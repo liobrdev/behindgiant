@@ -1,0 +1,217 @@
+.Navigation {
+  z-index: 10;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+
+  .MenuIcon {
+    &-container {
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &.is-on {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    &.is-corner-cropped {
+      height: calc(100% - 40px);
+  
+      &::after {
+        content: "";
+        z-index: 2;
+        position: fixed;
+        bottom: 20px;
+        left: -50%;
+        width: 100%;
+        min-width: 1280px;
+        height: 80px;
+        transform: rotate(-4.5deg);
+        background-color: white;
+      }
+    }
+
+    &.is-scrollable {
+      overflow-y: auto;
+    }
+
+    .MenuIcon-container {
+      z-index: 5;
+      position: relative;
+      width: 100%;
+      height: 75px;
+      background-color: white;
+      display: inline-flex;
+      align-items: center;
+
+      .MenuIcon {
+        left: 24px;
+
+        &:focus {
+          outline: $black dotted 1px;
+        }
+        
+        &-icon-line {
+          background-color: $black;
+        }
+      }
+
+      .MenuIcon-close {
+        font-family: $fontPrimary;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding-left: .25rem;
+        font-size: .75rem;
+        line-height: 28px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &-overlay {
+    position: fixed;
+    z-index: 9;
+    background: $black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .NavigationMenu {
+    z-index: 5;
+    position: relative;
+    width: 100%;
+    font-family: $fontPrimary;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .NavigationMenu-logo {
+      width: fit-content;
+      margin: 0 auto;
+      padding-top: 10px;
+
+      img {
+        width: 100%;
+        min-width: 125px;
+        max-width: 200px;
+      }
+    }
+
+    .NavigationMenu-links {
+      padding-bottom: 50px;
+
+      ul {
+        padding: 0;
+
+        li {
+          position: relative;
+          margin: 25px 0;
+          text-transform: uppercase;
+          text-align: center;
+          white-space: nowrap;
+
+          small {
+            font-weight: 400;
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            font-size: .7rem;
+            line-height: 1.3125rem;
+            letter-spacing: 1.5px;
+          }
+
+          a {
+            color: $black;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            padding-top: 1.3125rem;
+            padding-bottom: .5rem;
+            margin-bottom: -3px;
+            letter-spacing: 3px;
+            font-family: $fontPrimary;
+            font-size: 1.125rem;
+            font-weight: 800;
+            margin-top: -3px;
+            vertical-align: top;
+
+            &::before,
+            &::after {
+              content: "";
+              z-index: 6;
+              display: block;
+              position: absolute;
+              bottom: 1px;
+              width: 0;
+              height: 3px;
+              background-color: $black;
+              -webkit-transition: width 0.125s linear;
+                 -moz-transition: width 0.125s linear;
+                   -o-transition: width 0.125s linear;
+                      transition: width 0.125s linear;
+            }
+
+            &::before {
+              right: 50%;
+            }
+
+            &::after {
+              left: 50%;
+            }
+
+            &:focus,
+            &:hover {
+              &::before,
+              &::after {
+                width: 49%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include for-tall-window-up {
+    .NavigationMenu {
+      height: calc(100% - 75px);
+    }
+
+    @include for-tablet-portrait-up {
+      &.is-on {
+        width: 61.8%;
+
+        &.is-corner-cropped {
+          height: 100%;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @include for-tablet-landscape-up {
+      &.is-on {
+        width: 38.2%;
+      }
+    }
+  }
+}

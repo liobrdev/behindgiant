@@ -1,0 +1,19 @@
+# certbot
+/certbot
+
+# frontend
+frontend/.env.local
+frontend/.next
+frontend/node_modules
+frontend/npm-debug.log*
+
+# nginx
+nginx/etc/nginx/conf.d/*.conf
+
+# misc
+*.pem
+/*.env
+/.vscode
+/secrets
+todo.txt
+notes.txt

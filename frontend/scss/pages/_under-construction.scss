@@ -1,0 +1,72 @@
+section#under-construction-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+
+  .Banner-underlay {
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://assets.behindgiant.liobr.dev/media/images/havana.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .Banner-overlay {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  }
+
+  .UnderConstruction {
+    position: relative;
+    top: 150px;
+    text-align: center;
+    
+    .Logo {
+      a {
+        img {
+          width: 100%;
+          min-width: 125px;
+          max-width: 250px;
+        }
+      }
+    }
+
+    h1 {
+      margin: 20px auto;
+      max-width: 500px;
+      color: white;
+      font-family: $fontPrimary;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include for-tablet-landscape-up {
+        max-width: 900px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+.Footer--underConstruction {
+  position: fixed;
+  bottom: 0;
+  width: inherit;
+  text-align: center;
+  color: white;
+  padding-bottom: 3rem;
+}

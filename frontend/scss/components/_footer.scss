@@ -1,0 +1,14 @@
+.Footer {
+  width: inherit;
+  text-align: center;
+  color: white;
+  padding-bottom: 1rem;
+
+  span {
+    font-family: $fontPrimary;
+    font-weight: 400;
+    font-size: .625rem;
+    line-height: .6875rem;
+    letter-spacing: 1px;
+  }
+}

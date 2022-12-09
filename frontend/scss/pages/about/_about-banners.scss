@@ -1,0 +1,292 @@
+.Main--about {
+  section {
+    &.Section--banner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .Banner-underlay {
+        z-index: -2;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://assets.behindgiant.liobr.dev/media/images/tokyo.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        will-change: top;
+      }
+
+      .Banner-overlay {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 0.6;
+      }
+    }
+
+    &#about-banner1 {
+      .Intro {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        top: -50px;
+
+        .Logo {
+          text-align: center;
+          position: relative;
+          
+          img {
+            width: 100%;
+            max-width: 250px;
+            margin-left: auto;
+          }
+        }
+
+        .IntroText {          
+          h1 {
+            margin: 20px auto;
+            max-width: 567px;
+            color: white;
+            font-family: $fontPrimary;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.375rem;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .ScrollDown {
+        all: unset;
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        left: calc(50% - 25px);
+        color: white;
+        
+        span {
+          display: block;
+          position: relative;
+          width: 50px;
+          text-align: center;
+          font-weight: 400;
+          font-size: .75rem;
+          line-height: 1.0625rem;
+          text-transform: uppercase;
+          padding-bottom: 5px;
+        }
+
+        div {
+          position: relative;
+          left: calc(50% - 1px);
+          height: 90px;
+          width: 2px;
+          background: white;
+          transition: height 0.5s ease-out;
+        }
+
+        &:focus,
+        &:hover {
+          cursor: pointer;
+
+          div {
+            height: 85px;
+          }
+        }
+
+        &:focus {
+          outline: 1px dotted white;
+        }
+      }
+
+      &::after {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        bottom: -40px;
+        left: -50%;
+        width: 100%;
+        min-width: 1280px;
+        height: 80px;
+        transform: rotate(-3deg);
+        background-color: white;
+      }
+    }
+
+    &#about-banner2 {
+      .ScrollTop {
+        all: unset;
+        position: absolute;
+        top: 75px;
+        text-align: center;
+        width: inherit;
+        color: white;
+
+        div::before {
+          content: "";
+          display: block;
+          position: relative;
+          top: 0;
+          margin: 0 auto;
+          width: 18px;
+          height: 18px;
+          border-top: 1px solid white;
+          border-left: 1px solid white;
+          transform: rotate(45deg);
+          transition: top 0.5s ease-out;
+        }
+
+        span {
+          font-weight: 400;
+          font-size: .75rem;
+          line-height: 1.0625rem;
+          display: block;
+          text-transform: uppercase;
+        }
+
+        &:focus,
+        &:hover {
+          cursor: pointer;
+
+          div::before {
+            top: -5px;
+          }
+        }
+
+        &:focus {
+          outline: 1px dotted white;
+        }
+      }
+
+      .Logo {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        top: 20px;
+        
+        img {
+          width: 100%;
+          max-width: 250px;
+          margin-left: auto;
+        }
+      }
+
+      &::after {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        top: -50px;
+        left: -50%;
+        width: 100%;
+        min-width: 1280px;
+        height: 80px;
+        transform: rotate(-3deg);
+        background-color: white;
+      }
+
+      .Footer {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      &.Section--banner {
+        height: 520px;
+      }
+
+      &#about-banner1 {
+        &::after {
+          bottom: -50px;
+          min-width: 1440px;
+          height: 90px;
+        }
+
+        .Intro {
+          .IntroText {
+            h1 {
+              max-width: 656px;
+              line-height: 1.5rem;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+
+      &#about-banner2 {
+        &::after {
+          top: -40px;
+          min-width: 1440px;
+          height: 90px;
+        }
+      }
+    }
+
+    @include for-tablet-landscape-up {
+      &.Section--banner {
+        height: 656px;
+      }
+
+      &#about-banner1 {
+        &::after {
+          bottom: -70px;
+          min-width: 1920px;
+          height: 120px;
+        }
+
+        .Intro {
+          .IntroText {
+            h1 {
+              font-weight: 700;
+            }
+          }
+        }
+
+        .ScrollDown {
+          display: block;
+        }
+      }
+
+      &#about-banner2 {
+        .ScrollTop {
+          top: 111px;
+        }
+
+        &::after {
+          min-width: 1920px;
+          height: 110px;
+        }
+      }
+    }
+
+    @include for-desktop-up {
+      &#about-banner1 {
+        &::after {
+          bottom: -70px;
+          min-width: 2700px;
+          height: 130px;
+        }
+      }
+
+      &#about-banner2 {
+        &::after {
+          top: -60px;
+          min-width: 2700px;
+          height: 120px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.Main--about {
+  section {
+    &#about-clients {
+      font-family: $fontPrimary;
+      width: 85%;
+      margin: 3rem auto;
+
+      h2 {
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 1.3125rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 6rem auto 3rem;
+      }
+
+      .Clients {
+        position: relative;
+
+        h3 {
+          font-weight: 400;
+          font-size: .875rem;
+          line-height: 1.75rem;
+          padding: 4px 0;
+          margin-bottom: 12px;
+        }
+
+        ul {
+          padding-left: 0;
+          margin: 0;
+          margin-right: -50px;
+
+          li {
+            display: inline-block;
+            position: relative;
+            margin-right: 50px;
+            margin-bottom: 10px;
+            height: 30px;
+
+            img {
+              display: block;
+              width: auto;
+              height: 100%;
+              opacity: 0.7;
+              transition: opacity 1s linear;
+              transform: translate(0, -50%);
+              position: relative;
+              top: 50%;
+
+              &:hover,
+              &:focus {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      &#about-clients {
+        margin: 5rem auto;
+
+        h2 {
+          font-size: 1.375rem;
+          line-height: 1.625rem;
+          letter-spacing: 3px;
+          margin: 6rem auto 5rem;
+        }
+
+        .Clients {
+          h3 {
+            line-height: 1.75rem;
+          }
+
+          ul {
+            li {
+              height: 40px;
+              margin-right: 80px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    @include for-tablet-landscape-up {
+      &#about-clients {
+        margin: 6rem auto;
+
+        h2 {
+          font-size: 1.75rem;
+          font-weight: 700;
+          line-height: 2.0625rem;
+          letter-spacing: 4px;
+        }
+
+        .Clients {
+          h3 {
+            font-size: 1rem;
+            line-height: 1.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            padding-right: 80px;
+          }
+
+          ul {
+            li {
+              height: 50px;
+              margin-right: 100px;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
