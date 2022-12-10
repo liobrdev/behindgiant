@@ -237,12 +237,6 @@
   }
 
   @include for-medium-window-up {
-    &.is-on {
-      .NavigationMenu {
-        // height: 100%;
-      }
-    }
-
     @include for-tablet-portrait-up {
       &.is-on {
         .NavigationMenu {
@@ -272,10 +266,6 @@
     @include for-tablet-landscape-up {
       &.is-on {
         height: calc(100% - 75px);
-
-        .NavigationMenu {
-          // height: calc(100% - 75px);
-        }
 
         & + .Navigation-edge {
           bottom: 30px;
@@ -311,64 +301,4 @@
       }
     }
   }
-
-//     &.is-corner-cropped {
-//       height: calc(100% - 40px);
-  
-//       &::after {
-//         content: "";
-//         z-index: 2;
-//         position: fixed;
-//         bottom: 20px;
-//         left: -50%;
-//         width: 100%;
-//         min-width: 1280px;
-//         height: 80px;
-//         transform: rotate(-4.5deg);
-//         background-color: white;
-//       }
-//     }
-
-//     &.is-scrollable {
-//       overflow-y: auto;
-//     }
-//   }
-
-//   @include for-short-window-only {
-//     &.is-on {
-//       &.is-corner-cropped {
-//         height: 100%;
-
-//         &::after {
-//           display: none;
-//         }
-//       }
-//     }
-//   }
-
-//   @include for-tall-window-up {
-//     .NavigationMenu {
-//       height: calc(100% - 75px);
-//     }
-
-//     @include for-tablet-portrait-up {
-//       &.is-on {
-//         width: 61.8%;
-
-//         &.is-corner-cropped {
-//           height: 100%;
-
-//           &::after {
-//             display: none;
-//           }
-//         }
-//       }
-//     }
-
-//     @include for-tablet-landscape-up {
-//       &.is-on {
-//         width: 38.2%;
-//       }
-//     }
-//   }
 }
