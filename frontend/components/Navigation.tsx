@@ -26,6 +26,7 @@ class Navigation extends Component<Props> {
           <NavigationIcon isOn={navigationOn} />
           {navigationOn && <NavigationMenu />}
         </div>
+        {navigationOn && <div className='Navigation-edge' />}
       </>
     );
   }

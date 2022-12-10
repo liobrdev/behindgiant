@@ -11,6 +11,9 @@ export default function NavigationMenu() {
           <img className='NavigationMenu-logo-img' src={`${imagesUrl}/Logo-pr.png`} alt='Logo'/>
         </AnimatedLink>
       </div>
+      <h3 className='NavigationMenu-text'>
+        A consultancy and creative agency, purposefully built for the modern age.
+      </h3>
       <div className='NavigationMenu-links'>
         <ul>
           <li>
