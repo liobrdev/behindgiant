@@ -51,10 +51,14 @@ export default class About extends Component {
 
   onScroll() {
     if (this.banner1?.parentElement) {
-      const { bottom, top } = this.banner1.parentElement.getBoundingClientRect();
-
-      if (bottom >= 0 && top <= 0) {
-        this.banner1.style.top = `${-top / (1.33 * window.innerHeight) * 100}%`;
+      if (window.innerHeight < 500) {
+        if (this.banner1.style.top != '0') this.banner1.style.top = '0';
+      } else {
+        const { bottom, top } = this.banner1.parentElement.getBoundingClientRect();
+  
+        if (bottom >= 0 && top <= 0) {
+          this.banner1.style.top = `${-top / (1.33 * window.innerHeight) * 100}%`;
+        }
       }
     }
 
@@ -63,18 +67,22 @@ export default class About extends Component {
 
       if (top <= window.innerHeight && bottom >= 0) {
         this.collabH2.style.top = `${
-          ((window.innerHeight + 0.67 * this.collabH2.parentElement.clientHeight) - bottom) /
+          ((window.innerHeight + 0.75 * this.collabH2.parentElement.clientHeight) - bottom) /
           (window.innerHeight + this.collabH2.parentElement.clientHeight) * 100
         }%`;
       }
     }
 
     if (this.banner2?.parentElement) {
-      const { bottom, top } = this.banner2.parentElement.getBoundingClientRect();
+      if (window.innerHeight < 500) {
+        if (this.banner2.style.top != '0') this.banner2.style.top = '0';
+      } else {
+        const { bottom, top } = this.banner2.parentElement.getBoundingClientRect();
 
-      if (top <= window.innerHeight && bottom >= window.innerHeight - 20) {
-        this.banner2.style.top =
-          `${(window.innerHeight - bottom) / (1.33 * window.innerHeight) * 100}%`;
+        if (top <= window.innerHeight && bottom >= window.innerHeight - 20) {
+          this.banner2.style.top =
+            `${(window.innerHeight - bottom) / (1.33 * window.innerHeight) * 100}%`;
+        }
       }
     }
   }

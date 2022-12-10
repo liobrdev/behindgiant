@@ -24,7 +24,13 @@ class AnimatedLink extends Component<Props> {
     }
 
     this.props.makeMainUnscrollable();
-    this.props.hideMain();
+    this.props.turnMainOpacityOff();
+
+    await new Promise(resolve => {
+      this.animationTimeout = setTimeout(resolve, 333);
+    });
+
+    this.props.turnMainDisplayOff();
 
     await new Promise(resolve => {
       this.animationTimeout = setTimeout(resolve, 500);
@@ -55,14 +61,17 @@ const mapDispatchToProps = (dispatch: AppDispatch) => ({
   closeNavigation: () => {
     dispatch({ type: 'NAVIGATION_CLOSE' });
   },
-  hideMain: () => {
-    dispatch({ type: 'MAIN_HIDE' });
-  },
   makeMainUnscrollable: () => {
     dispatch({ type: 'MAIN_MAKE_UNSCROLLABLE' });
   },
   showLoadingView: () => {
     dispatch({ type: 'LOADING_VIEW_SHOW' });
+  },
+  turnMainDisplayOff: () => {
+    dispatch({ type: 'MAIN_DISPLAY_OFF' });
+  },
+  turnMainOpacityOff: () => {
+    dispatch({ type: 'MAIN_OPACITY_OFF' });
   },
 });
 

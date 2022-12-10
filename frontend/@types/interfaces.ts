@@ -52,7 +52,8 @@ export interface ILoadingViewState {
 }
 
 export interface IMainState {
-  isShowing: boolean;
+  isDisplayed: boolean;
+  isOpaque: boolean;
   isScrollable: boolean;
 }
 

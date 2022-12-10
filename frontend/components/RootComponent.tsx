@@ -75,7 +75,9 @@ class RootComponent extends Component<Props> {
   }
 
   async animateShowMain() {
-    if (this.props.mainIsShowing) return;
+    if (this.props.mainIsScrollable) this.props.makeMainUnscrollable();
+    if (this.props.mainIsOpaque) this.props.turnMainOpacityOff();
+    if (this.props.mainIsDisplayed) this.props.turnMainDisplayOff();
 
     await new Promise(resolve => {
       this.animationTimeout = setTimeout(resolve, 1000);
@@ -84,9 +86,14 @@ class RootComponent extends Component<Props> {
     if (!await this.checkIsMediaLoaded()) {
       console.error('Media did not load within a reasonable time frame!');
     }
-    
-    this.props.makeMainUnscrollable();
-    this.props.showMain();
+
+    this.props.turnMainDisplayOn();
+
+    await new Promise(resolve => {
+      this.animationTimeout = setTimeout(resolve, 250);
+    });
+
+    this.props.turnMainOpacityOn();
 
     await new Promise(resolve => {
       this.animationTimeout = setTimeout(resolve, 1000);
@@ -117,7 +124,7 @@ class RootComponent extends Component<Props> {
   }
 
   render() {
-    const { loadingViewIsShowing, mainIsScrollable, mainIsShowing } = this.props;
+    const { loadingViewIsShowing, mainIsDisplayed, mainIsOpaque, mainIsScrollable } = this.props;
 
     let name = this.props.router.pathname;
 
@@ -166,7 +173,9 @@ class RootComponent extends Component<Props> {
           {loadingViewIsShowing && <LoadingView />}
           <main id='main' className={
             `Main Main--${name}${
-              mainIsShowing ? ' is-showing' : ''
+              mainIsDisplayed ? ' is-displayed' : ''
+            }${
+              mainIsOpaque ? ' is-opaque' : ''
             }${
               mainIsScrollable ? ' is-scrollable' : ''
             }`
@@ -182,8 +191,9 @@ class RootComponent extends Component<Props> {
 
 const mapStateToProps = (state: AppState) => ({
   loadingViewIsShowing: state.loadingView.isShowing,
+  mainIsDisplayed: state.main.isDisplayed,
+  mainIsOpaque: state.main.isOpaque,
   mainIsScrollable: state.main.isScrollable,
-  mainIsShowing: state.main.isShowing,
   navigationOn: state.navigation.navigationOn,
 });
 
@@ -194,17 +204,23 @@ const mapDispatchToProps = (dispatch: AppDispatch) => ({
   hideLoadingView: () => {
     dispatch({ type: 'LOADING_VIEW_HIDE' });
   },
-  hideMain: () => {
-    dispatch({ type: 'MAIN_HIDE' });
-  },
   makeMainScrollable: () => {
     dispatch({ type: 'MAIN_MAKE_SCROLLABLE' });
   },
   makeMainUnscrollable: () => {
     dispatch({ type: 'MAIN_MAKE_UNSCROLLABLE' });
   },
-  showMain: () => {
-    dispatch({ type: 'MAIN_SHOW' });
+  turnMainDisplayOn: () => {
+    dispatch({ type: 'MAIN_DISPLAY_ON' });
+  },
+  turnMainDisplayOff: () => {
+    dispatch({ type: 'MAIN_DISPLAY_OFF' });
+  },
+  turnMainOpacityOn: () => {
+    dispatch({ type: 'MAIN_OPACITY_ON' });
+  },
+  turnMainOpacityOff: () => {
+    dispatch({ type: 'MAIN_OPACITY_OFF' });
   },
 });
 
