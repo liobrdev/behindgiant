@@ -6,10 +6,10 @@ const imagesUrl = process.env.NEXT_PUBLIC_IMAGES_URL || '';
 export default function UnderConstruction() {
   return (
     <>
-      <section id='under-construction-banner'>
+      <section id='under-construction-banner' className='Section--genericBanner'>
         <div className='Banner-underlay' />
         <div className='Banner-overlay' />
-        <div className='UnderConstruction'>
+        <div className='Info'>
           <div className='Logo'>
             <AnimatedLink href='/'>
               <img className='Logo-image' src={`${imagesUrl}/Logo-wh.png`} alt='behind GIANT'/>

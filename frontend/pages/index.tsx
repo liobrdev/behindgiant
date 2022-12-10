@@ -28,15 +28,14 @@ export default function Home() {
         <title>behind GIANT</title>
         <script type="application/ld+json">{breadcrumb}</script>
       </Head>
-      <section id='home-banner1'>
+      <section id='home-banner' className='Section--genericBanner'>
+        <div className='Banner-underlay' />
         <div className='Banner-overlay' />
-        <div className='Intro Intro--home'>
+        <div className='Info'>
           <div className='Logo'>
             <img className='Logo-image' src={`${imagesUrl}/Logo-wh.png`} alt='behind GIANT' />
           </div>
-          <div className='IntroText IntroText--home'>
-            <h1>A consultancy and creative agency, purposefully built for the modern age.</h1>
-          </div>
+          <h1>A consultancy and creative agency, purposefully built for the modern age.</h1>
         </div>
       </section>
       <Footer classNames='Footer--home' />

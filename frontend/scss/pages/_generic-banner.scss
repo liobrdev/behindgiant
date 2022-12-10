@@ -1,0 +1,91 @@
+.Main {
+  section {
+    &.Section--genericBanner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .Banner-underlay {
+        z-index: -2;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+
+      .Banner-overlay {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.5;
+      }
+
+      .Info {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        top: -50px;
+
+        .Logo {
+          text-align: center;
+          position: relative;
+          
+          img {
+            width: 100%;
+            max-width: 250px;
+            margin-left: auto;
+          }
+        }
+
+        h1 {
+          margin: 20px auto;
+          max-width: 567px;
+          color: white;
+          font-family: $fontPrimary;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          letter-spacing: 1px;
+          text-align: center;
+          text-transform: uppercase;
+
+          @include for-tablet-landscape-up {
+            font-weight: 700;
+            letter-spacing: 2px;
+          }
+        }
+      }
+
+      &#home-banner {
+        .Banner-underlay {
+          background-image: url(https://assets.behindgiant.liobr.dev/media/images/HomeBanner.jpg);
+        }
+      }
+
+      &#under-construction-banner {
+        .Banner-underlay {
+          background-image: url(https://assets.behindgiant.liobr.dev/media/images/havana.jpg);
+        }
+      }
+
+      & + .Footer {
+        position: fixed;
+        bottom: 0;
+        width: inherit;
+        text-align: center;
+        color: white;
+        padding-bottom: 3rem;
+      }
+    }
+  }
+}
