@@ -6,12 +6,13 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 0;
+  height: 100%;
+  background: white;
   overflow-y: hidden;
   overflow-x: hidden;
-  background: white;
-  transition-property: height;
-  transition-duration: .5s;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .333s;
   transition-timing-function: ease-in-out;
 
   &::-webkit-scrollbar {
@@ -33,7 +34,7 @@
   scrollbar-color: $tan transparent;
 
   &.is-showing {
-    height: 100%;
+    opacity: 1;
   }
 
   &.is-scrollable {

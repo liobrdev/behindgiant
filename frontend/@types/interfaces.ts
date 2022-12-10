@@ -57,10 +57,7 @@ export interface IMainState {
 }
 
 export interface INavigationState {
-  cornerIsCropped: boolean;
-  isScrollable: boolean;
   navigationOn: boolean;
-  overlayOn: boolean;
 }
 
 export interface IUserState {

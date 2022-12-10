@@ -23,17 +23,14 @@ class AnimatedLink extends Component<Props> {
       return this.props.closeNavigation();
     }
 
-    this.props.uncropNavigationCorner();
-    this.props.makeNavigationUnscrollable();
     this.props.makeMainUnscrollable();
-    this.props.hideNavigationOverlay();
-    this.props.showLoadingView();
+    this.props.hideMain();
 
     await new Promise(resolve => {
-      this.animationTimeout = setTimeout(resolve, 200);
+      this.animationTimeout = setTimeout(resolve, 500);
     });
 
-    this.props.hideMain();
+    this.props.showLoadingView();
 
     await new Promise(resolve => {
       this.animationTimeout = setTimeout(resolve, 1000);
@@ -58,23 +55,14 @@ const mapDispatchToProps = (dispatch: AppDispatch) => ({
   closeNavigation: () => {
     dispatch({ type: 'NAVIGATION_CLOSE' });
   },
-  hideNavigationOverlay: () => {
-    dispatch({ type: 'NAVIGATION_OVERLAY_HIDE' });
-  },
   hideMain: () => {
     dispatch({ type: 'MAIN_HIDE' });
-  },
-  makeNavigationUnscrollable: () => {
-    dispatch({ type: 'NAVIGATION_MAKE_UNSCROLLABLE' });
   },
   makeMainUnscrollable: () => {
     dispatch({ type: 'MAIN_MAKE_UNSCROLLABLE' });
   },
   showLoadingView: () => {
     dispatch({ type: 'LOADING_VIEW_SHOW' });
-  },
-  uncropNavigationCorner: () => {
-    dispatch({ type: 'NAVIGATION_CORNER_UNCROP' });
   },
 });
 
