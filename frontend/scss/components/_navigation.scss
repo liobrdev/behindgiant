@@ -300,5 +300,15 @@
         }
       }
     }
+
+    @include for-tablet-landscape-up {
+      &.is-on {
+        height: calc(100% - 150px);
+
+        & + .Navigation-edge {
+          bottom: 105px;
+        }
+      }
+    }
   }
 }
