@@ -41,17 +41,17 @@ $translateX: 0;
               transition: all $transition-time;
       
       &--line1 {
-        top: 0;
+        top: -1px;
         left: -2px;
       }
 
       &--line2 {
-        top: 33.333%;
+        top: calc(33.333% - 1px);
         left: 2px;
       }
 
       &--line3 {
-        top: 66.667%;
+        top: calc(66.667% - 1px);
         left: -2px;
       }
 
