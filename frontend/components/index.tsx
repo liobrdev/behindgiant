@@ -1,4 +1,7 @@
+export { default as AnalogClock } from './AnalogClock';
 export { default as AnimatedLink } from './AnimatedLink';
+export { default as Clocks } from './Clocks';
+export { default as DigitalClock} from './DigitalClock';
 export { default as Footer } from './Footer';
 export { default as InViewWrapper } from './InViewWrapper';
 export { default as LoadingView } from './LoadingView';

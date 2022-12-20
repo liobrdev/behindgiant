@@ -25,6 +25,10 @@ export interface IErrorInfo {
   [key: string]: IErrorMsg[];
 }
 
+export interface IIntervalTimebase {
+  timeoutId?: ReturnType<typeof setTimeout>;
+}
+
 export interface IRoute {
   path: string;
   name?: string;
