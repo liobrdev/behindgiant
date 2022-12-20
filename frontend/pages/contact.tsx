@@ -95,7 +95,7 @@ export default class Contact extends Component<{}, State> {
               </div>
               <hr/>
               <div className='Connect'>
-                <div><Link href="tel://510.555.2733"><a>510.555.8400</a></Link></div>
+                <div><Link href="tel://510.555.8400"><a>510.555.8400</a></Link></div>
                 <div>
                   <Link href="mailto:info@behindgiant.com"><a>info@behindgiant.com</a></Link>
                 </div>
