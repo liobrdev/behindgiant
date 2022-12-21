@@ -46,7 +46,8 @@
           
           img {
             width: 100%;
-            max-width: 250px;
+            min-width: 125px;
+            max-width: 200px;
             margin-left: auto;
           }
         }
@@ -251,6 +252,12 @@
         }
 
         .Intro {
+          .Logo {
+            img {
+              max-width: 250px;
+            }
+          }
+
           .IntroText {
             h1 {
               font-weight: 700;
