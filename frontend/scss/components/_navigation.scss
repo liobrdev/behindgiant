@@ -200,7 +200,7 @@
         .NavigationMenu-links {
           position: absolute;
           width: 100%;
-          bottom: 0;
+          bottom: 2.5vh;
 
           ul {
             display: flex;
@@ -279,7 +279,7 @@
       &.is-on {
         & + .Navigation-edge {
           bottom: 20px;
-          min-width: 2700px;
+          min-width: 3000px;
           height: 200px;
         }
       }
