@@ -35,7 +35,7 @@
       z-index: 5;
       position: relative;
       width: 100%;
-      height: 75px;
+      height: 85px;
       background-color: white;
       display: inline-flex;
       align-items: center;
@@ -81,7 +81,6 @@
       .NavigationMenu-logo {
         width: fit-content;
         margin: 0 auto;
-        padding-top: 10px;
   
         img {
           width: 100%;
@@ -221,7 +220,7 @@
     &.is-on {
       .NavigationMenu {
         .NavigationMenu-links {
-          bottom: 75px;
+          bottom: 85px;
 
           ul {
             max-width: 1080px;
@@ -241,7 +240,7 @@
       &.is-on {
         .NavigationMenu {
           .NavigationMenu-logo {
-            padding-top: 90px;
+            padding-top: 50px;
           }
 
           .NavigationMenu-text {
@@ -265,7 +264,7 @@
 
     @include for-tablet-landscape-up {
       &.is-on {
-        height: calc(100% - 75px);
+        height: calc(100% - 85px);
 
         & + .Navigation-edge {
           bottom: 30px;
@@ -289,7 +288,7 @@
   @include for-tall-window-up {
     &.is-on {
       .NavigationMenu {
-        height: calc(100% - 75px);
+        height: calc(100% - 85px);
       }
     }
 
