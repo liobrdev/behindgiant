@@ -1,0 +1,78 @@
+.Main--work {
+  section {
+    &#work-banner {
+      position: relative;
+      height: calc(100% - 175px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+      .Banner-underlay {
+        z-index: -2;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://assets.behindgiant.liobr.dev/media/images/food-truck.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        will-change: top;
+      }
+
+      .Banner-overlay {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 0.2;
+      }
+
+      .Intro {
+        a {
+          color: white;
+
+          .IntroText {
+            text-align: center;
+
+            h2 {
+              font-size: 1rem;
+              font-weight: 800;
+              line-height: 1.125rem;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            }
+
+            h3 {
+              font-size: 1.5rem;
+              font-weight: 800;
+              line-height: 1.9375rem;
+              letter-spacing: 3px;
+              text-transform: uppercase;
+              position: relative;
+              margin-top: 28px;
+              margin-bottom: 0;
+            }
+
+            h4 {
+              font-size: 1rem;
+              font-weight: 500;
+              line-height: 1.4375rem;
+              letter-spacing: 2px;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      &#work-banner {
+        height: calc(100% - 120px);
+      }
+    }
+  }
+}
