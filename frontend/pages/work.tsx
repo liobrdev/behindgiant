@@ -77,7 +77,7 @@ export default class Work extends Component {
           <div id='work-banner-bg' className='Banner-underlay' />
           <div className='Banner-overlay' />
           <div className='Intro Intro--work'>
-            <AnimatedLink href='#work-banner'>
+            <AnimatedLink href='/work/latest5'>
               <div id='work-banner-text'>
                 <h2>New Work</h2>
                 <h3>Food Truck</h3>
