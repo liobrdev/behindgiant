@@ -2,6 +2,7 @@ import { Component, ReactNode } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 
 import every from 'lodash/every';
+import filter from 'lodash/filter';
 import throttle from 'lodash/throttle';
 
 import Head from 'next/head';
@@ -13,6 +14,7 @@ import { LoadingView, MediaToBeLoaded, Navigation } from './';
 
 
 const description = 'behind GIANT - Creative Agency';
+const imagesUrl = process.env.NEXT_PUBLIC_IMAGES_URL || '';
 
 class RootComponent extends Component<Props> {
   private animationTimeout?: ReturnType<typeof setTimeout>;
@@ -37,17 +39,37 @@ class RootComponent extends Component<Props> {
   }
 
   isMediaLoaded(): boolean {
-    const videos =
-      document.getElementById('videosToBeLoaded')?.children as
-      HTMLCollectionOf<HTMLVideoElement>;
+    const divs = document.getElementsByClassName('MediaToBeLoaded');
+    let mediaLoadedSuccessfully = true;
 
-    if (!every(videos, (vid) => vid.readyState === 4)) return false;
+    for (let i = 0; i < divs.length; ++i) {
+      const media = divs[i];
 
-    const images =
-      document.getElementById('imagesToBeLoaded')?.children as
-      HTMLCollectionOf<HTMLImageElement>;
+      const videos = filter(media.children, element => 
+        element.nodeName.toLowerCase() === 'video'
+        && 'readyState' in element
+      );
 
-    return every(images, (img) => img.complete && img.naturalHeight !== 0);
+      if (!every(videos, (vid) => (vid as HTMLVideoElement).readyState === 4)) {
+        mediaLoadedSuccessfully = false;
+        break;
+      }
+  
+      const images = filter(media.children, element => 
+        element.nodeName.toLowerCase() === 'img'
+        && 'complete' in element
+        && 'naturalHeight' in element
+      );
+  
+      if (!every(images, (img) =>
+        (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalHeight !== 0
+      )) {
+        mediaLoadedSuccessfully = false;
+        break;
+      }
+    }
+
+    return mediaLoadedSuccessfully;
   }
 
   checkIsMediaLoaded(): Promise<boolean> {
@@ -169,7 +191,7 @@ class RootComponent extends Component<Props> {
           <meta property="og:description" content={description} />
         </Head>
         <div className='SiteContainer'>
-          <MediaToBeLoaded />
+          <MediaToBeLoaded imageUrls={[`${imagesUrl}/Logo-pr.png`]}/>
           {loadingViewIsShowing && <LoadingView />}
           <main id='main' className={
             `Main Main--${name}${

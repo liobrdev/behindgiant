@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Component, MouseEvent } from 'react';
 
-import { AnimatedLink } from '@/components';
+import { AnimatedLink, MediaToBeLoaded } from '@/components';
 import { IBreadcrumbListItem } from '@/types';
 
 
@@ -66,6 +66,19 @@ export default class Work extends Component {
           <title>Work</title>
           <script type="application/ld+json">{breadcrumb}</script>
         </Head>
+        <MediaToBeLoaded imageUrls={[
+          imagesUrl + '/Logo-bl2.png',
+          imagesUrl + '/madonnina.jpg',
+          imagesUrl + '/food-truck.jpg',
+          imagesUrl + '/skateboard.jpg',
+          imagesUrl + '/buildings.jpg',
+          imagesUrl + '/stickers.jpg',
+          imagesUrl + '/basketball.jpg',
+          '/twitter_white.png',
+          '/instagram_white.png',
+          '/facebook_white.png',
+          '/linkedin_white.png',
+        ]}/>
         <header id='work-header'>
           <div className='Logo'>
             <AnimatedLink href='/'>

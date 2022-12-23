@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Component } from 'react';
 
-import { Clocks, Footer } from '@/components';
+import { Clocks, Footer, MediaToBeLoaded } from '@/components';
 import { IBreadcrumbListItem, IIntervalTimebase } from '@/types';
 import { customSetInterval, customClearInterval } from '@/utils';
 
@@ -71,6 +71,14 @@ export default class Contact extends Component<{}, State> {
           <title>Contact</title>
           <script type="application/ld+json">{breadcrumb}</script>
         </Head>
+        <MediaToBeLoaded imageUrls={[
+          imagesUrl + '/Logo-wh.png',
+          imagesUrl + '/urban-colors.jpg',
+          '/twitter_white.png',
+          '/instagram_white.png',
+          '/facebook_white.png',
+          '/linkedin_white.png',
+        ]}/>
         <section id='contact'>
           <div className='Banner-underlay' />
           <div className='Banner-overlay' />

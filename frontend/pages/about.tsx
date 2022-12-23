@@ -5,7 +5,7 @@ import debounce from 'lodash/debounce';
 
 import Head from 'next/head';
 
-import { AnimatedLink, Footer, InViewWrapper } from '@/components';
+import { AnimatedLink, Footer, InViewWrapper, MediaToBeLoaded } from '@/components';
 import { IBreadcrumbListItem } from '@/types';
 
 
@@ -121,6 +121,21 @@ export default class About extends Component {
           <title>About</title>
           <script type="application/ld+json">{breadcrumb}</script>
         </Head>
+        <MediaToBeLoaded imageUrls={[
+          imagesUrl + '/Logo-wh.png',
+          imagesUrl + '/tokyo.jpg',
+          imagesUrl + '/triangles.png',
+          imagesUrl + '/stock-portrait-woman1.jpg',
+          imagesUrl + '/stock-portrait-man1.jpg',
+          imagesUrl + '/stock-portrait-man2.jpg',
+          imagesUrl + '/photographer.jpg',
+          imagesUrl + '/sold.jpg',
+          imagesUrl + '/ideas.jpg',
+          '/twitter_white.png',
+          '/instagram_white.png',
+          '/facebook_white.png',
+          '/linkedin_white.png',
+        ]}/>
         <section id='about-banner1' className='Section--banner'>
           <div id='about-banner1-bg' className='Banner-underlay' />
           <div className='Banner-overlay' />
