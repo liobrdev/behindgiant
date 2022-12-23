@@ -20,6 +20,7 @@
           width: 100%;
           position: relative;
           text-align: center;
+          margin-bottom: 3rem;
 
           .TextLink {
             position: relative;
@@ -118,10 +119,6 @@
               }
             }
           }
-
-          & + .Project {
-            margin-top: 3rem;
-          }
         }
       }
     }
@@ -135,11 +132,6 @@
         .Projects {
           .Project {
             width: 50%;
-            margin-bottom: 3rem;
-
-            & + .Project {
-              margin-top: 0;
-            }
           }
         }
       }
