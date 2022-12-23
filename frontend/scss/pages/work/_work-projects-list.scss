@@ -1,0 +1,158 @@
+.Main--work {
+  section {
+    &#work-projects-list {
+      h3 {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 400;
+        padding: 40px 7.5%;
+        text-align: center;
+        margin: 0;
+      }
+
+      .Projects {
+        display: inline-flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+
+        .Project {
+          width: 100%;
+          position: relative;
+          text-align: center;
+
+          .TextLink {
+            position: relative;
+            top: calc(100% - 66px);
+            display: inline-block;
+            height: 66px;
+
+            .Text {
+              position: relative;
+              width: fit-content;
+              margin: 0 auto;
+              text-align: center;
+
+              h4 {
+                color: $black;
+                font-weight: 800;
+                font-size: 1.0625rem;
+                line-height: 1.8125rem;
+                letter-spacing: 2px;
+                position: relative;
+                text-transform: uppercase;
+                margin: 10px 0 0;
+              }
+  
+              p {
+                color: $black;
+                font-weight: 400;
+                font-size: .9375rem;
+                line-height: 1.6875rem;
+                letter-spacing: 1px;
+                position: relative;
+                margin: 0;
+              }
+            }
+
+            &:focus,
+            &:hover {
+              & + .ThumbLink {
+                .Thumb {
+                  .ThumbImage-wrapper .ThumbImage {
+                    opacity: 1;
+                    transform: scaleX(1.075) scaleY(1.075);
+                  }
+                  
+                  &-info {
+                    img {
+                      opacity: 0.75;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .ThumbLink {
+            position: relative;
+            top: -66px;
+
+            .Thumb {
+              position: relative;
+
+              .ThumbImage {
+                &-wrapper {
+                  overflow: hidden;
+                  width: 100%;
+                }
+
+                height: 0;
+                padding-bottom: 56.66667%;
+                overflow: hidden;
+                margin: auto;
+                opacity: 0.95;
+                transform: scaleX(1) scaleY(1);
+                transition-property: opacity, transform;
+                transition-duration: 0.5s;
+                transition-timing-function: ease;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+            }
+
+            &:focus,
+            &:hover {
+              .Thumb {
+                .ThumbImage-wrapper .ThumbImage {
+                  opacity: 1;
+                  transform: scaleX(1.075) scaleY(1.075);
+                }
+
+                &-info {
+                  img {
+                    opacity: 0.75;
+                  }
+                }
+              }
+            }
+          }
+
+          & + .Project {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      &#work-projects-list {
+        h3 {
+          padding: 90px 7.5% 40px;
+        }
+
+        .Projects {
+          .Project {
+            width: 50%;
+            margin-bottom: 3rem;
+
+            & + .Project {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    @include for-desktop-up {
+      &#work-projects-list {
+        .Projects {
+          .Project {
+            width: 33.3%;
+          }
+        }
+      }
+    }
+  }
+}

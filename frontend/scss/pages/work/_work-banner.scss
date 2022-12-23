@@ -35,7 +35,7 @@
         a {
           color: white;
 
-          .IntroText {
+          #work-banner-text {
             text-align: center;
 
             h2 {
@@ -67,11 +67,58 @@
           }
         }
       }
+
+      .ScrollDown {
+        all: unset;
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 25px);
+        color: white;
+        
+        span {
+          display: block;
+          position: relative;
+          width: 50px;
+          text-align: center;
+          font-weight: 400;
+          font-size: .75rem;
+          line-height: 1.0625rem;
+          text-transform: uppercase;
+          padding-bottom: 5px;
+        }
+
+        div {
+          position: relative;
+          left: calc(50% - 1px);
+          height: 50px;
+          width: 2px;
+          background: white;
+          transition: height 0.5s ease-out;
+        }
+
+        &:focus,
+        &:hover {
+          cursor: pointer;
+
+          div {
+            height: 60px;
+          }
+        }
+
+        &:focus {
+          outline: 1px dotted white;
+        }
+      }
     }
 
     @include for-tablet-portrait-up {
       &#work-banner {
         height: calc(100% - 120px);
+
+        .ScrollDown {
+          display: block;
+        }
       }
     }
   }

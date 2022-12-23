@@ -8,6 +8,7 @@ export default function MediaToBeLoaded() {
         <img src={`${imagesUrl}/Logo-wh.png`} alt='' />
         <img src={`${imagesUrl}/Logo-pr.png`} alt='' />
         <img src={`${imagesUrl}/Logo-bl.png`} alt='' />
+        <img src={`${imagesUrl}/Logo-bl2.png`} alt='' />
         <img src={`${imagesUrl}/HomeBanner.jpg`} alt='' />
         <img src={`${imagesUrl}/tokyo.jpg`} alt='' />
         <img src={`${imagesUrl}/triangles.png`} alt='' />

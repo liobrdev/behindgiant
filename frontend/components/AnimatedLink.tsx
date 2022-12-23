@@ -51,9 +51,9 @@ class AnimatedLink extends Component<Props> {
   }
 
   render() {
-    const { handleLink, props: { children, href } } = this;
+    const { handleLink, props: { className, children, href } } = this;
 
-    return <a href={href} onClick={handleLink}>{children}</a>;
+    return <a href={href} onClick={handleLink} className={className}>{children}</a>;
   }
 }
 
@@ -83,6 +83,7 @@ interface Props extends PropsFromRedux {
   children: ReactNode;
   href: string;
   router: NextRouter;
+  className?: string;
 }
 
 export default connector(withRouter(AnimatedLink));
