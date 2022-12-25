@@ -1,3 +1,4 @@
+import debounce from 'lodash/debounce';
 import Head from 'next/head';
 import { Component, MouseEvent } from 'react';
 
@@ -39,6 +40,22 @@ export default class Work extends Component {
     this.banner = null;
     this.bannerText = null;
     this.handleScrollDown = this.handleScrollDown.bind(this);
+    this.onScroll = debounce(this.onScroll.bind(this), 5, { leading: true });
+  }
+
+  onScroll() {
+    if (this.bannerText) {
+      if (window.innerHeight < 500) {
+        if (this.bannerText.style.top != '0') this.bannerText.style.top = '0';
+      } else if (this.banner) {
+        const { bottom } = this.banner.getBoundingClientRect();
+
+        if (bottom <= window.innerHeight && bottom >= 0) {
+          this.bannerText.style.top =
+            `${(window.innerHeight - bottom) / (window.innerHeight) * 100 * 1.75}%`;
+        }
+      }
+    }
   }
 
   handleScrollDown(e: MouseEvent<HTMLButtonElement>) {
@@ -54,9 +71,14 @@ export default class Work extends Component {
   }
 
   componentDidMount() {
+    document.getElementById('main')?.addEventListener('scroll', this.onScroll);
     this.header = document.getElementById('work-header');
     this.banner = document.getElementById('work-banner');
     this.bannerText = document.getElementById('work-banner-text');
+  }
+
+  componentWillUnmount() {
+    document.getElementById('main')?.removeEventListener('scroll', this.onScroll);
   }
 
   render() {
