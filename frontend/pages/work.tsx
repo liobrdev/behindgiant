@@ -2,7 +2,7 @@ import debounce from 'lodash/debounce';
 import Head from 'next/head';
 import { Component, MouseEvent } from 'react';
 
-import { AnimatedLink, MediaToBeLoaded } from '@/components';
+import { AnimatedLink, Footer, MediaToBeLoaded } from '@/components';
 import { IBreadcrumbListItem } from '@/types';
 
 
@@ -40,6 +40,7 @@ export default class Work extends Component {
     this.banner = null;
     this.bannerText = null;
     this.handleScrollDown = this.handleScrollDown.bind(this);
+    this.handleScrollTop = this.handleScrollTop.bind(this);
     this.onScroll = debounce(this.onScroll.bind(this), 5, { leading: true });
   }
 
@@ -68,6 +69,12 @@ export default class Work extends Component {
       left: 0,
       behavior: 'smooth',
     });
+  }
+
+  handleScrollTop(e: MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    document.getElementById('main')?.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
 
   componentDidMount() {
@@ -231,6 +238,18 @@ export default class Work extends Component {
               </AnimatedLink>
             </div>
           </div>
+        </section>
+        <section id='work-footer'>
+          <button className='ScrollTop' onClick={this.handleScrollTop} type='button'>
+            <div/>
+            <span>Scroll top</span>
+          </button>
+          <div className='Logo'>
+            <AnimatedLink href='/'>
+              <img className='Logo-image' src={`${imagesUrl}/Logo-wh.png`} alt='behind GIANT'/>
+            </AnimatedLink>
+          </div>
+          <Footer classNames='Footer--work' />
         </section>
       </>
     );

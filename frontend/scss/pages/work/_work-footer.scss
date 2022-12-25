@@ -1,0 +1,123 @@
+.Main--work {
+  section {
+    &#work-footer {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $black;
+
+      &::before {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        top: -50px;
+        left: -50%;
+        width: 100%;
+        min-width: 1280px;
+        height: 80px;
+        transform: rotate(-3deg);
+        background-color: white;
+      }
+
+      .ScrollTop {
+        all: unset;
+        position: absolute;
+        top: 75px;
+        text-align: center;
+        width: inherit;
+        color: white;
+
+        div::before {
+          content: "";
+          display: block;
+          position: relative;
+          top: 0;
+          margin: 0 auto;
+          width: 18px;
+          height: 18px;
+          border-top: 1px solid white;
+          border-left: 1px solid white;
+          transform: rotate(45deg);
+          transition: top 0.5s ease-out;
+        }
+
+        span {
+          font-weight: 400;
+          font-size: .75rem;
+          line-height: 1.0625rem;
+          display: block;
+          text-transform: uppercase;
+        }
+
+        &:focus,
+        &:hover {
+          cursor: pointer;
+
+          div::before {
+            top: -5px;
+          }
+        }
+
+        &:focus {
+          outline: 1px dotted white;
+        }
+      }
+
+      .Logo {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        top: 20px;
+        
+        img {
+          width: 100%;
+          max-width: 250px;
+          margin-left: auto;
+        }
+      }
+
+      .Footer {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      &#work-footer {
+        &::before {
+          top: -40px;
+          min-width: 1440px;
+          height: 90px;
+        }
+      }
+    }
+
+    @include for-tablet-landscape-up {
+      &#work-footer {
+        &::before {
+          min-width: 1920px;
+          height: 110px;
+        }
+
+        .ScrollTop {
+          top: 111px;
+        }
+      }
+    }
+
+    @include for-desktop-up {
+      &#work-footer {
+        &::before {
+          top: -60px;
+          min-width: 2700px;
+          height: 120px;
+        }
+      }
+    }
+  }
+}
