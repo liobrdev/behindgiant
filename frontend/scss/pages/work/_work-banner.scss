@@ -116,14 +116,6 @@
       &#work-banner {
         height: calc(100% - 120px);
 
-        .ScrollDown {
-          display: block;
-        }
-      }
-    }
-
-    @include for-tablet-landscape-up {
-      &#work-banner {
         .Intro {
           a {
             #work-banner-text {
@@ -146,6 +138,10 @@
               }
             }
           }
+        }
+
+        .ScrollDown {
+          display: block;
         }
       }
     }
