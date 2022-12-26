@@ -241,7 +241,7 @@
 
     @include for-tablet-landscape-up {
       &.Section--banner {
-        height: 656px;
+        height: 600px;
       }
 
       &#about-banner1 {
@@ -280,6 +280,10 @@
 
     @include for-desktop-up {
       &#about-banner1 {
+        .ScrollDown {
+          bottom: 25px;
+        }
+
         &::after {
           bottom: -70px;
           min-width: 2700px;
