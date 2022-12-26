@@ -32,12 +32,14 @@ const breadcrumb = JSON.stringify({
 export default class Work extends Component {
   private header: HTMLElement | null;
   private banner: HTMLElement | null;
+  private bannerBg: HTMLElement | null;
   private bannerText: HTMLElement | null;
 
   constructor(props: {}) {
     super(props);
     this.header = null;
     this.banner = null;
+    this.bannerBg = null;
     this.bannerText = null;
     this.handleScrollDown = this.handleScrollDown.bind(this);
     this.handleScrollTop = this.handleScrollTop.bind(this);
@@ -45,15 +47,17 @@ export default class Work extends Component {
   }
 
   onScroll() {
-    if (this.bannerText) {
+    if (this.bannerBg && this.bannerText) {
       if (window.innerHeight < 500) {
+        if (this.bannerBg.style.top != '0') this.bannerBg.style.top = '0';
         if (this.bannerText.style.top != '0') this.bannerText.style.top = '0';
       } else if (this.banner) {
         const { bottom } = this.banner.getBoundingClientRect();
-
+  
         if (bottom <= window.innerHeight && bottom >= 0) {
-          this.bannerText.style.top =
-            `${(window.innerHeight - bottom) / window.innerHeight * 100}%`;
+          const bannerToScreenRatio = (window.innerHeight - bottom) / window.innerHeight;
+          this.bannerBg.style.top = `${bannerToScreenRatio * 10}%`;
+          this.bannerText.style.top = `${bannerToScreenRatio * 100}%`;
         }
       }
     }
@@ -81,6 +85,7 @@ export default class Work extends Component {
     document.getElementById('main')?.addEventListener('scroll', this.onScroll);
     this.header = document.getElementById('work-header');
     this.banner = document.getElementById('work-banner');
+    this.bannerBg = document.getElementById('work-banner-bg');
     this.bannerText = document.getElementById('work-banner-text');
   }
 

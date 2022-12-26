@@ -26,11 +26,11 @@
       content: "";
       z-index: -1;
       position: absolute;
-      bottom: -20px;
+      bottom: -30px;
       left: -50%;
       width: 100%;
       min-width: 1280px;
-      height: 80px;
+      height: 90px;
       transform: rotate(-3deg);
       background-color: white;
     }
@@ -41,13 +41,13 @@
       height: 120px;
 
       .Logo {
-        top: 50px;
+        top: 60px;
       }
 
       &::after {
-        bottom: -40px;
+        bottom: -50px;
         min-width: 1440px;
-        height: 90px;
+        height: 100px;
       }
     }
   }
@@ -55,7 +55,8 @@
   @include for-tablet-landscape-up {
     header {
       &::after {
-        bottom: -50px;
+        bottom: -60px;
+        height: 120px;
         min-width: 1920px;
       }
     }
@@ -64,9 +65,9 @@
   @include for-desktop-up {
     header {
       &::after {
-        bottom: -60px;
+        bottom: -70px;
         min-width: 2700px;
-        height: 130px;
+        height: 140px;
       }
     }
   }

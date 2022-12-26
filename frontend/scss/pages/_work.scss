@@ -2,6 +2,10 @@
   .Navigation {
     .MenuIcon-container {
       .MenuIcon {
+        &:focus {
+          outline: $black dotted 1px;
+        }
+
         .MenuIcon-icon {
           .MenuIcon-icon-line {
             background-color: $black;
