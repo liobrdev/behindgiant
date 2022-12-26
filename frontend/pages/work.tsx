@@ -53,7 +53,7 @@ export default class Work extends Component {
 
         if (bottom <= window.innerHeight && bottom >= 0) {
           this.bannerText.style.top =
-            `${(window.innerHeight - bottom) / (window.innerHeight) * 100 * 1.1}%`;
+            `${(window.innerHeight - bottom) / window.innerHeight * 100}%`;
         }
       }
     }
