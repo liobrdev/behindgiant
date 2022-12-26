@@ -119,7 +119,7 @@ export default class About extends Component {
       <>
         <Head>
           <title>About</title>
-          <script type="application/ld+json">{breadcrumb}</script>
+          <script type='application/ld+json'>{breadcrumb}</script>
         </Head>
         <MediaToBeLoaded imageUrls={[
           imagesUrl + '/Logo-wh.png',
@@ -390,45 +390,54 @@ export default class About extends Component {
           <InViewWrapper animation='enter-left' unobserveOnEnter>
             <div className='LatestNews'>
               <div className='Article'>
-                <AnimatedLink href='/news/latest3'>
+                <AnimatedLink href='/news/latest3' className='TextLink'>
+                  <div className='Text'>
+                    <time dateTime='2023-01-03'>January 3, 2023</time>
+                    <h4>behind GIANT welcomes newest design team members</h4>
+                  </div>
+                </AnimatedLink>
+                <AnimatedLink href='/news/latest3' className='ThumbLink'>
                   <div className='Thumb'>
                     <div className='ThumbImage-wrapper'>
-                      <div className='ThumbImage' />
-                    </div>
-                    <div className='Thumb-info'>
-                      <time dateTime="2023-01-03"><b>3 Jan</b></time>
-                      <img src={`${imagesUrl}/Logo-bl.png`} alt='Logo' />
+                      <div className='ThumbImage' style={{
+                        backgroundImage: 'url(' + imagesUrl + '/photographer.jpg' + ')'
+                      }}/>
                     </div>
                   </div>
-                  <p>behind GIANT welcomes newest design team members</p>
                 </AnimatedLink>
               </div>
               <div className='Article'>
-                <AnimatedLink href='/news/latest2'>
+                <AnimatedLink href='/news/latest2' className='TextLink'>
+                  <div className='Text'>
+                    <time dateTime='2023-01-02'>January 2, 2023</time>
+                    <h4>Announcing upcoming Brand Company LLC partnership in Q2 2023</h4>
+                  </div>
+                </AnimatedLink>
+                <AnimatedLink href='/news/latest2' className='ThumbLink'>
                   <div className='Thumb'>
                     <div className='ThumbImage-wrapper'>
-                      <div className='ThumbImage' />
-                    </div>
-                    <div className='Thumb-info'>
-                      <time dateTime="2023-01-02"><b>2 Jan</b></time>
-                      <img src={`${imagesUrl}/Logo-bl.png`} alt='Logo' />
+                      <div className='ThumbImage' style={{
+                        backgroundImage: 'url(' + imagesUrl + '/sold.jpg' + ')'
+                      }}/>
                     </div>
                   </div>
-                  <p>Announcing new partnership with Brand Company LLC by second quarter 2023</p>
                 </AnimatedLink>
               </div>
               <div className='Article'>
-                <AnimatedLink href='/news/latest1'>
+                <AnimatedLink href='/news/latest1' className='TextLink'>
+                  <div className='Text'>
+                    <time dateTime='2023-01-01'>January 1, 2023</time>
+                    <h4>Debuting renovated online landing page</h4>
+                  </div>
+                </AnimatedLink>
+                <AnimatedLink href='/news/latest1' className='ThumbLink'>
                   <div className='Thumb'>
                     <div className='ThumbImage-wrapper'>
-                      <div className='ThumbImage' />
-                    </div>
-                    <div className='Thumb-info'>
-                      <time dateTime="2023-01-01"><b>1 Jan</b></time>
-                      <img src={`${imagesUrl}/Logo-bl.png`} alt='Logo' />
+                      <div className='ThumbImage' style={{
+                        backgroundImage: 'url(' + imagesUrl + '/ideas.jpg' + ')'
+                      }}/>
                     </div>
                   </div>
-                  <p>Debuting renovated online landing page</p>
                 </AnimatedLink>
               </div>
             </div>

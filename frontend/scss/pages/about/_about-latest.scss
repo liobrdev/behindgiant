@@ -2,7 +2,6 @@
   section {
     &#about-latest {
       font-family: $fontPrimary;
-      width: 85%;
       margin: 3rem auto;
 
       h2 {
@@ -16,20 +15,84 @@
       }
 
       .LatestNews {
-        .Article {
-          position: relative;
-          max-width: 552px;
-          display: block;
-          margin: 0 auto;
+        display: inline-flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
 
-          a {
+        .Article {
+          width: 100%;
+          position: relative;
+          text-align: center;
+          margin-bottom: 3rem;
+
+          .TextLink {
+            position: relative;
+            top: calc(100% - 8rem);
+            display: inline-block;
+            max-width: 90%;
+            height: 8rem;
+
+            .Text {
+              position: relative;
+              text-align: center;
+
+              time {
+                color: $black;
+                font-weight: 400;
+                font-size: .7rem;
+                line-height: 1.3125rem;
+                letter-spacing: 1.5px;
+                position: relative;
+                display: inline-block;
+                margin: 1rem 0 0;
+                text-transform: uppercase;
+              }
+              
+              h4 {
+                color: $black;
+                font-weight: 800;
+                font-size: 1.0625rem;
+                line-height: 1.8125rem;
+                letter-spacing: 2px;
+                position: relative;
+                text-transform: uppercase;
+                margin: 0;
+                max-height: 5.4375rem;
+                overflow: auto;
+              }
+            }
+
+            &:focus,
+            &:hover {
+              & + .ThumbLink {
+                .Thumb {
+                  .ThumbImage-wrapper .ThumbImage {
+                    opacity: 1;
+                    transform: scaleX(1.075) scaleY(1.075);
+                  }
+                  
+                  &-info {
+                    img {
+                      opacity: 0.75;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .ThumbLink {
+            position: relative;
+            top: -8rem;
+
             .Thumb {
+              position: relative;
+
               .ThumbImage {
                 &-wrapper {
                   overflow: hidden;
                   width: 100%;
-                  max-width: 552px;
-                  margin: 0 auto;
                 }
 
                 height: 0;
@@ -45,48 +108,6 @@
                 background-repeat: no-repeat;
                 background-size: cover;
               }
-
-              &-info {
-                height: 40px;
-                display: block;
-                position: relative;
-                width: 100%;
-                max-width: 552px;
-                margin: 15px auto 0;
-
-                time {
-                  display: inline-block;
-                  color: $palered;
-                  font-weight: 800;
-                  font-size: 1.375rem;
-                  line-height: 2.4375rem;
-                  letter-spacing: 3px;
-                  text-transform: uppercase;
-                }
-
-                img {
-                  display: inline-block;
-                  width: auto;
-                  max-height: 100%;
-                  opacity: 0.25;
-                  position: absolute;
-                  right: 0;
-                  transition: opacity 0.5s ease;
-                }
-              }
-            }
-
-            p {
-              color: $black;
-              font-weight: 700;
-              font-size: 1rem;
-              line-height: 1.4375rem;
-              letter-spacing: 1px;
-              text-transform: uppercase;
-              position: relative;
-              display: block;
-              margin: 15px auto 0;
-              max-width: 552px;
             }
 
             &:focus,
@@ -105,36 +126,12 @@
               }
             }
           }
-
-          & + .Article {
-            margin-top: 5rem;
-          }
-
-          &:nth-child(1) {
-            a .Thumb .ThumbImage-wrapper .ThumbImage {
-              background-image: url("https://assets.behindgiant.liobr.dev/media/images/photographer.jpg");
-            }
-          }
-
-          &:nth-child(2) {
-            a .Thumb .ThumbImage-wrapper .ThumbImage {
-              background-image: url("https://assets.behindgiant.liobr.dev/media/images/sold.jpg");
-            }
-          }
-
-          &:nth-child(3) {
-            a .Thumb .ThumbImage-wrapper .ThumbImage {
-              background-image: url("https://assets.behindgiant.liobr.dev/media/images/ideas.jpg");
-            }
-          }
         }
       }
     }
 
     @include for-tablet-portrait-up {
       &#about-latest {
-        margin: 5rem auto;
-
         h2 {
           font-size: 1.375rem;
           line-height: 1.625rem;
@@ -143,34 +140,8 @@
         }
 
         .LatestNews {
-          display: flex;
-
           .Article {
-            width: 47.5%;
-
-            a {
-              .Thumb {
-                .ThumbImage {
-                  padding-bottom: 207px;
-                }
-              }
-            }
-
-            & + .Article {
-              margin-top: unset;
-            }
-
-            &:nth-of-type(1) {
-              margin: 0 2.5% 0 auto;
-            }
-
-            &:nth-of-type(2) {
-              margin: 0 auto 0 2.5%;
-            }
-
-            &:nth-of-type(3) {
-              display: none;
-            }
+            width: 50%;
           }
         }
       }
@@ -178,8 +149,6 @@
 
     @include for-tablet-landscape-up {
       &#about-latest {
-        margin: 6rem auto;
-
         h2 {
           font-size: 1.75rem;
           font-weight: 700;
@@ -189,14 +158,7 @@
 
         .LatestNews {
           .Article {
-            a {
-              .Thumb {
-                .ThumbImage {
-                  padding-bottom: 321px;
-                  max-width: 552px;
-                }
-              }
-            }
+            width: 33.3%;
           }
         }
       }
