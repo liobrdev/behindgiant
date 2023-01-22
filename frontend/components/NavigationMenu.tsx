@@ -25,12 +25,8 @@ export default function NavigationMenu() {
             <AnimatedLink href='/work'>Work</AnimatedLink>
           </li>
           <li>
-            <small>Made by us</small>
-            <AnimatedLink href='/production'>Production</AnimatedLink>
-          </li>
-          <li>
-            <small>Incubator</small>
-            <AnimatedLink href='/ip'>IP</AnimatedLink>
+            <small>Ideas &amp; opinions</small>
+            <AnimatedLink href='/blog'>Blog</AnimatedLink>
           </li>
           <li>
             <small>Latest stories</small>

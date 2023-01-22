@@ -14,8 +14,8 @@ const breadcrumbList: IBreadcrumbListItem[] = [
   {
     "@type": "ListItem",
     position: 2,
-    name: "IP",
-    item: "https://behindgiant.com/ip"
+    name: "Blog",
+    item: "https://behindgiant.com/blog"
   }
 ];
 
@@ -25,11 +25,11 @@ const breadcrumb = JSON.stringify({
   "itemListElement": breadcrumbList
 });
 
-export default function IP() {
+export default function Blog() {
   return (
     <>
       <Head>
-        <title>behind GIANT IP</title>
+        <title>behind GIANT Blog</title>
         <script type="application/ld+json">{breadcrumb}</script>
       </Head>
       <UnderConstruction />
