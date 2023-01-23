@@ -91,13 +91,21 @@
           &:nth-of-type(2) {
             bottom: 120px;
             left: calc(50% - 200px);
-            transform: rotate(-60deg);
+            -webkit-transform: rotate(-60deg);
+               -moz-transform: rotate(-60deg);
+                -ms-transform: rotate(-60deg);
+                 -o-transform: rotate(-60deg);
+                    transform: rotate(-60deg);
           }
 
           &:nth-of-type(3) {
             bottom: 120px;
             right: calc(50% - 200px);
-            transform: rotate(60deg);
+            -webkit-transform: rotate(60deg);
+               -moz-transform: rotate(60deg);
+                -ms-transform: rotate(60deg);
+                 -o-transform: rotate(60deg);
+                    transform: rotate(60deg);
           }
 
           &:nth-of-type(4) {

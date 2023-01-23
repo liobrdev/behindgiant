@@ -120,7 +120,11 @@
         width: 100%;
         min-width: 1280px;
         height: 80px;
-        transform: rotate(-3deg);
+        -webkit-transform: rotate(-3deg);
+           -moz-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+             -o-transform: rotate(-3deg);
+                transform: rotate(-3deg);
         background-color: white;
       }
     }
@@ -144,7 +148,11 @@
           height: 18px;
           border-top: 1px solid white;
           border-left: 1px solid white;
-          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+             -moz-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+               -o-transform: rotate(45deg);
+                  transform: rotate(45deg);
           transition: top 0.5s ease-out;
         }
 
@@ -193,7 +201,11 @@
         width: 100%;
         min-width: 1280px;
         height: 80px;
-        transform: rotate(-3deg);
+        -webkit-transform: rotate(-3deg);
+           -moz-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+             -o-transform: rotate(-3deg);
+                transform: rotate(-3deg);
         background-color: white;
       }
 

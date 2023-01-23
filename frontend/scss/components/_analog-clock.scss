@@ -16,7 +16,11 @@ $size: 120px;
     left: calc(50% - 1px);
     width: 2px;
     background: none;
-    transform-origin: bottom center;
+    -webkit-transform-origin: bottom center;
+       -moz-transform-origin: bottom center;
+        -ms-transform-origin: bottom center;
+         -o-transform-origin: bottom center;
+            transform-origin: bottom center;
     border-radius: 1px;
   }
 
@@ -32,7 +36,10 @@ $size: 120px;
     height: #{($size / 2) - 20};
     margin-top: 20px;
     background: white;
-    animation: time 3600s linear infinite;
+    -webkit-animation: time 3600s linear infinite;
+       -moz-animation: time 3600s linear infinite;
+         -o-animation: time 3600s linear infinite;
+            animation: time 3600s linear infinite;
   }
 
   &-hour {
@@ -40,7 +47,10 @@ $size: 120px;
     height: #{($size / 2) - 40};
     margin-top: 40px;
     background: white;
-    animation: time 43200s linear infinite;
+    -webkit-animation: time 43200s linear infinite;
+       -moz-animation: time 43200s linear infinite;
+         -o-animation: time 43200s linear infinite;
+            animation: time 43200s linear infinite;
   }
 
   &-indicator {
@@ -49,7 +59,11 @@ $size: 120px;
 
     @for $i from 1 through 12 {
       &:nth-of-type(#{$i}) {
-        transform: rotateZ(calc(6deg * #{$i * 5}));
+        -webkit-transform: rotateZ(calc(6deg * #{$i * 5}));
+           -moz-transform: rotateZ(calc(6deg * #{$i * 5}));
+            -ms-transform: rotateZ(calc(6deg * #{$i * 5}));
+             -o-transform: rotateZ(calc(6deg * #{$i * 5}));
+                transform: rotateZ(calc(6deg * #{$i * 5}));
       }
     }
   }
@@ -65,8 +79,22 @@ $size: 120px;
   }
 }
 
+@-webkit-keyframes time {
+  to {
+    -webkit-transform: rotateZ(360deg);
+       -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+         -o-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
 @keyframes time {
   to {
-    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+       -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+         -o-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
   }
 }

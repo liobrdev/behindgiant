@@ -254,7 +254,11 @@
           position: absolute;
           left: -50%;
           width: 100%;
-          transform: rotate(-3deg);
+          -webkit-transform: rotate(-3deg);
+             -moz-transform: rotate(-3deg);
+              -ms-transform: rotate(-3deg);
+               -o-transform: rotate(-3deg);
+                  transform: rotate(-3deg);
           background-color: white;
           bottom: 33px;
           min-width: 1440px;

@@ -46,7 +46,11 @@
                 padding-bottom: 56.66667%;
                 margin: auto;
                 opacity: 0.95;
-                transform: scaleX(1) scaleY(1);
+                -webkit-transform: scaleX(1) scaleY(1);
+                   -moz-transform: scaleX(1) scaleY(1);
+                    -ms-transform: scaleX(1) scaleY(1);
+                     -o-transform: scaleX(1) scaleY(1);
+                        transform: scaleX(1) scaleY(1);
                 transition-property: opacity, transform;
                 transition-duration: 0.5s;
                 transition-timing-function: ease;
@@ -120,7 +124,11 @@
 
               .Founder .FounderImage-wrapper .FounderImage {
                 opacity: 1;
-                transform: scaleX(1.075) scaleY(1.075);
+                -webkit-transform: scaleX(1.075) scaleY(1.075);
+                   -moz-transform: scaleX(1.075) scaleY(1.075);
+                    -ms-transform: scaleX(1.075) scaleY(1.075);
+                     -o-transform: scaleX(1.075) scaleY(1.075);
+                        transform: scaleX(1.075) scaleY(1.075);
               }
             }
           }
