@@ -387,7 +387,7 @@ export default class About extends Component {
         </section>
         <section id='about-latest'>
           <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Latest news</h2></InViewWrapper>
-          <InViewWrapper animation='enter-left' unobserveOnEnter>
+          <InViewWrapper unobserveOnEnter>
             <div className='LatestNews'>
               <div className='Article'>
                 <AnimatedLink href='/news/latest3' className='TextLink'>
