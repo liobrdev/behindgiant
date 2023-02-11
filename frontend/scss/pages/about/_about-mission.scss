@@ -1,6 +1,6 @@
 .Main--about {
   section {
-    &.Section--generic {
+    &#about-mission {
       font-family: $fontPrimary;
       width: 85%;
       margin: 0 auto;
@@ -53,31 +53,8 @@
       }
     }
 
-    &#about-strategy {
-      &::before {
-        content: "";
-        z-index: 2;
-        position: absolute;
-        top: -130px;
-        left: -50%;
-        width: 100%;
-        min-width: 1280px;
-        height: 80px;
-        -webkit-transform: rotate(-3deg);
-           -moz-transform: rotate(-3deg);
-            -ms-transform: rotate(-3deg);
-             -o-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-        background-color: white;
-      }
-
-      .Row {
-        margin-top: 4rem;
-      }
-    }
-
     @include for-tablet-portrait-up {
-      &.Section--generic {
+      &#about-mission {
         margin: 5rem auto;
 
         h2 {
@@ -112,18 +89,10 @@
           }
         }
       }
-
-      &#about-strategy {
-        &::before {
-          top: -120px;
-          min-width: 1440px;
-          height: 96px;
-        }
-      }
     }
 
     @include for-tablet-landscape-up {
-      &.Section--generic {
+      &#about-mission {
         margin-top: 6rem;
 
         h2 {
@@ -141,30 +110,6 @@
           .Column {
             padding-right: 15%;
           }
-        }
-      }
-
-      &#about-strategy {
-        &::before {
-          top: -150px;
-          min-width: 1920px;
-          height: 120px;
-        }
-
-        .Row {
-          h3, .Column {
-            margin-top: 0;
-          }
-        }
-      }
-    }
-
-    @include for-desktop-up {
-      &#about-strategy {
-        &::before {
-          top: -170px;
-          min-width: 2700px;
-          height: 120px;
         }
       }
     }

@@ -131,6 +131,7 @@ export default class About extends Component {
           imagesUrl + '/photographer.jpg',
           imagesUrl + '/sold.jpg',
           imagesUrl + '/ideas.jpg',
+          imagesUrl + '/ikigai.png',
           '/twitter_white.png',
           '/instagram_white.png',
           '/facebook_white.png',
@@ -152,8 +153,10 @@ export default class About extends Component {
             <div/>
           </button>
         </section>
-        <section id='about-mission' className='Section--generic'>
-          <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Why behind GIANT?</h2></InViewWrapper>
+        <section id='about-mission'>
+          <InViewWrapper threshold={0.5} unobserveOnEnter>
+            <h2>Why behind GIANT?</h2>
+          </InViewWrapper>
           <div className='Row Row--mission'>
             <InViewWrapper threshold={0.25} unobserveOnEnter>
               <h3>
@@ -164,8 +167,8 @@ export default class About extends Component {
             <InViewWrapper threshold={0.25} unobserveOnEnter>
               <div className='Column'>
                 <p>
-                  Quis lectus nulla at volutpat diam ut &mdash; ridiculus mus mauris vitae ultricies
-                  leo integer.
+                  Quis lectus nulla at volutpat diam ut &mdash; ridiculus mus mauris vitae
+                  ultricies leo integer.
                 </p>
                 <p>
                   Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras, enim nulla
@@ -183,64 +186,8 @@ export default class About extends Component {
             </InViewWrapper>
           </div>
         </section>
-        <section id='about-beliefs'>
-          <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Our beliefs</h2></InViewWrapper>
-          <div className='Row Row--beliefs'>
-            <div className='Column'>
-              <InViewWrapper threshold={0.5} unobserveOnEnter>
-                <div className='BeliefTile'>
-                  <b>01</b>
-                  <p>
-                    Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque
-                    pulvinar.
-                  </p>
-                </div>
-              </InViewWrapper>
-              <InViewWrapper threshold={0.5} unobserveOnEnter>
-                <div className='BeliefTile'>
-                  <b>02</b>
-                  <p>
-                    Lectus magna fringilla urna porttitor. Ut ornare lectus sit amet est placerat.
-                  </p>
-                </div>
-              </InViewWrapper>
-              <InViewWrapper threshold={0.5} unobserveOnEnter>
-                <div className='BeliefTile'>
-                  <b>03</b>
-                  <p>Enim ut sem viverra aliquet eget sit amet tellus.</p>
-                </div>
-              </InViewWrapper>
-            </div>
-            <div className='Column'>
-              <InViewWrapper threshold={0.5} unobserveOnEnter>
-                <div className='BeliefTile'>
-                  <b>04</b>
-                  <p>
-                    Diam in arcu cursus euismod quis viverra nibh. Diam donec adipiscing
-                    tristique risus nec feugiat.
-                  </p>
-                </div>
-              </InViewWrapper>
-              <InViewWrapper threshold={0.5} unobserveOnEnter>
-                <div className='BeliefTile'>
-                  <b>05</b>
-                  <p>Varius sit amet mattis vulputate enim nulla aliquet porttitor.</p>
-                </div>
-              </InViewWrapper>
-              <InViewWrapper threshold={0.5} unobserveOnEnter>
-                <div className='BeliefTile'>
-                  <b>06</b>
-                  <p>
-                    Platea dictumst vestibulum rhoncus est pellentesque. Potenti nullam ac tortor
-                    vitae.
-                  </p>
-                </div>
-              </InViewWrapper>
-            </div>
-          </div>
-        </section>
         <section id='about-offerings'>
-          <InViewWrapper threshold={0.5} unobserveOnEnter><h2>What we offer</h2></InViewWrapper>
+          <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Our offerings</h2></InViewWrapper>
           <InViewWrapper animation='enter-left' unobserveOnEnter>
             <div className='Offerings'>
               <div className='Offering'>
@@ -274,28 +221,18 @@ export default class About extends Component {
             </div>
           </InViewWrapper>
         </section>
-        <section id='about-collab'>
-          <h2 id='collab-h2'><span>Collaborative</span><span>Environment</span></h2>
-          <InViewWrapper animation='triangles' threshold={0.9} unobserveOnEnter>
-            <div/>
-            <img src={`${imagesUrl}/triangles.png`} alt='triangles' />
-            <span>INNOVATION</span>
-            <span>STRATEGY</span>
-            <span>TECHNOLOGY</span>
-            <span>COMMUNITY</span>
+        <section id='about-beliefs'>
+          <InViewWrapper threshold={0.25} unobserveOnEnter>
+            <h2>What we believe</h2>
           </InViewWrapper>
-        </section>
-        <section id='about-strategy' className='Section--generic'>
           <div className='Row Row--mission'>
             <InViewWrapper threshold={0.25} unobserveOnEnter>
-              <h3>
-                Lorem ipsum <strong>dolor</strong> sit amet, <strong>consectetur </strong>
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.
-              </h3>
-            </InViewWrapper>
-            <InViewWrapper threshold={0.25} unobserveOnEnter>
               <div className='Column'>
+                <h3>
+                  Lorem ipsum <strong>dolor</strong> sit amet, <strong>consectetur </strong>
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.
+                </h3>
                 <p>
                   Tellus mauris a diam maecenas sed enim, augue mauris augue neque gravida in
                   fermentum et sollicitudin, nibh nisl condimentum id venenatis a, molestie at
@@ -312,6 +249,9 @@ export default class About extends Component {
                   etiam, et magnis dis parturient montes.
                 </p>
               </div>
+            </InViewWrapper>
+            <InViewWrapper threshold={0.25} unobserveOnEnter>
+              <img className='Ikigai-image' src={`${imagesUrl}/ikigai.png`} alt='Ikigai image' />
             </InViewWrapper>
           </div>
         </section>
@@ -374,9 +314,6 @@ export default class About extends Component {
           <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Clients</h2></InViewWrapper>
           <div className='Clients'>
             <InViewWrapper threshold={0.5} unobserveOnEnter>
-              <h3>behind GIANT has partnered with:</h3>
-            </InViewWrapper>
-            <InViewWrapper threshold={0.5} unobserveOnEnter>
               <ul>
                 {clientsRange.map(i => (
                   <li key={i}><img src={`${imagesUrl}/Logo-bl.png`} alt='Logo' /></li>
@@ -386,7 +323,7 @@ export default class About extends Component {
           </div>
         </section>
         <section id='about-latest'>
-          <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Latest news</h2></InViewWrapper>
+          <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Recent posts</h2></InViewWrapper>
           <InViewWrapper unobserveOnEnter>
             <div className='LatestNews'>
               <div className='Article'>

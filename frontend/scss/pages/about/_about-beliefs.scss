@@ -3,7 +3,7 @@
     &#about-beliefs {
       font-family: $fontPrimary;
       width: 85%;
-      margin: 3rem auto;
+      margin: 6rem auto 3rem;
 
       h2 {
         font-weight: 700;
@@ -19,41 +19,43 @@
 
       .Row {
         .Column {
-          .BeliefTile {
-            margin-top: 3rem;
+          width: 100%;
+          margin: 2rem auto;
+          max-width: 600px;
 
-            b {
-              &::before {
-                content: "";
-                width: 24px;
-                height: 4px;
-                position: relative;
-                display: inline-block;
-                margin-right: 14px;
-                background: currentcolor;
-                letter-spacing: 5px;
-                top: -8px;
-              }
+          h3 {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            font-size: 1.125rem;
+            line-height: 2rem;
+            letter-spacing: 0;
 
+            strong {
               font-weight: 700;
-              color: $palered;
-              margin-bottom: 4px;
-              font-size: 30px;
-              line-height: 36px;
-              font-size: 1.875rem;
-              line-height: 2.25rem;
-              text-align: left;
-            }
-
-            p {
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 26px;
-              font-size: .875rem;
-              line-height: 1.625rem;
-              letter-spacing: 0;
             }
           }
+
+          p {
+            margin: 0 auto;
+            margin-top: 3rem;
+            font-size: 14px;
+            line-height: 26px;
+            font-size: .875rem;
+            line-height: 1.625rem;
+            letter-spacing: 0;
+
+            & + p {
+              margin-top: 26px;
+            }
+          }
+        }
+
+        .Ikigai-image {
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+          max-width: 600px;
         }
       }
     }
@@ -69,22 +71,29 @@
         }
 
         .Row {
+          display: flex;
+
           .Column {
-            .BeliefTile {
-              text-align: center;
+            padding-right: 12.5%;
 
-              b {
-                &::before {
-                  display: none;
-                }
-              }
-
-              p {
-                font-size: 1rem;
-                line-height: 1.75rem;
-                letter-spacing: 1px;
-              }
+            h3 {
+              font-size: 1.5rem;
+              line-height: 2.8125rem;
+              font-weight: 400;
             }
+
+            p {
+              font-size: 1rem;
+              margin-top: 6.75rem;
+              line-height: 1.75rem;
+              font-weight: 400;
+              letter-spacing: 1px;
+              width: calc(100vw - 50% + 9px);
+            }
+          }
+
+          .Ikigai-image {
+            margin-top: 2rem;
           }
         }
       }
@@ -102,40 +111,10 @@
         }
 
         .Row {
-          margin-top: 3rem;
-          display: flex;
-
           .Column {
-            width: 47%;
-
-            .BeliefTile {
-              min-height: 12rem;
-
-              b {
-                &::before {
-                  display: inline-block;
-                  width: 32px;
-                  display: inline-block;
-                  margin-right: 16px;
-                  top: -11px;
-                }
-
-                font-size: 2.5rem;
-                line-height: 2.9375rem;
-                padding-right: 48px;
-              }
-
-              p {
-                text-align: left;
-              }
-            }
-
-            &:nth-of-type(1) {
-              margin-right: 3%;
-            }
-
-            &:nth-of-type(2) {
-              margin-left: 3%;
+            p {
+              margin-top: 3rem;
+              width: 100%;
             }
           }
         }

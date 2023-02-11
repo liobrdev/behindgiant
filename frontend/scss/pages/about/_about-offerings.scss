@@ -74,23 +74,6 @@
           }
         }
       }
-
-      &::after {
-        content: "";
-        z-index: 2;
-        position: absolute;
-        bottom: -75px;
-        left: -50%;
-        width: 100%;
-        min-width: 1280px;
-        height: 80px;
-        -webkit-transform: rotate(-3deg);
-           -moz-transform: rotate(-3deg);
-            -ms-transform: rotate(-3deg);
-             -o-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-        background-color: white;
-      }
     }
 
     @include for-tablet-portrait-up {
@@ -116,12 +99,6 @@
               margin-top: 0;
             }
           }
-        }
-
-        &::after {
-          bottom: -100px;
-          min-width: 1440px;
-          height: 95px;
         }
       }
     }
@@ -195,22 +172,6 @@
               margin-left: 1%;
             }
           }
-        }
-
-        &::after {
-          bottom: -150px;
-          min-width: 1920px;
-          height: 120px;
-        }
-      }
-    }
-
-    @include for-desktop-up {
-      &#about-offerings {
-        &::after {
-          bottom: -150px;
-          min-width: 2700px;
-          height: 130px;
         }
       }
     }

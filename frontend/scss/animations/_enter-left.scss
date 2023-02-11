@@ -11,10 +11,10 @@
 				-ms-transform: translateX(120px);
 				 -o-transform: translateX(120px);
 						transform: translateX(120px);
-		-webkit-transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
-			 -moz-transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
-				 -o-transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
-						transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+		-webkit-transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+			 -moz-transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+				 -o-transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+						transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
 	}
 
 	&.in-view {
