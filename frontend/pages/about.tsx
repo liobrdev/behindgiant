@@ -255,71 +255,72 @@ export default class About extends Component {
             </InViewWrapper>
           </div>
         </section>
-        <section id='about-founders'>
-          <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Our Team</h2></InViewWrapper>
-          <InViewWrapper animation='enter-right' unobserveOnEnter>
-            <div className='Founders'>
-              <div className='Founder-wrapper'>
-                <AnimatedLink href='/about/alvin-brown'>
-                  <div className='Founder'>
-                    <h3>Alvin Brown</h3>
-                    <div className='FounderImage-wrapper'>
-                      <div className='FounderImage' />
-                    </div>
-                    <div className='Founder-text'>
-                      <p>
-                        <q>Here should be a neat quote uttered at least once by this founder.</q>
-                      </p>
-                      <span>Read more</span>
-                    </div>
-                  </div>
-                </AnimatedLink>
-              </div>
-              <div className='Founder-wrapper'>
-                <AnimatedLink href='/about/breanna-doe'>
-                  <div className='Founder'>
-                    <h3>Breanna Doe</h3>
-                    <div className='FounderImage-wrapper'>
-                      <div className='FounderImage' />
-                    </div>
-                    <div className='Founder-text'>
-                      <p>
-                        <q>Here should be a neat quote uttered at least once by this founder.</q>
-                      </p>
-                      <span>Read more</span>
-                    </div>
-                  </div>
-                </AnimatedLink>
-              </div>
-              <div className='Founder-wrapper'>
-                <AnimatedLink href='/about/cole-smith'>
-                  <div className='Founder'>
-                    <h3>Cole Smith</h3>
-                    <div className='FounderImage-wrapper'>
-                      <div className='FounderImage' />
-                    </div>
-                    <div className='Founder-text'>
-                      <p>
-                        <q>Here should be a neat quote uttered at least once by this founder.</q>
-                      </p>
-                      <span>Read more</span>
-                    </div>
-                  </div>
-                </AnimatedLink>
-              </div>
+        <section id='about-who-we-are'>
+          <h3>Who we are</h3>
+          <div className='Columns'>
+            <div className='Column'>
+              <h5>
+                <span>Founder and CEO</span>&nbsp;
+                <b>Anwar Malloy</b>&nbsp;
+                <span>
+                  congue nisi vitae suscipit tellus mauris a diam. Sit amet facilisis magna etiam,
+                  et magnis dis parturient montes.
+                </span>
+              </h5>
+              <img src={imagesUrl + '/stock-portrait-man2.jpg'} alt='Photo of CEO' />
             </div>
-          </InViewWrapper>
+            <div className='Column'>
+              <p>
+                <q>Here should be a neat quote uttered at least once by this founder.</q>&nbsp;
+                <i>Read more</i>
+              </p>
+              <p>
+                <span>
+                  Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras, enim nulla
+                  aliquet porttitor lacus luctus accumsan.
+                </span>
+              </p>
+              <p>
+                <span>
+                  Lectus magna fringilla urna porttitor rhoncus dolor purus non enim, vehicula
+                  ipsum a arcu cursus vitae.
+                </span>
+              </p>
+              <p>
+                <span>
+                  Volutpat odio facilisis mauris sit amet massa. Convallis tellus id interdum
+                  velit laoreet id donec ultrices tincidunt. 
+                </span>
+              </p>
+            </div>
+          </div>
         </section>
         <section id='about-clients'>
-          <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Clients</h2></InViewWrapper>
-          <div className='Clients'>
-            <InViewWrapper threshold={0.5} unobserveOnEnter>
-              <ul>
-                {clientsRange.map(i => (
-                  <li key={i}><img src={`${imagesUrl}/Logo-bl.png`} alt='Logo' /></li>
-                ))}
-              </ul>
-            </InViewWrapper>
+          <h3>Clients</h3>
+          <div>
+            <h5>
+              <span>behind Giant has partnered with:</span>
+            </h5>
+            <ul>
+              <li>
+                <span>Putative Brand</span>
+              </li>
+              <li>
+                <span>Adeedok Shoes</span>
+              </li>
+              <li>
+                <span>Iconic Agency</span>
+              </li>
+              <li>
+                <span>Old & News Clothing</span>
+              </li>
+            </ul>
+            <h5>
+              <span>+ several other brands, individuals, and creative agencies.</span>&nbsp;
+              <AnimatedLink href='/contact'><strong>Talk to us</strong></AnimatedLink>&nbsp;
+              <span>&mdash;</span>&nbsp;
+              <span>we'd love to work with you.</span>
+            </h5>
           </div>
         </section>
         <section id='about-latest'>

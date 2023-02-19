@@ -5,7 +5,7 @@
       width: 85%;
       margin: 3rem auto;
 
-      h2 {
+      h3 {
         font-weight: 700;
         font-size: 1.125rem;
         line-height: 1.3125rem;
@@ -15,50 +15,44 @@
         margin: 6rem auto 3rem;
       }
 
-      .Clients {
+      div {
         position: relative;
 
-        h3 {
+        h5,
+        ul li {
+          font-size: 16px;
+          font-size: 1rem;
           font-weight: 400;
-          font-size: .875rem;
+          line-height: 28px;
           line-height: 1.75rem;
-          padding: 4px 0;
-          margin-bottom: 12px;
+          letter-spacing: 1px;
+          margin-bottom: 24px;
+          margin-bottom: 1.5rem;
         }
 
         ul {
-          padding-left: 0;
-          margin: 0;
-          margin-right: -50px;
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 0 1rem;
 
           li {
-            display: inline-block;
-            position: relative;
-            margin-right: 50px;
-            margin-bottom: 10px;
-            height: 30px;
-
-            img {
-              display: block;
-              width: auto;
-              height: 100%;
-              opacity: 0.7;
-              transition: opacity 1s linear;
-              -webkit-transform: translate(0, -50%);
-                 -moz-transform: translate(0, -50%);
-                  -ms-transform: translate(0, -50%);
-                   -o-transform: translate(0, -50%);
-                      transform: translate(0, -50%);
-              position: relative;
-              top: 50%;
-
-              &:hover,
-              &:focus {
-                opacity: 1;
-              }
-            }
+            display: inline list-item;
+            list-style: inherit;
+            margin-bottom: 16px;
+            margin-bottom: 1rem;
+            margin-right: 80px;
+            margin-right: 5rem;
           }
         }
+
+        // h5 {
+        //   margin: 0 auto 1.5rem;
+        //   font-size: 16px;
+        //   line-height: 26px;
+        //   font-size: .875rem;
+        //   line-height: 1.625rem;
+        //   letter-spacing: 0;
+        // }
       }
     }
 
@@ -66,7 +60,7 @@
       &#about-clients {
         margin: 5rem auto;
 
-        h2 {
+        h3 {
           font-size: 1.375rem;
           line-height: 1.625rem;
           letter-spacing: 3px;
@@ -93,7 +87,7 @@
       &#about-clients {
         margin: 6rem auto;
 
-        h2 {
+        h3 {
           font-size: 1.75rem;
           font-weight: 700;
           line-height: 2.0625rem;
