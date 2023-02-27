@@ -154,36 +154,43 @@ export default class About extends Component {
           </button>
         </section>
         <section id='about-mission'>
-          <InViewWrapper threshold={0.5} unobserveOnEnter>
-            <h2>Why behind GIANT?</h2>
-          </InViewWrapper>
-          <div className='Row Row--mission'>
-            <InViewWrapper threshold={0.25} unobserveOnEnter>
-              <h3>
-                <strong>behind GIANT&apos;s mission</strong> is consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </h3>
-            </InViewWrapper>
-            <InViewWrapper threshold={0.25} unobserveOnEnter>
-              <div className='Column'>
-                <p>
+          <h3>WHY behind GIANT?</h3>
+          <div className='Columns'>
+            <div className='Column'>
+              <h5>
+                <strong>Our mission</strong>&nbsp;
+                <span>
+                  is consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+                </span>
+              </h5>
+            </div>
+            <div className='Column'>
+              <p>
+                <span>
                   Quis lectus nulla at volutpat diam ut &mdash; ridiculus mus mauris vitae
                   ultricies leo integer.
-                </p>
-                <p>
+                </span>
+              </p>
+              <p>
+                <span>
                   Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras, enim nulla
                   aliquet porttitor lacus luctus accumsan.
-                </p>
-                <p>
+                </span>
+              </p>
+              <p>
+                <span>
                   Lectus magna fringilla urna porttitor rhoncus dolor purus non enim, vehicula
                   ipsum a arcu cursus vitae.
-                </p>
-                <p>
+                </span>
+              </p>
+              <p>
+                <span>
                   Volutpat odio facilisis mauris sit amet massa. Convallis tellus id interdum
                   velit laoreet id donec ultrices tincidunt. 
-                </p>
-              </div>
-            </InViewWrapper>
+                </span>
+              </p>
+            </div>
           </div>
         </section>
         <section id='about-offerings'>

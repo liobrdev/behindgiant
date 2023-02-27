@@ -5,48 +5,51 @@
       width: 85%;
       margin: 0 auto;
 
-      h2 {
+      h3 {
         font-weight: 700;
-        font-size: 1.125rem;
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 21px;
         line-height: 1.3125rem;
         letter-spacing: 1px;
-        text-transform: uppercase;
+        letter-spacing: .0625rem;
+        margin: 64px auto 48px;
         margin: 4rem auto 3rem;
-        position: absolute;
-        top: -8.3125rem;
         width: 100%;
         text-align: center;
       }
 
-      .Row {
-        margin-top: 8.3125rem;
-
-        h3 {
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 32px;
-          font-size: 1.125rem;
-          line-height: 2rem;
-          letter-spacing: 0;
-
-          strong {
-            font-weight: 700;
-          }
-        }
-
+      .Columns {
         .Column {
+          margin: 48px 0;
           margin: 3rem 0;
 
-          p {
-            margin: 0 auto;
-            font-size: 14px;
-            line-height: 26px;
-            font-size: .875rem;
-            line-height: 1.625rem;
-            letter-spacing: 0;
+          &:first-of-type {
+            h5 {
+              font-weight: 400;
+              font-size: 20px;
+              font-size: 1.25rem;
+              line-height: 32px;
+              line-height: 2rem;
+              letter-spacing: 1px;
+              letter-spacing: .0625rem;
+              margin-bottom: 48px;
+              margin-bottom: 3rem;
+            }
+          }
 
-            & + p {
-              margin-top: 26px;
+          &:last-of-type {
+            p {
+              font-weight: 400;
+              font-size: 16px;
+              font-size: 1rem;
+              line-height: 28px;
+              line-height: 1.75rem;
+              letter-spacing: 1px;
+              letter-spacing: .0625rem;
+              margin-bottom: 24px;
+              margin-bottom: 1.5rem;
+              margin-top: 0;
             }
           }
         }
@@ -55,36 +58,25 @@
 
     @include for-tablet-portrait-up {
       &#about-mission {
+        margin: 80px auto;
         margin: 5rem auto;
 
-        h2 {
-          font-size: 1.375rem;
-          line-height: 1.625rem;
-          letter-spacing: 3px;
+        h3 {
+          font-size: 30px;
+          font-size: 1.875rem;
+          margin: 96px auto 80px;
+          margin: 6rem auto 5rem;
         }
 
-        .Row {
-          display: flex;
-
-          & > div {
-            width: 50%;
-          }
-
-          h3 {
-            font-size: 1.5rem;
-            line-height: 2.8125rem;
-            font-weight: 400;
-            padding-right: 25%;
-          }
-
+        .Columns {
           .Column {
-            margin: 0;
-
-            p {
-              font-size: 1rem;
-              line-height: 1.75rem;
-              font-weight: 400;
-              letter-spacing: 1px;
+            &:first-of-type {
+              h5 {
+                font-size: 24px;
+                font-size: 1.5rem;
+                line-height: 45px;
+                line-height: 2.8125rem;
+              }
             }
           }
         }
@@ -93,22 +85,17 @@
 
     @include for-tablet-landscape-up {
       &#about-mission {
-        margin-top: 6rem;
-
-        h2 {
-          font-size: 1.75rem;
-          font-weight: 700;
-          line-height: 2.0625rem;
-          letter-spacing: 4px;
-        }
-
-        .Row {
-          h3, .Column {
-            margin-top: 4rem;
-          }
+        .Columns {
+          display: flex;
 
           .Column {
-            padding-right: 15%;
+            width: 50%;
+            margin: 0;
+
+            &:first-of-type {
+              display: block;
+              padding-right: 10%;
+            }
           }
         }
       }
