@@ -3,17 +3,20 @@
     &#about-offerings {
       font-family: $fontPrimary;
       width: 85%;
+      margin: 48px auto;
       margin: 3rem auto;
 
       h2 {
         font-weight: 700;
         font-size: 18px;
-        line-height: 32px;
         font-size: 1.125rem;
+        line-height: 32px;
         line-height: 1.3125rem;
         letter-spacing: 1px;
+        letter-spacing: .0625rem;
         text-transform: uppercase;
         text-align: center;
+        margin: 96px auto 48px;
         margin: 6rem auto 3rem;
       }
 
@@ -22,7 +25,10 @@
           text-align: center;
           position: relative;
           border-radius: 3px;
-          box-shadow: 0px 1px 10px 3px #D8D8D8;
+          border-radius: .3125rem;
+          box-shadow: 0 1px 10px 3px #D8D8D8;
+          box-shadow: 0 .0625rem .625rem .1875rem #D8D8D8;
+          padding: 32px 32px 64px;
           padding: 2rem 2rem 4rem;
           margin: 0 auto;
 
@@ -33,6 +39,7 @@
             position: relative;
             width: 100px;
             height: 120px;
+            margin: 8px auto;
             margin: 0.5rem auto;            
 
             img {
@@ -44,10 +51,14 @@
           h3 {
             color: orange;
             font-weight: 800;
+            font-size: 18px;
             font-size: 1.125rem;
+            line-height: 21px;
             line-height: 1.3125rem;
             letter-spacing: 2px;
+            letter-spacing: .125rem;
             text-transform: uppercase;
+            margin: 16px 0;
             margin: 1rem 0;
           }
 
@@ -57,10 +68,12 @@
             font-size: 1rem;
             line-height: 22px;
             line-height: 1.375rem;
+            margin: 8px auto;
             margin: 0.5rem auto;
           }
 
           & + .Offering {
+            margin-top: 80px;
             margin-top: 5rem;
           }
         }
@@ -70,9 +83,12 @@
     @include for-tablet-portrait-up {
       &#about-offerings {
         h2 {
+          font-size: 22px;
           font-size: 1.375rem;
+          line-height: 26px;
           line-height: 1.625rem;
           letter-spacing: 3px;
+          letter-spacing: .1875rem;
         }
 
         .Offerings {
@@ -85,17 +101,22 @@
 
     @include for-tablet-landscape-up {
       &#about-offerings {
+        margin: 96px auto;
         margin: 6rem auto;
 
         h2 {
-          font-size: 1.75rem;
           font-weight: 700;
+          font-size: 28px;
+          font-size: 1.75rem;
+          line-height: 33px;
           line-height: 2.0625rem;
           letter-spacing: 4px;
+          letter-spacing: .25rem;
         }
 
         .Offerings {
           display: flex;
+          margin-top: 96px;
           margin-top: 6rem;
 
           .Offering {
