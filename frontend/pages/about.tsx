@@ -124,14 +124,14 @@ export default class About extends Component {
         <MediaToBeLoaded imageUrls={[
           imagesUrl + '/Logo-wh.png',
           imagesUrl + '/tokyo.jpg',
-          imagesUrl + '/triangles.png',
-          imagesUrl + '/stock-portrait-woman1.jpg',
-          imagesUrl + '/stock-portrait-man1.jpg',
+          imagesUrl + '/meeting-icon.png',
+          imagesUrl + '/puzzle-icon.png',
+          imagesUrl + '/gears-icon.png',
+          imagesUrl + '/ikigai.png',
           imagesUrl + '/stock-portrait-man2.jpg',
           imagesUrl + '/photographer.jpg',
           imagesUrl + '/sold.jpg',
           imagesUrl + '/ideas.jpg',
-          imagesUrl + '/ikigai.png',
           '/twitter_white.png',
           '/instagram_white.png',
           '/facebook_white.png',
@@ -142,7 +142,7 @@ export default class About extends Component {
           <div className='Banner-overlay' />
           <div className='Intro Intro--about'>
             <div className='Logo'>
-              <img className='Logo-image' src={`${imagesUrl}/Logo-wh.png`} alt='behind GIANT' />
+              <img className='Logo-image' src={imagesUrl + '/Logo-wh.png'} alt='behind GIANT' />
             </div>
             <div className='IntroText IntroText--about'>
               <h1>A consultancy and creative agency, purposefully built for the modern age.</h1>
@@ -191,7 +191,9 @@ export default class About extends Component {
           <InViewWrapper animation='enter-left' unobserveOnEnter>
             <div className='Offerings'>
               <div className='Offering'>
-                <b>01</b>
+                <div className='IconContainer'>
+                  <img src={imagesUrl + '/meeting-icon.png'} alt='' width='100px' />
+                </div>
                 <h3>Consulting &amp; Strategy</h3>
                 <p>Brand Strategy &amp; Marketing</p>
                 <p>Data &amp; Analytics</p>
@@ -199,7 +201,9 @@ export default class About extends Component {
                 <p>Digital Integration</p>
               </div>
               <div className='Offering'>
-                <b>02</b>
+                <div className='IconContainer'>
+                  <img src={imagesUrl + '/puzzle-icon.png'} alt='' width='100px' />
+                </div>
                 <h3>Creative</h3>
                 <p>Storytelling</p>
                 <p>Experiential Marketing</p>
@@ -210,7 +214,9 @@ export default class About extends Component {
                 <p>Mobile</p>
               </div>
               <div className='Offering'>
-                <b>03</b>
+                <div className='IconContainer'>
+                  <img src={imagesUrl + '/gears-icon.png'} alt='' width='100px' />
+                </div>                
                 <h3>Production</h3>
                 <p>Film &amp; TV Production</p>
                 <p>Social Content Creation</p>
@@ -251,7 +257,7 @@ export default class About extends Component {
               </div>
             </InViewWrapper>
             <InViewWrapper threshold={0.25} unobserveOnEnter>
-              <img className='Ikigai-image' src={`${imagesUrl}/ikigai.png`} alt='Ikigai image' />
+              <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image' />
             </InViewWrapper>
           </div>
         </section>
@@ -390,7 +396,7 @@ export default class About extends Component {
           </button>
           <div className='Logo'>
             <AnimatedLink href='/'>
-              <img className='Logo-image' src={`${imagesUrl}/Logo-wh.png`} alt='behind GIANT'/>
+              <img className='Logo-image' src={imagesUrl + '/Logo-wh.png'} alt='behind GIANT'/>
             </AnimatedLink>
           </div>
           <Footer classNames='Footer--about' />
