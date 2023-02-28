@@ -194,45 +194,43 @@ export default class About extends Component {
           </div>
         </section>
         <section id='about-offerings'>
-          <InViewWrapper threshold={0.5} unobserveOnEnter><h2>Our offerings</h2></InViewWrapper>
-          <InViewWrapper animation='enter-left' unobserveOnEnter>
-            <div className='Offerings'>
-              <div className='Offering'>
-                <div className='IconContainer'>
-                  <img src={imagesUrl + '/meeting-icon.png'} alt='' width='100px' />
-                </div>
-                <h3>Consulting &amp; Strategy</h3>
-                <p>Brand Strategy &amp; Marketing</p>
-                <p>Data &amp; Analytics</p>
-                <p>Consumer Insights</p>
-                <p>Digital Integration</p>
+          <h3>OUR OFFERINGS</h3>
+          <div className='Offerings'>
+            <div className='Offering'>
+              <div className='IconContainer'>
+                <img src={imagesUrl + '/meeting-icon.png'} alt='' width='100px' />
               </div>
-              <div className='Offering'>
-                <div className='IconContainer'>
-                  <img src={imagesUrl + '/puzzle-icon.png'} alt='' width='100px' />
-                </div>
-                <h3>Creative</h3>
-                <p>Storytelling</p>
-                <p>Experiential Marketing</p>
-                <p>Print &amp; OOH</p>
-                <p>Branding &amp; Design</p>
-                <p>Social</p>
-                <p>User Experience Design</p>
-                <p>Mobile</p>
-              </div>
-              <div className='Offering'>
-                <div className='IconContainer'>
-                  <img src={imagesUrl + '/gears-icon.png'} alt='' width='100px' />
-                </div>                
-                <h3>Production</h3>
-                <p>Film &amp; TV Production</p>
-                <p>Social Content Creation</p>
-                <p>Directing</p>
-                <p>Post Production</p>
-                <p>Prototype Development</p>
-              </div>
+              <h5>Consulting &amp; Strategy</h5>
+              <p>Brand Strategy &amp; Marketing</p>
+              <p>Data &amp; Analytics</p>
+              <p>Consumer Insights</p>
+              <p>Digital Integration</p>
             </div>
-          </InViewWrapper>
+            <div className='Offering'>
+              <div className='IconContainer'>
+                <img src={imagesUrl + '/puzzle-icon.png'} alt='' width='100px' />
+              </div>
+              <h5>Creative</h5>
+              <p>Storytelling</p>
+              <p>Experiential Marketing</p>
+              <p>Print &amp; OOH</p>
+              <p>Branding &amp; Design</p>
+              <p>Social</p>
+              <p>User Experience Design</p>
+              <p>Mobile</p>
+            </div>
+            <div className='Offering'>
+              <div className='IconContainer'>
+                <img src={imagesUrl + '/gears-icon.png'} alt='' width='100px' />
+              </div>                
+              <h5>Production</h5>
+              <p>Film &amp; TV Production</p>
+              <p>Social Content Creation</p>
+              <p>Directing</p>
+              <p>Post Production</p>
+              <p>Prototype Development</p>
+            </div>
+          </div>
         </section>
         <section id='about-beliefs'>
           <InViewWrapper threshold={0.25} unobserveOnEnter>
