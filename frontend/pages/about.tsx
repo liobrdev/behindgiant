@@ -157,7 +157,7 @@ export default class About extends Component {
           <div className='Columns'>
             <div className='Column'>
               <h5>
-                <strong>behind Giant&apos;s mission</strong>&nbsp;
+                <strong>behind Giant&apos;s mission</strong>&nbsp;<wbr/>
                 <span>
                   is consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                   dolore magna aliqua.
@@ -232,37 +232,57 @@ export default class About extends Component {
           </div>
         </section>
         <section id='about-beliefs'>
-          <InViewWrapper threshold={0.25} unobserveOnEnter>
-            <h2>What we believe</h2>
-          </InViewWrapper>
-          <div className='Row Row--mission'>
-            <InViewWrapper threshold={0.25} unobserveOnEnter>
-              <div className='Column'>
-                <h3>
-                  Lorem ipsum <strong>dolor</strong> sit amet, <strong>consectetur </strong>
+          <h3>WHAT WE BELIEVE</h3>
+          <div className='Columns'>
+            <div className='Column'>
+              <h5>
+                <span>Lorem ipsum</span>&nbsp;<wbr/>
+                <strong>dolor</strong>&nbsp;<wbr/>
+                <span>sit amet,</span>&nbsp;<wbr/>
+                <strong>consectetur</strong>&nbsp;<wbr/>
+                <span>
                   adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                   aliqua.
-                </h3>
-                <p>
+                </span>
+              </h5>
+              <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image' />
+            </div>
+            <div className='Column'>
+              <h5>
+                <span>Lorem ipsum</span>&nbsp;<wbr/>
+                <strong>dolor</strong>&nbsp;<wbr/>
+                <span>sit amet,</span>&nbsp;<wbr/>
+                <strong>consectetur</strong>&nbsp;<wbr/>
+                <span>
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.
+                </span>
+              </h5>
+              <p>
+                <span>
                   Tellus mauris a diam maecenas sed enim, augue mauris augue neque gravida in
                   fermentum et sollicitudin, nibh nisl condimentum id venenatis a, molestie at
                   elementum eu facilisis sed odio aoreet suspendisse interdum consectetur libero
                   id faucibus nisl tincidunt eget.
-                </p>
-                <p>
+                </span>
+              </p>
+              <p>
+                <span>
                   Sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Interdum
                   consectetur libero id faucibus nisl tincidunt eget nullam, neque convallis a
                   cras semper auctor neque.
-                </p>
-                <p>
+                </span>
+              </p>
+              <p>
+                <span>
                   Nunc congue nisi vitae suscipit tellus mauris a diam. Sit amet facilisis magna
                   etiam, et magnis dis parturient montes.
-                </p>
-              </div>
-            </InViewWrapper>
-            <InViewWrapper threshold={0.25} unobserveOnEnter>
+                </span>
+              </p>
+            </div>
+            <div className='Column'>
               <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image' />
-            </InViewWrapper>
+            </div>
           </div>
         </section>
         <section id='about-who-we-are'>
@@ -270,8 +290,8 @@ export default class About extends Component {
           <div className='Columns'>
             <div className='Column'>
               <h5>
-                <span>Founder and CEO</span>&nbsp;
-                <b>Anwar Malloy</b>&nbsp;
+                <span>Founder and CEO</span>&nbsp;<wbr/>
+                <b>Anwar Malloy</b>&nbsp;<wbr/>
                 <span>
                   congue nisi vitae suscipit tellus mauris a diam. Sit amet facilisis magna etiam,
                   et magnis dis parturient montes.
@@ -281,7 +301,7 @@ export default class About extends Component {
             </div>
             <div className='Column'>
               <p>
-                <q>Here should be a neat quote uttered at least once by this founder.</q>&nbsp;
+                <q>Here should be a neat quote uttered at least once by this founder.</q>&nbsp;<wbr/>
                 <i>Read more</i>
               </p>
               <p>
@@ -326,9 +346,9 @@ export default class About extends Component {
               </li>
             </ul>
             <h5>
-              <span>+ several other brands, individuals, and creative agencies.</span>&nbsp;
-              <AnimatedLink href='/contact'><strong>Talk to us</strong></AnimatedLink>&nbsp;
-              <span>&mdash;</span>&nbsp;
+              <span>+ several other brands, individuals, and creative agencies.</span>&nbsp;<wbr/>
+              <AnimatedLink href='/contact'><strong>Talk to us</strong></AnimatedLink>&nbsp;<wbr/>
+              <span>&mdash;</span>&nbsp;<wbr/>
               <span>we'd love to work with you.</span>
             </h5>
           </div>

@@ -3,97 +3,125 @@
     &#about-beliefs {
       font-family: $fontPrimary;
       width: 85%;
+      margin: 96px auto 48px;
       margin: 6rem auto 3rem;
 
-      h2 {
+      h3 {
         font-weight: 700;
-        font-size: 18px;
-        line-height: 32px;
-        font-size: 1.125rem;
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 21px;
         line-height: 1.3125rem;
         letter-spacing: 1px;
-        text-transform: uppercase;
+        letter-spacing: .0625rem;
+        margin: 64px auto 48px;
+        margin: 4rem auto 3rem;
         text-align: center;
-        margin: 6rem auto 3rem;
       }
 
-      .Row {
+      .Columns {
         .Column {
           width: 100%;
-          margin: 2rem auto;
-          max-width: 600px;
 
-          h3 {
+          h5 {
             font-weight: 400;
-            font-size: 18px;
+            font-size: 20px;
+            font-size: 1.25rem;
             line-height: 32px;
-            font-size: 1.125rem;
             line-height: 2rem;
-            letter-spacing: 0;
+            letter-spacing: 1px;
+            letter-spacing: .0625rem;
+            margin-bottom: 48px;
+            margin-bottom: 3rem;
 
             strong {
               font-weight: 700;
             }
           }
 
-          p {
+          .Ikigai-image {
+            display: block;
+            width: 100%;
             margin: 0 auto;
-            margin-top: 3rem;
-            font-size: 14px;
-            line-height: 26px;
-            font-size: .875rem;
-            line-height: 1.625rem;
-            letter-spacing: 0;
+            max-width: 600px;
+          }
 
-            & + p {
-              margin-top: 26px;
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            font-size: 1rem;
+            line-height: 28px;
+            line-height: 1.75rem;
+            letter-spacing: 1px;
+            letter-spacing: .0625rem;
+            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+
+            &:last-of-type {
+              margin-bottom: 48px;
+              margin-bottom: 3rem;
             }
           }
-        }
 
-        .Ikigai-image {
-          display: block;
-          width: 100%;
-          margin: 0 auto;
-          max-width: 600px;
+          &:nth-of-type(1) {
+            .Ikigai-image {
+              display: none;
+            }
+          }
+
+          &:nth-of-type(2) {
+            h5 {
+              display: none;
+            }
+          }
         }
       }
     }
 
     @include for-tablet-portrait-up {
       &#about-beliefs {
-        margin: 5rem auto;
-
-        h2 {
-          font-size: 1.375rem;
-          line-height: 1.625rem;
-          letter-spacing: 3px;
+        h3 {
+          font-size: 30px;
+          font-size: 1.875rem;
+          letter-spacing: 2px;
+          letter-spacing: .125rem;
+          margin: 112px auto 80px;
+          margin: 7rem auto 5rem;
         }
 
-        .Row {
-          display: flex;
-
+        .Columns {
           .Column {
-            padding-right: 12.5%;
-
-            h3 {
+            h5 {
+              font-size: 24px;
               font-size: 1.5rem;
+              line-height: 45px;
               line-height: 2.8125rem;
-              font-weight: 400;
             }
 
-            p {
-              font-size: 1rem;
-              margin-top: 6.75rem;
-              line-height: 1.75rem;
-              font-weight: 400;
-              letter-spacing: 1px;
-              width: calc(100vw - 50% + 9px);
-            }
-          }
+            &:nth-of-type(1) {
+              display: flex;
+              margin-bottom: 48px;
+              margin-bottom: 3rem;
 
-          .Ikigai-image {
-            margin-top: 2rem;
+              h5 {
+                width: 50%;
+                overflow-wrap: anywhere;
+                padding-right: 32px;
+                padding-right: 2rem;
+                margin-bottom: 0;
+              }
+
+              .Ikigai-image {
+                display: block;
+                width: 50%;
+                height: min-content;
+              }
+            }
+
+            &:nth-of-type(3) {
+              display: none;
+            }
           }
         }
       }
@@ -101,20 +129,35 @@
 
     @include for-tablet-landscape-up {
       &#about-beliefs {
-        margin: 6rem auto;
+        margin: 5rem auto;
 
-        h2 {
-          font-size: 1.75rem;
-          font-weight: 700;
-          line-height: 2.0625rem;
-          letter-spacing: 4px;
-        }
+        .Columns {
+          display: flex;
 
-        .Row {
           .Column {
-            p {
-              margin-top: 3rem;
+            p:last-of-type {
+              margin-bottom: 24px;
+              margin-bottom: 1.5rem;
+            }
+
+            &:nth-of-type(1) {
+              display: none;
+            }
+
+            &:nth-of-type(2) {
               width: 100%;
+              padding-right: 10%;
+
+              h5 {
+                display: block;
+                margin-bottom: 48px;
+                margin-bottom: 3rem;
+              }
+            }
+
+            &:nth-of-type(3) {
+              width: 100%;
+              display: block;
             }
           }
         }
