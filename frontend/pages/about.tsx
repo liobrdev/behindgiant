@@ -154,11 +154,10 @@ export default class About extends Component {
           </button>
         </section>
         <section id='about-mission'>
-          <h3>WHY behind GIANT?</h3>
           <div className='Columns'>
             <div className='Column'>
               <h5>
-                <strong>Our mission</strong>&nbsp;
+                <strong>behind Giant&apos;s mission</strong>&nbsp;
                 <span>
                   is consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                   dolore magna aliqua.
