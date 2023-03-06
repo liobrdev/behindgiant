@@ -3,16 +3,20 @@
     &#about-who-we-are {
       font-family: $fontPrimary;
       width: 85%;
-      margin: 3rem auto;
+      margin: 96px auto 48px;
+      margin: 6rem auto 3rem;
 
       h3 {
         font-weight: 700;
-        font-size: 1.125rem;
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 21px;
         line-height: 1.3125rem;
         letter-spacing: 1px;
-        text-transform: uppercase;
+        letter-spacing: .0625rem;
+        margin: 64px auto 48px;
+        margin: 4rem auto 3rem;
         text-align: center;
-        margin: 6rem auto 3rem;
       }
 
       .Columns {
@@ -20,12 +24,18 @@
           &:first-of-type {
             h5 {
               font-weight: 400;
-              font-size: 18px;
+              font-size: 20px;
+              font-size: 1.25rem;
               line-height: 32px;
-              font-size: 1.125rem;
               line-height: 2rem;
-              letter-spacing: 0;
+              letter-spacing: 1px;
+              letter-spacing: .0625rem;
+              margin-bottom: 48px;
               margin-bottom: 3rem;
+
+              strong {
+                font-weight: 700;
+              }
             }
   
             img {
@@ -36,14 +46,21 @@
 
           &:last-of-type {
             p {
+              font-weight: 400;
               font-size: 16px;
               font-size: 1rem;
-              font-weight: 400;
               line-height: 28px;
               line-height: 1.75rem;
               letter-spacing: 1px;
+              letter-spacing: .0625rem;
               margin-bottom: 24px;
               margin-bottom: 1.5rem;
+              margin-top: 0;
+
+              &:last-of-type {
+                margin-bottom: 48px;
+                margin-bottom: 3rem;
+              }
             }
           }
         }
@@ -52,12 +69,12 @@
 
     @include for-tablet-portrait-up {
       &#about-who-we-are {
-        margin: 5rem auto;
-
         h3 {
-          font-size: 1.375rem;
-          line-height: 1.625rem;
-          letter-spacing: 3px;
+          font-size: 30px;
+          font-size: 1.875rem;
+          letter-spacing: 2px;
+          letter-spacing: .125rem;
+          margin: 112px auto 80px;
           margin: 6rem auto 5rem;
         }
 
@@ -73,23 +90,24 @@
               }
 
               h5 {
+                font-size: 24px;
                 font-size: 1.5rem;
-                font-weight: 400;
+                line-height: 45px;
                 line-height: 2.8125rem;
               }
 
               img {
                 height: min-content;
+                padding-right: 32px;
                 padding-right: 2rem;
               }
             }
 
             &:last-of-type {
               p {
-                font-size: 1rem;
-                line-height: 1.75rem;
-                font-weight: 400;
-                letter-spacing: 1px;
+                &:last-of-type {
+                  margin-bottom: 0;
+                }
               }
             }
           }
@@ -99,15 +117,6 @@
 
     @include for-tablet-landscape-up {
       &#about-who-we-are {
-        margin: 6rem auto;
-
-        h3 {
-          font-size: 1.75rem;
-          font-weight: 700;
-          line-height: 2.0625rem;
-          letter-spacing: 4px;
-        }
-
         .Columns {
           display: flex;
 

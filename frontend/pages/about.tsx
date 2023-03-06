@@ -286,7 +286,7 @@ export default class About extends Component {
           </div>
         </section>
         <section id='about-who-we-are'>
-          <h3>Who we are</h3>
+          <h3>WHO WE ARE</h3>
           <div className='Columns'>
             <div className='Column'>
               <h5>
@@ -301,8 +301,10 @@ export default class About extends Component {
             </div>
             <div className='Column'>
               <p>
-                <q>Here should be a neat quote uttered at least once by this founder.</q>&nbsp;<wbr/>
-                <i>Read more</i>
+                <q>
+                  Morbi volutpat ipsum quis est vestibulum, et porta diam eleifend. Ut volutpat
+                  condimentum lacinia.
+                </q>
               </p>
               <p>
                 <span>
