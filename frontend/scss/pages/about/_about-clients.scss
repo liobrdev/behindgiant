@@ -3,111 +3,111 @@
     &#about-clients {
       font-family: $fontPrimary;
       width: 85%;
-      margin: 3rem auto;
+      margin: 96px auto 48px;
+      margin: 6rem auto 3rem;
 
       h3 {
         font-weight: 700;
-        font-size: 1.125rem;
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 21px;
         line-height: 1.3125rem;
         letter-spacing: 1px;
-        text-transform: uppercase;
+        letter-spacing: .0625rem;
+        margin: 64px auto 48px;
+        margin: 4rem auto 3rem;
         text-align: center;
-        margin: 6rem auto 3rem;
       }
 
-      div {
-        position: relative;
+      .Columns {
+        .Column {
+          &:first-of-type {
+            p,
+            ul li {
+              font-weight: 400;
+              font-size: 16px;
+              font-size: 1rem;
+              line-height: 28px;
+              line-height: 1.75rem;
+              letter-spacing: 1px;
+              letter-spacing: .0625rem;
+              margin-bottom: 24px;
+              margin-bottom: 1.5rem;
+              margin-top: 0;
+            }
 
-        h5,
-        ul li {
-          font-size: 16px;
-          font-size: 1rem;
-          font-weight: 400;
-          line-height: 28px;
-          line-height: 1.75rem;
-          letter-spacing: 1px;
-          margin-bottom: 24px;
-          margin-bottom: 1.5rem;
-        }
+            p {
+              &:last-of-type {
+                margin-bottom: 48px;
+                margin-bottom: 3rem;
+              }
+            }
 
-        ul {
-          display: flex;
-          flex-wrap: wrap;
-          margin: 0 0 1rem;
+            ul {
+              display: flex;
+              flex-wrap: wrap;
+              margin: 0 0 16px;
+              margin: 0 0 1rem;
 
-          li {
-            display: inline list-item;
-            list-style: inherit;
-            margin-bottom: 16px;
-            margin-bottom: 1rem;
-            margin-right: 80px;
-            margin-right: 5rem;
-          }
-        }
-
-        // h5 {
-        //   margin: 0 auto 1.5rem;
-        //   font-size: 16px;
-        //   line-height: 26px;
-        //   font-size: .875rem;
-        //   line-height: 1.625rem;
-        //   letter-spacing: 0;
-        // }
-      }
-    }
-
-    @include for-tablet-portrait-up {
-      &#about-clients {
-        margin: 5rem auto;
-
-        h3 {
-          font-size: 1.375rem;
-          line-height: 1.625rem;
-          letter-spacing: 3px;
-          margin: 6rem auto 5rem;
-        }
-
-        .Clients {
-          h3 {
-            line-height: 1.75rem;
+              li {
+                display: inline list-item;
+                list-style: inherit;
+                margin-bottom: 16px;
+                margin-bottom: 1rem;
+                margin-right: 80px;
+                margin-right: 5rem;
+              }
+            }
           }
 
-          ul {
-            li {
-              height: 40px;
-              margin-right: 80px;
-              margin-bottom: 20px;
+          &:last-of-type {
+            h5 {
+              font-weight: 400;
+              font-size: 20px;
+              font-size: 1.25rem;
+              line-height: 32px;
+              line-height: 2rem;
+              letter-spacing: 1px;
+              letter-spacing: .0625rem;
+              margin-bottom: 16px;
+              margin-bottom: 1rem;
+
+              a {
+                color: $neonblue;
+              }
+
+              strong {
+                font-weight: 700;
+              }
             }
           }
         }
       }
     }
 
+    @include for-tablet-portrait-up {
+      &#about-clients {
+        h3 {
+          font-size: 30px;
+          font-size: 1.875rem;
+          letter-spacing: 2px;
+          letter-spacing: .125rem;
+          margin: 112px auto 80px;
+          margin: 6rem auto 5rem;
+        }
+      }
+    }
+
     @include for-tablet-landscape-up {
       &#about-clients {
-        margin: 6rem auto;
+        .Columns {
+          display: flex;
 
-        h3 {
-          font-size: 1.75rem;
-          font-weight: 700;
-          line-height: 2.0625rem;
-          letter-spacing: 4px;
-        }
+          .Column {
+            width: 50%;
 
-        .Clients {
-          h3 {
-            font-size: 1rem;
-            line-height: 1.75rem;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-            padding-right: 80px;
-          }
-
-          ul {
-            li {
-              height: 50px;
-              margin-right: 100px;
-              margin-bottom: 30px;
+            &:first-of-type {
+              padding-right: 10%;
             }
           }
         }

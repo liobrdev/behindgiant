@@ -328,31 +328,54 @@ export default class About extends Component {
           </div>
         </section>
         <section id='about-clients'>
-          <h3>Clients</h3>
+          <h3>CLIENTS</h3>
+          <div className='Columns'>
+            <div className='Column'>
+              <p>
+                <strong className='u-orange'>behind</strong>&nbsp;<wbr/>
+                <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
+                <span>has partnered with:</span>
+              </p>
+              <ul>
+                <li>
+                  <span>Putative Brand</span>
+                </li>
+                <li>
+                  <span>Adeedok Shoes</span>
+                </li>
+                <li>
+                  <span>Iconic Agency</span>
+                </li>
+                <li>
+                  <span>Old &amp; News Clothing</span>
+                </li>
+              </ul>
+              <p>
+                <span>+ several other brands, creators, and agencies.</span>
+              </p>
+            </div>
+            <div className='Column'>
+              <h5>
+                <span>Let&apos;s work to amplify and respond to voices which</span>&nbsp;<wbr/>
+                <strong className='u-orange'>historically</strong>&nbsp;<wbr/>
+                <span>have gone</span>&nbsp;<wbr/>
+                <strong className='u-teal'>unlistened</strong>&nbsp;<wbr/>
+                <span>&mdash;</span>&nbsp;<wbr/>
+                <span>
+                  to reach consumers and businesses who seek and offer new creative opportunities.
+                </span>
+              </h5>
+              <h5>
+                <AnimatedLink href='/contact'>
+                  <strong>Contact us</strong>
+                </AnimatedLink>&nbsp;<wbr/>
+                <span>&mdash;</span>&nbsp;<wbr/>
+                <span>we'd love to help share your story.</span>
+              </h5>
+            </div>
+          </div>
           <div>
-            <h5>
-              <span>behind Giant has partnered with:</span>
-            </h5>
-            <ul>
-              <li>
-                <span>Putative Brand</span>
-              </li>
-              <li>
-                <span>Adeedok Shoes</span>
-              </li>
-              <li>
-                <span>Iconic Agency</span>
-              </li>
-              <li>
-                <span>Old & News Clothing</span>
-              </li>
-            </ul>
-            <h5>
-              <span>+ several other brands, individuals, and creative agencies.</span>&nbsp;<wbr/>
-              <AnimatedLink href='/contact'><strong>Talk to us</strong></AnimatedLink>&nbsp;<wbr/>
-              <span>&mdash;</span>&nbsp;<wbr/>
-              <span>we'd love to work with you.</span>
-            </h5>
+            
           </div>
         </section>
         <section id='about-latest'>
