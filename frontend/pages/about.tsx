@@ -245,7 +245,9 @@ export default class About extends Component {
                   aliqua.
                 </span>
               </h5>
-              <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image' />
+              <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image'
+                width='500px'
+              />
             </div>
             <div className='Column'>
               <h5>
@@ -281,7 +283,9 @@ export default class About extends Component {
               </p>
             </div>
             <div className='Column'>
-              <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image' />
+              <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image'
+                width='500px'
+              />
             </div>
           </div>
         </section>
