@@ -227,17 +227,14 @@ export default class About extends Component {
           </div>
         </section>
         <section id='about-beliefs'>
-          <h3>WHAT WE BELIEVE</h3>
+          <h3>Our Beliefs</h3>
           <div className='Columns'>
             <div className='Column'>
               <h5>
-                <span>Lorem ipsum</span>&nbsp;<wbr/>
-                <strong>dolor</strong>&nbsp;<wbr/>
-                <span>sit amet,</span>&nbsp;<wbr/>
-                <strong>consectetur</strong>&nbsp;<wbr/>
+                <strong><i>Ikigai</i></strong>&nbsp;<wbr/>
                 <span>
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua.
+                  (生き甲斐) &mdash; a Japanese philosophy dating back three millennia which
+                  translates as &apos;a reason for being.&apos;
                 </span>
               </h5>
               <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image'
@@ -246,36 +243,44 @@ export default class About extends Component {
             </div>
             <div className='Column'>
               <h5>
-                <span>Lorem ipsum</span>&nbsp;<wbr/>
-                <strong>dolor</strong>&nbsp;<wbr/>
-                <span>sit amet,</span>&nbsp;<wbr/>
-                <strong>consectetur</strong>&nbsp;<wbr/>
+                <strong><i>Ikigai</i></strong>&nbsp;<wbr/>
                 <span>
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua.
+                  (生き甲斐) &mdash; a Japanese philosophy dating back three millennia which
+                  translates as &apos;a reason for being.&apos;
                 </span>
               </h5>
               <p>
                 <span>
-                  Tellus mauris a diam maecenas sed enim, augue mauris augue neque gravida in
-                  fermentum et sollicitudin, nibh nisl condimentum id venenatis a, molestie at
-                  elementum eu facilisis sed odio aoreet suspendisse interdum consectetur libero
-                  id faucibus nisl tincidunt eget.
-                </span>
+                  The concept is meant to give people a clearer idea of their purpose in life,
+                  leading to well-being and satisfaction. While generally applied to one&apos;s
+                  personal life,
+                </span>&nbsp;<wbr/>
+                <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
+                <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
+                <span>applies</span>&nbsp;<wbr/>
+                <i>ikigai</i>&nbsp;<wbr/>
+                <span>to build resilient, sustainable businesses.</span>
               </p>
               <p>
                 <span>
-                  Sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Interdum
-                  consectetur libero id faucibus nisl tincidunt eget nullam, neque convallis a
-                  cras semper auctor neque.
+                  Our beliefs are rooted in answering four important questions and in guiding our
+                  clients to do the same for their business:
                 </span>
               </p>
-              <p>
-                <span>
-                  Nunc congue nisi vitae suscipit tellus mauris a diam. Sit amet facilisis magna
-                  etiam, et magnis dis parturient montes.
-                </span>
-              </p>
+              <ul>
+                <li>
+                  <span>How is your business giving back to the world?</span>
+                </li>
+                <li>
+                  <span>What is the driving force behind your motivation?</span>
+                </li>
+                <li>
+                  <span>What are you good at?</span>
+                </li>
+                <li>
+                  <span>How can what you're good at translate to profit?</span>
+                </li>
+              </ul>
             </div>
             <div className='Column'>
               <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image'
