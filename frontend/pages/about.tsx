@@ -193,7 +193,7 @@ export default class About extends Component {
           </div>
         </section>
         <section id='about-offerings'>
-          <h3>OUR OFFERINGS</h3>
+          <h3>Our Offerings</h3>
           <div className='Offerings'>
             <div className='Offering'>
               <div className='IconContainer'>
@@ -201,9 +201,7 @@ export default class About extends Component {
               </div>
               <h5>Consulting &amp; Strategy</h5>
               <p>Brand Strategy &amp; Marketing</p>
-              <p>Data &amp; Analytics</p>
               <p>Consumer Insights</p>
-              <p>Digital Integration</p>
             </div>
             <div className='Offering'>
               <div className='IconContainer'>
@@ -215,8 +213,6 @@ export default class About extends Component {
               <p>Print &amp; OOH</p>
               <p>Branding &amp; Design</p>
               <p>Social</p>
-              <p>User Experience Design</p>
-              <p>Mobile</p>
             </div>
             <div className='Offering'>
               <div className='IconContainer'>
@@ -227,7 +223,6 @@ export default class About extends Component {
               <p>Social Content Creation</p>
               <p>Directing</p>
               <p>Post Production</p>
-              <p>Prototype Development</p>
             </div>
           </div>
         </section>
