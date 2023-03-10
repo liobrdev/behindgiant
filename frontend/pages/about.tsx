@@ -290,12 +290,12 @@ export default class About extends Component {
           </div>
         </section>
         <section id='about-who-we-are'>
-          <h3>WHO WE ARE</h3>
+          <h3>Who We Are</h3>
           <div className='Columns'>
             <div className='Column'>
               <h5>
                 <span>Founder and CEO</span>&nbsp;<wbr/>
-                <b>Anwar Malloy</b>&nbsp;<wbr/>
+                <strong>Anwar Malloy</strong>&nbsp;<wbr/>
                 <span>
                   congue nisi vitae suscipit tellus mauris a diam. Sit amet facilisis magna etiam,
                   et magnis dis parturient montes.
