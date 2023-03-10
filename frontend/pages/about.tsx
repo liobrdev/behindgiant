@@ -332,11 +332,11 @@ export default class About extends Component {
           </div>
         </section>
         <section id='about-clients'>
-          <h3>CLIENTS</h3>
+          <h3>Clients</h3>
           <div className='Columns'>
             <div className='Column'>
               <p>
-                <strong className='u-orange'>behind</strong>&nbsp;<wbr/>
+                <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
                 <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
                 <span>has partnered with:</span>
               </p>
@@ -361,7 +361,7 @@ export default class About extends Component {
             <div className='Column'>
               <h5>
                 <span>Let&apos;s work to amplify and respond to voices which</span>&nbsp;<wbr/>
-                <strong className='u-orange'>historically</strong>&nbsp;<wbr/>
+                <strong className='u-neonorange'>historically</strong>&nbsp;<wbr/>
                 <span>have gone</span>&nbsp;<wbr/>
                 <strong className='u-teal'>unlistened</strong>&nbsp;<wbr/>
                 <span>&mdash;</span>&nbsp;<wbr/>

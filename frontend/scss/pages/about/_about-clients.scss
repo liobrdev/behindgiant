@@ -8,10 +8,10 @@
 
       h3 {
         font-weight: 700;
-        font-size: 20px;
-        font-size: 1.25rem;
-        line-height: 21px;
-        line-height: 1.3125rem;
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 28px;
+        line-height: 1.75rem;
         letter-spacing: 1px;
         letter-spacing: .0625rem;
         margin: 64px auto 48px;
@@ -38,8 +38,8 @@
 
             p {
               &:last-of-type {
-                margin-bottom: 48px;
-                margin-bottom: 3rem;
+                margin-bottom: 40px;
+                margin-bottom: 2.5rem;
               }
             }
 
@@ -74,6 +74,12 @@
 
               a {
                 color: $neonblue;
+                padding-bottom: 4px;
+                padding-bottom: .25rem;
+
+                &:hover {
+                  border-bottom: 1px solid $neonblue;
+                }
               }
 
               strong {
@@ -88,12 +94,35 @@
     @include for-tablet-portrait-up {
       &#about-clients {
         h3 {
-          font-size: 30px;
-          font-size: 1.875rem;
+          font-size: 32px;
+          font-size: 2rem;
           letter-spacing: 2px;
           letter-spacing: .125rem;
           margin: 112px auto 80px;
-          margin: 6rem auto 5rem;
+          margin: 7rem auto 5rem;
+        }
+
+        .Columns {
+          .Column {
+            &:first-of-type {
+              p,
+              ul li {
+                font-size: 18px;
+                font-size: 1.125rem;
+                line-height: 32px;
+                line-height: 2rem;
+              }
+            }
+
+            &:last-of-type {
+              h5 {
+                font-size: 24px;
+                font-size: 1.5rem;
+                line-height: 45px;
+                line-height: 2.8125rem;
+              }
+            }
+          }
         }
       }
     }
