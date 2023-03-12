@@ -2,16 +2,22 @@
   section {
     &#about-latest {
       font-family: $fontPrimary;
-      margin: 3rem auto;
+      width: 100%;
+      max-width: 1200px;
+      margin: 96px auto 0;
+      margin: 6rem auto 0;
 
-      h2 {
+      h3 {
         font-weight: 700;
-        font-size: 1.125rem;
-        line-height: 1.3125rem;
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 28px;
+        line-height: 1.75rem;
         letter-spacing: 1px;
-        text-transform: uppercase;
+        letter-spacing: .0625rem;
+        margin: 64px auto 48px;
+        margin: 4rem auto 3rem;
         text-align: center;
-        margin: 6rem auto 3rem;
       }
 
       .LatestNews {
@@ -40,22 +46,28 @@
               time {
                 color: $black;
                 font-weight: 400;
-                font-size: .7rem;
-                line-height: 1.3125rem;
-                letter-spacing: 1.5px;
+                font-size: 12px;
+                font-size: .75rem;
+                line-height: 20px;
+                line-height: 1.25rem;
+                letter-spacing: 1px;
+                letter-spacing: .0625rem;
                 position: relative;
                 display: inline-block;
-                margin: 1rem 0 0;
+                margin: 16px 0 4px;
+                margin: 1rem 0 .25rem;
                 text-transform: uppercase;
               }
               
-              h4 {
+              h5 {
                 color: $black;
-                font-weight: 800;
-                font-size: 1.0625rem;
-                line-height: 1.8125rem;
-                letter-spacing: 2px;
-                position: relative;
+                font-weight: 400;
+                font-size: 18px;
+                font-size: 1.125rem;
+                line-height: 24px;
+                line-height: 1.5rem;
+                letter-spacing: 1px;
+                letter-spacing: .0625rem;
                 text-transform: uppercase;
                 margin: 0;
                 max-height: 5.4375rem;
@@ -100,7 +112,7 @@
                 }
 
                 height: 0;
-                padding-bottom: 56.66667%;
+                padding-bottom: 60%;
                 overflow: hidden;
                 margin: auto;
                 opacity: 0.95;
@@ -144,11 +156,13 @@
 
     @include for-tablet-portrait-up {
       &#about-latest {
-        h2 {
-          font-size: 1.375rem;
-          line-height: 1.625rem;
-          letter-spacing: 3px;
-          margin: 6rem auto 5rem;
+        h3 {
+          font-size: 32px;
+          font-size: 2rem;
+          letter-spacing: 2px;
+          letter-spacing: .125rem;
+          margin: 112px auto 80px;
+          margin: 7rem auto 5rem;
         }
 
         .LatestNews {
@@ -161,16 +175,18 @@
 
     @include for-tablet-landscape-up {
       &#about-latest {
-        h2 {
-          font-size: 1.75rem;
-          font-weight: 700;
-          line-height: 2.0625rem;
-          letter-spacing: 4px;
-        }
+        width: 85%;
 
         .LatestNews {
           .Article {
-            width: 33.3%;
+            width: 50%;
+
+            &:first-of-type {
+              padding-right: 2.75%;
+            }
+            &:last-of-type {
+              padding-left: 2.75%;
+            }
           }
         }
       }
