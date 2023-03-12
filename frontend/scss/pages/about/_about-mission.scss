@@ -19,8 +19,12 @@
               line-height: 2rem;
               letter-spacing: 1px;
               letter-spacing: .0625rem;
-              margin-bottom: 48px;
-              margin-bottom: 3rem;
+              margin-bottom: 40px;
+              margin-bottom: 2.5rem;
+  
+              strong {
+                font-weight: 700;
+              }
             }
           }
 
@@ -55,6 +59,15 @@
                 font-size: 1.5rem;
                 line-height: 45px;
                 line-height: 2.8125rem;
+              }
+            }
+
+            &:last-of-type {
+              p {
+                font-size: 18px;
+                font-size: 1.125rem;
+                line-height: 32px;
+                line-height: 2rem;
               }
             }
           }

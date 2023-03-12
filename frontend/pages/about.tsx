@@ -145,7 +145,10 @@ export default class About extends Component {
               <img className='Logo-image' src={imagesUrl + '/Logo-wh.png'} alt='behind GIANT' />
             </div>
             <div className='IntroText IntroText--about'>
-              <h1>A consultancy and creative agency, purposefully built for the modern age.</h1>
+              <h1>
+                A Tokyo-based creative consultancy placing emphasis on the elevation of the
+                minority voice.
+              </h1>
             </div>
           </div>
           <button className='ScrollDown' onClick={this.handleScrollDown} type='button'>
@@ -157,36 +160,38 @@ export default class About extends Component {
           <div className='Columns'>
             <div className='Column'>
               <h5>
-                <strong>behind Giant&apos;s mission</strong>&nbsp;<wbr/>
-                <span>
-                  is consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </span>
+                <span>We produce marketing that</span>&nbsp;<wbr/>
+                <strong>resonates</strong>&nbsp;<wbr/>
+                <span>with the minority consumer culturally and empirically.</span>
               </h5>
             </div>
             <div className='Column'>
               <p>
                 <span>
-                  Quis lectus nulla at volutpat diam ut &mdash; ridiculus mus mauris vitae
-                  ultricies leo integer.
+                  Creative consultancies identify the needs of their client and find creative
+                  strategies for solving the client&apos;s problems. Unfortunately, the solutions
+                  are often void of the insights and voices of the communities which they intend
+                  to serve.
                 </span>
               </p>
               <p>
                 <span>
-                  Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras, enim nulla
-                  aliquet porttitor lacus luctus accumsan.
+                  Collaborations often leave out culturally competent agency partners, pointing to
+                  a lack of diversity in representation and resulting in biased marketing and
+                  missed opportunities. Only 11.4% of creative industry jobs are filled by Black,
+                  Asian, or minority ethnic people, and just 11.5% of creative directors in the
+                  USA are women.
                 </span>
               </p>
               <p>
                 <span>
-                  Lectus magna fringilla urna porttitor rhoncus dolor purus non enim, vehicula
-                  ipsum a arcu cursus vitae.
-                </span>
-              </p>
-              <p>
+                  Huge disparities in opportunities to participate result in smaller reach and
+                  lower profits. This should be addressed. We constructed
+                </span>&nbsp;<wbr/>
+                <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
+                <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
                 <span>
-                  Volutpat odio facilisis mauris sit amet massa. Convallis tellus id interdum
-                  velit laoreet id donec ultrices tincidunt. 
+                  to strategically fill creative gaps and better connect brands with consumers.
                 </span>
               </p>
             </div>
@@ -264,7 +269,7 @@ export default class About extends Component {
               <p>
                 <span>
                   Our beliefs are rooted in answering four important questions and in guiding our
-                  clients to do the same for their business:
+                  clients to do the same for their purposes:
                 </span>
               </p>
               <ul>
@@ -338,7 +343,7 @@ export default class About extends Component {
               <p>
                 <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
                 <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
-                <span>has partnered with:</span>
+                <span>has worked with:</span>
               </p>
               <ul>
                 <li>
@@ -355,26 +360,19 @@ export default class About extends Component {
                 </li>
               </ul>
               <p>
-                <span>+ several other brands, creators, and agencies.</span>
+                <span>+ other brands, creators, and shops.</span>
               </p>
             </div>
             <div className='Column'>
               <h5>
-                <span>Let&apos;s work to amplify and respond to voices which</span>&nbsp;<wbr/>
-                <strong className='u-neonorange'>historically</strong>&nbsp;<wbr/>
-                <span>have gone</span>&nbsp;<wbr/>
-                <strong className='u-teal'>unlistened</strong>&nbsp;<wbr/>
-                <span>&mdash;</span>&nbsp;<wbr/>
-                <span>
-                  to reach consumers and businesses who seek and offer new creative opportunities.
-                </span>
+                <span>We connect businesses with customers.</span>
               </h5>
               <h5>
                 <AnimatedLink href='/contact'>
                   <strong>Contact us</strong>
                 </AnimatedLink>&nbsp;<wbr/>
                 <span>&mdash;</span>&nbsp;<wbr/>
-                <span>we'd love to help share your story.</span>
+                <span>schedule a chat today.</span>
               </h5>
             </div>
           </div>
