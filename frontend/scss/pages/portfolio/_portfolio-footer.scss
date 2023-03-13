@@ -1,6 +1,6 @@
-.Main--work {
+.Main--portfolio {
   section {
-    &#work-footer {
+    &#portfolio-footer {
       position: relative;
       width: 100%;
       overflow: hidden;
@@ -96,7 +96,7 @@
     }
 
     @include for-tablet-portrait-up {
-      &#work-footer {
+      &#portfolio-footer {
         &::before {
           top: -40px;
           min-width: 1440px;
@@ -106,7 +106,7 @@
     }
 
     @include for-tablet-landscape-up {
-      &#work-footer {
+      &#portfolio-footer {
         &::before {
           min-width: 1920px;
           height: 110px;
@@ -119,7 +119,7 @@
     }
 
     @include for-desktop-up {
-      &#work-footer {
+      &#portfolio-footer {
         &::before {
           top: -60px;
           min-width: 2700px;

@@ -15,13 +15,13 @@ const breadcrumbList: IBreadcrumbListItem[] = [
     "@type": "ListItem",
     position: 2,
     name: "Work",
-    item: "https://behindgiant.com/work"
+    item: "https://behindgiant.com/portfolio"
   },
   {
     "@type": "ListItem",
     position: 3,
     name: "Project",
-    item: "https://behindgiant.com/work/project"
+    item: "https://behindgiant.com/portfolio/project"
   }
 ];
 
@@ -31,7 +31,7 @@ const breadcrumb = JSON.stringify({
   "itemListElement": breadcrumbList
 });
 
-export default function WorkProject() {
+export default function PortfolioProject() {
   return (
     <>
       <Head>

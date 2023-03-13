@@ -1,6 +1,6 @@
-.Main--about {
+.Main--home {
   section {
-    &#about-beliefs {
+    &#home-beliefs {
       font-family: $fontPrimary;
       width: 100%;
       background: white;
@@ -93,7 +93,7 @@
     }
 
     @include for-tablet-portrait-up {
-      &#about-beliefs {
+      &#home-beliefs {
         h3 {
           font-size: 32px;
           font-size: 2rem;
@@ -161,7 +161,7 @@
     }
 
     @include for-tablet-landscape-up {
-      &#about-beliefs {
+      &#home-beliefs {
         .Columns {
           display: flex;
 

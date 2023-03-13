@@ -17,12 +17,12 @@ export default function NavigationMenu() {
       <div className='NavigationMenu-links'>
         <ul>
           <li>
-            <small>Behind Giant</small>
-            <AnimatedLink href='/about'>About Us</AnimatedLink>
+            <small>behind Giant</small>
+            <AnimatedLink href='/'>Home</AnimatedLink>
           </li>
           <li>
             <small>Our projects</small>
-            <AnimatedLink href='/work'>Work</AnimatedLink>
+            <AnimatedLink href='/portfolio'>Portfolio</AnimatedLink>
           </li>
           <li>
             <small>Ideas &amp; opinions</small>

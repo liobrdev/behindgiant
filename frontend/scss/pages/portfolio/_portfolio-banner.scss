@@ -1,6 +1,6 @@
-.Main--work {
+.Main--portfolio {
   section {
-    &#work-banner {
+    &#portfolio-banner {
       position: relative;
       height: calc(100% - 175px);
       overflow: hidden;
@@ -37,7 +37,7 @@
         a {
           color: white;
 
-          #work-banner-text {
+          #portfolio-banner-text {
             text-align: center;
             position: relative;
 
@@ -116,12 +116,12 @@
     }
 
     @include for-tablet-portrait-up {
-      &#work-banner {
+      &#portfolio-banner {
         height: calc(100% - 120px);
 
         .Intro {
           a {
-            #work-banner-text {
+            #portfolio-banner-text {
               h2 {
                 font-size: 1.25rem;
                 line-height: 1.4375rem;

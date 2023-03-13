@@ -1,4 +1,4 @@
-.Main--about {
+.Main--home {
   section {
     &.Section--banner {
       position: relative;
@@ -30,7 +30,7 @@
       }
     }
 
-    &#about-banner1 {
+    &#home-banner1 {
       .Intro {
         width: 90%;
         margin: 0 auto;
@@ -116,7 +116,7 @@
       }
     }
 
-    &#about-banner2 {
+    &#home-banner2 {
       .ScrollTop {
         all: unset;
         position: absolute;
@@ -197,7 +197,7 @@
     }
 
     @include for-tablet-portrait-up {
-      &#about-banner1 {
+      &#home-banner1 {
         .Intro {
           .IntroText {
             h1 {
@@ -221,7 +221,7 @@
         }
       }
 
-      &#about-banner1 {
+      &#home-banner1 {
         .Intro {
           .Logo {
             img {

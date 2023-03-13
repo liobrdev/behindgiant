@@ -1,25 +1,11 @@
-.Main--about {
+.Main--home {
   section {
-    &#about-who-we-are {
+    &#home-mission {
       font-family: $fontPrimary;
       width: 100%;
       background: white;
-      padding: 112px 7.5% 0;
-      padding: 7rem 7.5% 0;
-
-      h3 {
-        font-weight: 400;
-        font-size: 24px;
-        font-size: 1.5rem;
-        line-height: 28px;
-        line-height: 1.75rem;
-        letter-spacing: 3px;
-        letter-spacing: .1875rem;
-        margin: 0 auto 48px;
-        margin: 0 auto 3rem;
-        text-align: center;
-        text-transform: uppercase;
-      }
+      padding: 64px 7.5% 0;
+      padding: 4rem 7.5% 0;
 
       .Columns {
         .Column {
@@ -34,16 +20,10 @@
               letter-spacing: .0625rem;
               margin-bottom: 40px;
               margin-bottom: 2.5rem;
-
+  
               strong {
                 font-weight: 700;
               }
-            }
-  
-            img {
-              width: 100%;
-              margin-bottom: 40px;
-              margin-bottom: 2.5rem;
             }
           }
 
@@ -70,39 +50,18 @@
     }
 
     @include for-tablet-portrait-up {
-      &#about-who-we-are {
-        h3 {
-          font-size: 32px;
-          font-size: 2rem;
-          letter-spacing: 4px;
-          letter-spacing: .25rem;
-          margin: 0 auto 80px;
-          margin: 0 auto 5rem;
-        }
+      &#home-mission {
+        padding: 80px 7.5% 0;
+        padding: 5rem 7.5% 0;
 
         .Columns {
           .Column {
             &:first-of-type {
-              display: flex;
-              flex-direction: row-reverse;
-              position: relative;
-
-              h5, img {
-                width: 50%;
-              }
-
               h5 {
                 font-size: 24px;
                 font-size: 1.5rem;
                 line-height: 45px;
                 line-height: 2.8125rem;
-              }
-
-              img {
-                height: min-content;
-                padding-right: 32px;
-                padding-right: 2rem;
-                margin-bottom: 0;
               }
             }
 
@@ -112,10 +71,6 @@
                 font-size: 1.125rem;
                 line-height: 32px;
                 line-height: 2rem;
-
-                &:last-of-type {
-                  margin-bottom: 0;
-                }
               }
             }
           }
@@ -124,24 +79,17 @@
     }
 
     @include for-tablet-landscape-up {
-      &#about-who-we-are {
+      &#home-mission {
         .Columns {
           display: flex;
 
           .Column {
             width: 50%;
+            margin: 0;
 
             &:first-of-type {
               display: block;
               padding-right: 10%;
-  
-              h5, img {
-                width: 100%;
-              }
-
-              img {
-                padding-right: 0;
-              }
             }
           }
         }

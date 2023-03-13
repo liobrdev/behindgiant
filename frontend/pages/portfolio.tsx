@@ -18,8 +18,8 @@ const breadcrumbList: IBreadcrumbListItem[] = [
   {
     "@type": "ListItem",
     position: 2,
-    name: "Work",
-    item: "https://behindgiant.com/work"
+    name: "Portfolio",
+    item: "https://behindgiant.com/portfolio"
   }
 ];
 
@@ -29,7 +29,7 @@ const breadcrumb = JSON.stringify({
   "itemListElement": breadcrumbList
 });
 
-export default class Work extends Component {
+export default class Portfolio extends Component {
   private header: HTMLElement | null;
   private banner: HTMLElement | null;
   private bannerBg: HTMLElement | null;
@@ -83,10 +83,10 @@ export default class Work extends Component {
 
   componentDidMount() {
     document.getElementById('main')?.addEventListener('scroll', this.onScroll);
-    this.header = document.getElementById('work-header');
-    this.banner = document.getElementById('work-banner');
-    this.bannerBg = document.getElementById('work-banner-bg');
-    this.bannerText = document.getElementById('work-banner-text');
+    this.header = document.getElementById('portfolio-header');
+    this.banner = document.getElementById('portfolio-banner');
+    this.bannerBg = document.getElementById('portfolio-banner-bg');
+    this.bannerText = document.getElementById('portfolio-banner-text');
   }
 
   componentWillUnmount() {
@@ -97,7 +97,7 @@ export default class Work extends Component {
     return (
       <>
         <Head>
-          <title>Work</title>
+          <title>Portfolio</title>
           <script type="application/ld+json">{breadcrumb}</script>
         </Head>
         <MediaToBeLoaded imageUrls={[
@@ -113,19 +113,19 @@ export default class Work extends Component {
           '/facebook_white.png',
           '/linkedin_white.png',
         ]}/>
-        <header id='work-header'>
+        <header id='portfolio-header'>
           <div className='Logo'>
             <AnimatedLink href='/'>
               <img className='Logo-image' src={`${imagesUrl}/Logo-bl2.png`} alt='behind GIANT'/>
             </AnimatedLink>
           </div>
         </header>
-        <section id='work-banner'>
-          <div id='work-banner-bg' className='Banner-underlay' />
+        <section id='portfolio-banner'>
+          <div id='portfolio-banner-bg' className='Banner-underlay' />
           <div className='Banner-overlay' />
-          <div className='Intro Intro--work'>
-            <AnimatedLink href='/work/latest5'>
-              <div id='work-banner-text'>
+          <div className='Intro Intro--portfolio'>
+            <AnimatedLink href='/portfolio/latest5'>
+              <div id='portfolio-banner-text'>
                 <h2>New Work</h2>
                 <h3>Food Truck</h3>
                 <h4>#LoremIpsum</h4>
@@ -137,17 +137,17 @@ export default class Work extends Component {
             <div/>
           </button>
         </section>
-        <section id='work-projects-list'>
+        <section id='portfolio-projects-list'>
           <h3>Recent <strong>work</strong> from <strong>behind GIANT:</strong></h3>
           <div className='Projects'>
             <div className='Project'>
-              <AnimatedLink href='/work/latest6' className='TextLink'>
+              <AnimatedLink href='/portfolio/latest6' className='TextLink'>
                 <div className='Text'>
                   <h4>Madonnina</h4>
                   <p>In the Cathedral</p>
                 </div>
               </AnimatedLink>
-              <AnimatedLink href='/work/latest6' className='ThumbLink'>
+              <AnimatedLink href='/portfolio/latest6' className='ThumbLink'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -158,13 +158,13 @@ export default class Work extends Component {
               </AnimatedLink>
             </div>
             <div className='Project'>
-              <AnimatedLink href='/work/latest5' className='TextLink'>
+              <AnimatedLink href='/portfolio/latest5' className='TextLink'>
                 <div className='Text'>
                   <h4>Food Truck</h4>
                   <p>#LoremIpsum</p>
                 </div>
               </AnimatedLink>
-              <AnimatedLink href='/work/latest5' className='ThumbLink'>
+              <AnimatedLink href='/portfolio/latest5' className='ThumbLink'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -175,13 +175,13 @@ export default class Work extends Component {
               </AnimatedLink>
             </div>
             <div className='Project'>
-              <AnimatedLink href='/work/latest4' className='TextLink'>
+              <AnimatedLink href='/portfolio/latest4' className='TextLink'>
                 <div className='Text'>
                   <h4>Fourth Wheel</h4>
                   <p>Now you see it.</p>
                 </div>
               </AnimatedLink>
-              <AnimatedLink href='/work/latest4' className='ThumbLink'>
+              <AnimatedLink href='/portfolio/latest4' className='ThumbLink'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -192,13 +192,13 @@ export default class Work extends Component {
               </AnimatedLink>
             </div>
             <div className='Project'>
-              <AnimatedLink href='/work/latest3' className='TextLink'>
+              <AnimatedLink href='/portfolio/latest3' className='TextLink'>
                 <div className='Text'>
                   <h4>To the Sky</h4>
                   <p>Examine the American Dream</p>
                 </div>
               </AnimatedLink>
-              <AnimatedLink href='/work/latest3' className='ThumbLink'>
+              <AnimatedLink href='/portfolio/latest3' className='ThumbLink'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -209,13 +209,13 @@ export default class Work extends Component {
               </AnimatedLink>
             </div>
             <div className='Project'>
-              <AnimatedLink href='/work/latest2' className='TextLink'>
+              <AnimatedLink href='/portfolio/latest2' className='TextLink'>
                 <div className='Text'>
                   <h4>Collage</h4>
                   <p>A Fresh Coat of Ink</p>
                 </div>
               </AnimatedLink>
-              <AnimatedLink href='/work/latest2' className='ThumbLink'>
+              <AnimatedLink href='/portfolio/latest2' className='ThumbLink'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -226,13 +226,13 @@ export default class Work extends Component {
               </AnimatedLink>
             </div>
             <div className='Project'>
-              <AnimatedLink href='/work/latest1' className='TextLink'>
+              <AnimatedLink href='/portfolio/latest1' className='TextLink'>
                 <div className='Text'>
                   <h4>Hello World</h4>
                   <p>What do you think so far?</p>
                 </div>
               </AnimatedLink>
-              <AnimatedLink href='/work/latest1' className='ThumbLink'>
+              <AnimatedLink href='/portfolio/latest1' className='ThumbLink'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -244,7 +244,7 @@ export default class Work extends Component {
             </div>
           </div>
         </section>
-        <section id='work-footer'>
+        <section id='portfolio-footer'>
           <button className='ScrollTop' onClick={this.handleScrollTop} type='button'>
             <div/>
             <span>Scroll top</span>
@@ -254,7 +254,7 @@ export default class Work extends Component {
               <img className='Logo-image' src={`${imagesUrl}/Logo-wh.png`} alt='behind GIANT'/>
             </AnimatedLink>
           </div>
-          <Footer classNames='Footer--work' />
+          <Footer classNames='Footer--portfolio' />
         </section>
       </>
     );

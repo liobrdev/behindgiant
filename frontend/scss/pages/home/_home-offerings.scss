@@ -1,6 +1,6 @@
-.Main--about {
+.Main--home {
   section {
-    &#about-offerings {
+    &#home-offerings {
       font-family: $fontPrimary;
       width: 100%;
       background: white;
@@ -85,7 +85,7 @@
     }
 
     @include for-tablet-portrait-up {
-      &#about-offerings {
+      &#home-offerings {
         h3 {
           font-size: 32px;
           font-size: 2rem;
@@ -104,7 +104,7 @@
     }
 
     @include for-tablet-landscape-up {
-      &#about-offerings {
+      &#home-offerings {
         .Offerings {
           display: flex;
 

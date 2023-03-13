@@ -1,33 +1,22 @@
-.Main--about {
+.Main--portfolio {
   section {
-    &#about-latest {
-      font-family: $fontPrimary;
-      width: 100%;
-      background: white;
-      padding: 112px 0 0;
-      padding: 7rem 0 0;
-
+    &#portfolio-projects-list {
       h3 {
-        font-weight: 400;
-        font-size: 24px;
-        font-size: 1.5rem;
-        line-height: 28px;
+        font-size: 1rem;
         line-height: 1.75rem;
-        letter-spacing: 3px;
-        letter-spacing: .1875rem;
-        margin: 0 auto 48px;
-        margin: 0 auto 3rem;
+        font-weight: 400;
+        padding: 40px 7.5%;
         text-align: center;
-        text-transform: uppercase;
+        margin: 0;
       }
 
-      .LatestNews {
+      .Projects {
         display: inline-flex;
         flex-wrap: wrap;
         position: relative;
         width: 100%;
 
-        .Article {
+        .Project {
           width: 100%;
           position: relative;
           text-align: center;
@@ -35,44 +24,35 @@
 
           .TextLink {
             position: relative;
-            top: calc(100% - 8rem);
+            top: calc(100% - 66px);
             display: inline-block;
-            max-width: 90%;
-            height: 8rem;
+            height: 66px;
 
             .Text {
               position: relative;
+              width: fit-content;
+              margin: 0 auto;
               text-align: center;
 
-              time {
+              h4 {
                 color: $black;
-                font-weight: 400;
-                font-size: 12px;
-                font-size: .75rem;
-                line-height: 20px;
-                line-height: 1.25rem;
-                letter-spacing: 1px;
-                letter-spacing: .0625rem;
+                font-weight: 800;
+                font-size: 1.0625rem;
+                line-height: 1.8125rem;
+                letter-spacing: 2px;
                 position: relative;
-                display: inline-block;
-                margin: 16px 0 4px;
-                margin: 1rem 0 .25rem;
                 text-transform: uppercase;
+                margin: 10px 0 0;
               }
-              
-              h5 {
+  
+              p {
                 color: $black;
                 font-weight: 400;
-                font-size: 18px;
-                font-size: 1.125rem;
-                line-height: 24px;
-                line-height: 1.5rem;
+                font-size: .9375rem;
+                line-height: 1.6875rem;
                 letter-spacing: 1px;
-                letter-spacing: .0625rem;
-                text-transform: uppercase;
+                position: relative;
                 margin: 0;
-                max-height: 5.4375rem;
-                overflow: auto;
               }
             }
 
@@ -101,7 +81,7 @@
 
           .ThumbLink {
             position: relative;
-            top: -8rem;
+            top: -66px;
 
             .Thumb {
               position: relative;
@@ -113,7 +93,7 @@
                 }
 
                 height: 0;
-                padding-bottom: 60%;
+                padding-bottom: 56.66667%;
                 overflow: hidden;
                 margin: auto;
                 opacity: 0.95;
@@ -156,39 +136,24 @@
     }
 
     @include for-tablet-portrait-up {
-      &#about-latest {
+      &#portfolio-projects-list {
         h3 {
-          font-size: 32px;
-          font-size: 2rem;
-          letter-spacing: 4px;
-          letter-spacing: .25rem;
-          margin: 0 auto 80px;
-          margin: 0 auto 5rem;
+          padding: 90px 7.5% 40px;
         }
 
-        .LatestNews {
-          .Article {
+        .Projects {
+          .Project {
             width: 50%;
           }
         }
       }
     }
 
-    @include for-tablet-landscape-up {
-      &#about-latest {
-        padding: 112px 7.5% 0;
-        padding: 7rem 7.5% 0;
-
-        .LatestNews {
-          .Article {
-            width: 50%;
-
-            &:first-of-type {
-              padding-right: 2.75%;
-            }
-            &:last-of-type {
-              padding-left: 2.75%;
-            }
+    @include for-desktop-up {
+      &#portfolio-projects-list {
+        .Projects {
+          .Project {
+            width: 33.3%;
           }
         }
       }
