@@ -281,7 +281,7 @@ export default class Home extends Component {
                     <span>What are you good at?</span>
                   </li>
                   <li>
-                    <span>How can what you're good at translate to profit?</span>
+                    <span>How can what you&apos;re good at translate to profit?</span>
                   </li>
                 </ul>
               </div>
