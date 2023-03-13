@@ -19,11 +19,9 @@ export default function UnderConstruction() {
         <div className='Banner-overlay' />
         <div className='Info'>
           <div className='Logo'>
-            <AnimatedLink href='/'>
-              <img className='Logo-image' src={`${imagesUrl}/Logo-wh.png`} alt='behind GIANT'/>
-            </AnimatedLink>
+            <AnimatedLink href='/'><h1>behind Giant</h1></AnimatedLink>
           </div>
-          <h1>This page is currently under construction - check back soon!</h1>
+          <h2>This page is currently under construction - check back soon!</h2>
         </div>
       </section>
       <Footer classNames='Footer--underConstruction' />

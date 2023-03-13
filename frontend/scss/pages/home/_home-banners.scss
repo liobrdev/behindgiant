@@ -41,17 +41,22 @@
         .Logo {
           text-align: center;
           position: relative;
-          
-          img {
-            width: 100%;
-            min-width: 125px;
-            max-width: 200px;
-            margin-left: auto;
+
+          h1 {
+            color: white;
+            font-weight: 300;
+            font-size: 48px;
+            font-size: 3rem;
+            letter-spacing: -1px;
+            letter-spacing: -.0625rem;
+            margin-top: 0;
+            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
           }
         }
 
         .IntroText {          
-          h1 {
+          h2 {
             margin: 20px auto;
             max-width: 567px;
             color: white;
@@ -169,19 +174,6 @@
         }
       }
 
-      .Logo {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-        position: relative;
-        
-        img {
-          width: 100%;
-          max-width: 250px;
-          margin-left: auto;
-        }
-      }
-
       .Footer {
         position: absolute;
         bottom: 0;
@@ -199,8 +191,15 @@
     @include for-tablet-portrait-up {
       &#home-banner1 {
         .Intro {
-          .IntroText {
+          .Logo {
             h1 {
+              font-size: 64px;
+              font-size: 4rem;
+            }
+          }
+
+          .IntroText {
+            h2 {
               max-width: 656px;
               letter-spacing: 2px;
             }
@@ -209,25 +208,6 @@
 
         .ScrollDown {
           display: block;
-        }
-      }
-    }
-
-    @include for-tablet-landscape-up {
-      &.Section--banner {  
-        .Banner-underlay {
-          width: 100%;
-          right: unset;
-        }
-      }
-
-      &#home-banner1 {
-        .Intro {
-          .Logo {
-            img {
-              max-width: 250px;
-            }
-          }
         }
       }
     }

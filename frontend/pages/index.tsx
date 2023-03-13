@@ -134,13 +134,13 @@ export default class Home extends Component {
           <div className='Banner-overlay' />
           <div className='Intro Intro--home'>
             <div className='Logo'>
-              <img className='Logo-image' src={imagesUrl + '/Logo-wh.png'} alt='behind GIANT' />
+              <h1>behind Giant</h1>
             </div>
             <div className='IntroText IntroText--home'>
-              <h1>
+              <h2>
                 A Tokyo-based creative consultancy placing emphasis on the elevation of the
                 minority voice.
-              </h1>
+              </h2>
             </div>
           </div>
           <button className='ScrollDown' onClick={this.handleScrollDown} type='button'>
@@ -424,14 +424,9 @@ export default class Home extends Component {
           <div id='home-banner2-bg' className='Banner-underlay' />
           <div className='Banner-overlay' />
           <button className='ScrollTop' onClick={this.handleScrollTop} type='button'>
-            <div/>
+            <div />
             <span>Scroll top</span>
           </button>
-          <div className='Logo'>
-            <AnimatedLink href='/'>
-              <img className='Logo-image' src={imagesUrl + '/Logo-wh.png'} alt='behind GIANT'/>
-            </AnimatedLink>
-          </div>
           <Footer classNames='Footer--home' />
         </section>
       </>
