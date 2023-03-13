@@ -1,6 +1,5 @@
 import { Component, MouseEvent } from 'react';
 
-import range from 'lodash/range';
 import debounce from 'lodash/debounce';
 
 import Head from 'next/head';
@@ -10,6 +9,7 @@ import { IBreadcrumbListItem } from '@/types';
 
 
 const imagesUrl = process.env.NEXT_PUBLIC_IMAGES_URL || '';
+const videosUrl = process.env.NEXT_PUBLIC_VIDEOS_URL || '';
 
 const breadcrumbList: IBreadcrumbListItem[] = [
   {
@@ -32,18 +32,14 @@ const breadcrumb = JSON.stringify({
   "itemListElement": breadcrumbList
 });
 
-const clientsRange = range(12);
-
 export default class About extends Component {
   private banner1: HTMLElement | null;
   private banner2: HTMLElement | null;
-  private collabH2: HTMLElement | null;
 
   constructor(props: {}) {
     super(props);
     this.banner1 = null;
     this.banner2 = null;
-    this.collabH2 = null;
     this.onScroll = debounce(this.onScroll.bind(this), 5, { leading: true });
     this.handleScrollDown = this.handleScrollDown.bind(this);
     this.handleScrollTop = this.handleScrollTop.bind(this);
@@ -52,36 +48,37 @@ export default class About extends Component {
   onScroll() {
     if (this.banner1?.parentElement) {
       if (window.innerHeight < 500) {
-        if (this.banner1.style.top != '0') this.banner1.style.top = '0';
+        if (this.banner1.style.transform != 'translateY(0)') {
+          this.banner1.style.transform = 'translateY(0)';
+        }
       } else {
-        const { bottom, top } = this.banner1.parentElement.getBoundingClientRect();
+        let { bottom, top } = this.banner1.parentElement.getBoundingClientRect();
   
         if (bottom >= 0 && top <= 0) {
-          this.banner1.style.top = `${-top / (1.33 * window.innerHeight) * 100}%`;
-        }
-      }
-    }
+          if ((this.banner1 as HTMLVideoElement).paused) {
+            (this.banner1 as HTMLVideoElement).play();
+          }
 
-    if (this.collabH2?.parentElement) {
-      const { bottom, top } = this.collabH2.parentElement.getBoundingClientRect();
+          this.banner1.style.transform = `translateY(${top / window.innerHeight * 15}%)`;
+        } else if (this.banner2?.parentElement) {
+          let top2 = this.banner2.parentElement.getBoundingClientRect().top;
 
-      if (top <= window.innerHeight && bottom >= 0) {
-        this.collabH2.style.top = `${
-          ((window.innerHeight + 0.75 * this.collabH2.parentElement.clientHeight) - bottom) /
-          (window.innerHeight + this.collabH2.parentElement.clientHeight) * 100
-        }%`;
-      }
-    }
+          if (top2 <= window.innerHeight) {
+            if ((this.banner1 as HTMLVideoElement).paused) {
+              (this.banner1 as HTMLVideoElement).play();
+            }
 
-    if (this.banner2?.parentElement) {
-      if (window.innerHeight < 500) {
-        if (this.banner2.style.top != '0') this.banner2.style.top = '0';
-      } else {
-        const { bottom, top } = this.banner2.parentElement.getBoundingClientRect();
-
-        if (top <= window.innerHeight && bottom >= window.innerHeight - 20) {
-          this.banner2.style.top =
-            `${(window.innerHeight - bottom) / (1.33 * window.innerHeight) * 100}%`;
+            this.banner1.style.transform =
+              `translateY(${15 - ((window.innerHeight - top2) / window.innerHeight * 15)}%)`;
+          } else {
+            if (!(this.banner1 as HTMLVideoElement).paused) {
+              (this.banner1 as HTMLVideoElement).pause();
+            }
+          }
+        } else {
+          if (!(this.banner1 as HTMLVideoElement).paused) {
+            (this.banner1 as HTMLVideoElement).pause();
+          }
         }
       }
     }
@@ -91,7 +88,7 @@ export default class About extends Component {
     e.preventDefault();
 
     document.getElementById('main')?.scrollTo({
-      top: this.banner1?.clientHeight,
+      top: document.getElementById('about-banner1')?.clientHeight,
       left: 0,
       behavior: 'smooth',
     });
@@ -107,7 +104,6 @@ export default class About extends Component {
     document.getElementById('main')?.addEventListener('scroll', this.onScroll);
     this.banner1 = document.getElementById('about-banner1-bg');
     this.banner2 = document.getElementById('about-banner2-bg');
-    this.collabH2 = document.getElementById('collab-h2');
   }
 
   componentWillUnmount() {
@@ -136,9 +132,11 @@ export default class About extends Component {
           '/instagram_white.png',
           '/facebook_white.png',
           '/linkedin_white.png',
-        ]}/>
+        ]} videoUrls={[videosUrl + '/walking-beach.mp4']} />
         <section id='about-banner1' className='Section--banner'>
-          <div id='about-banner1-bg' className='Banner-underlay' />
+          <video id='about-banner1-bg' className='Banner-underlay' autoPlay muted loop
+            src={videosUrl + '/walking-beach.mp4'}
+          />
           <div className='Banner-overlay' />
           <div className='Intro Intro--about'>
             <div className='Logo'>

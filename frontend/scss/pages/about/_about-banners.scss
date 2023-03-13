@@ -3,23 +3,20 @@
     &.Section--banner {
       position: relative;
       width: 100%;
+      height: 100%;
       overflow: hidden;
-      height: 440px;
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       .Banner-underlay {
         z-index: -2;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(https://assets.behindgiant.liobr.dev/media/images/tokyo.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        will-change: top;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 225%;
+        max-width: 1650px;
+        will-change: transform;
       }
 
       .Banner-overlay {
@@ -38,7 +35,8 @@
         width: 90%;
         margin: 0 auto;
         position: relative;
-        top: -50px;
+        top: -16px;
+        top: -1rem;
 
         .Logo {
           text-align: center;
@@ -57,13 +55,15 @@
             margin: 20px auto;
             max-width: 567px;
             color: white;
-            font-family: $fontPrimary;
             font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.375rem;
+            font-size: 18px;
+            font-size: 1.125rem;
+            line-height: 24px;
+            line-height: 1.5rem;
             letter-spacing: 1px;
-            text-align: center;
+            letter-spacing: .0625rem;
             text-transform: uppercase;
+            text-align: center;
           }
         }
       }
@@ -72,7 +72,7 @@
         all: unset;
         display: none;
         position: absolute;
-        bottom: 10px;
+        bottom: 0px;
         left: calc(50% - 25px);
         color: white;
         
@@ -82,8 +82,12 @@
           width: 50px;
           text-align: center;
           font-weight: 400;
+          font-size: 12px;
           font-size: .75rem;
-          line-height: 1.0625rem;
+          line-height: 20px;
+          line-height: 1.25rem;
+          letter-spacing: 1px;
+          letter-spacing: .0625rem;
           text-transform: uppercase;
           padding-bottom: 5px;
         }
@@ -91,7 +95,7 @@
         div {
           position: relative;
           left: calc(50% - 1px);
-          height: 90px;
+          height: 55px;
           width: 2px;
           background: white;
           transition: height 0.5s ease-out;
@@ -102,7 +106,7 @@
           cursor: pointer;
 
           div {
-            height: 85px;
+            height: 50px;
           }
         }
 
@@ -110,30 +114,13 @@
           outline: 1px dotted white;
         }
       }
-
-      &::after {
-        content: "";
-        z-index: 1;
-        position: absolute;
-        bottom: -40px;
-        left: -50%;
-        width: 100%;
-        min-width: 1280px;
-        height: 80px;
-        -webkit-transform: rotate(-3deg);
-           -moz-transform: rotate(-3deg);
-            -ms-transform: rotate(-3deg);
-             -o-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-        background-color: white;
-      }
     }
 
     &#about-banner2 {
       .ScrollTop {
         all: unset;
         position: absolute;
-        top: 75px;
+        top: 50px;
         text-align: center;
         width: inherit;
         color: white;
@@ -158,10 +145,14 @@
 
         span {
           font-weight: 400;
+          font-size: 12px;
           font-size: .75rem;
-          line-height: 1.0625rem;
-          display: block;
+          line-height: 20px;
+          line-height: 1.25rem;
+          letter-spacing: 1px;
+          letter-spacing: .0625rem;
           text-transform: uppercase;
+          display: block;
         }
 
         &:focus,
@@ -183,7 +174,6 @@
         margin: 0 auto;
         text-align: center;
         position: relative;
-        top: 20px;
         
         img {
           width: 100%;
@@ -192,46 +182,26 @@
         }
       }
 
-      &::after {
-        content: "";
-        z-index: 1;
-        position: absolute;
-        top: -50px;
-        left: -50%;
-        width: 100%;
-        min-width: 1280px;
-        height: 80px;
-        -webkit-transform: rotate(-3deg);
-           -moz-transform: rotate(-3deg);
-            -ms-transform: rotate(-3deg);
-             -o-transform: rotate(-3deg);
-                transform: rotate(-3deg);
-        background-color: white;
-      }
-
       .Footer {
         position: absolute;
         bottom: 0;
       }
     }
 
-    @include for-tablet-portrait-up {
-      &.Section--banner {
-        height: 520px;
-      }
-
-      &#about-banner1 {
-        &::after {
-          bottom: -50px;
-          min-width: 1440px;
-          height: 90px;
+    @include for-big-phone-up {
+      &.Section--banner {  
+        .Banner-underlay {
+          width: 154%;
         }
+      }
+    }
 
+    @include for-tablet-portrait-up {
+      &#about-banner1 {
         .Intro {
           .IntroText {
             h1 {
               max-width: 656px;
-              line-height: 1.5rem;
               letter-spacing: 2px;
             }
           }
@@ -241,73 +211,23 @@
           display: block;
         }
       }
-
-      &#about-banner2 {
-        &::after {
-          top: -40px;
-          min-width: 1440px;
-          height: 90px;
-        }
-      }
     }
 
     @include for-tablet-landscape-up {
-      &.Section--banner {
-        height: 656px;
+      &.Section--banner {  
+        .Banner-underlay {
+          width: 100%;
+          right: unset;
+        }
       }
 
       &#about-banner1 {
-        &::after {
-          bottom: -70px;
-          min-width: 1920px;
-          height: 120px;
-        }
-
         .Intro {
           .Logo {
             img {
               max-width: 250px;
             }
           }
-
-          .IntroText {
-            h1 {
-              font-weight: 700;
-            }
-          }
-        }
-      }
-
-      &#about-banner2 {
-        .ScrollTop {
-          top: 111px;
-        }
-
-        &::after {
-          min-width: 1920px;
-          height: 110px;
-        }
-      }
-    }
-
-    @include for-desktop-up {
-      &#about-banner1 {
-        .ScrollDown {
-          bottom: 25px;
-        }
-
-        &::after {
-          bottom: -70px;
-          min-width: 2700px;
-          height: 130px;
-        }
-      }
-
-      &#about-banner2 {
-        &::after {
-          top: -60px;
-          min-width: 2700px;
-          height: 120px;
         }
       }
     }
