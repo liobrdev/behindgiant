@@ -185,7 +185,7 @@ export default class Home extends Component {
                   <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
                   <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
                   <span>
-                    to strategically fill creative gaps and better connect brands with consumers.
+                    to strategically fill creative gaps and better connect brands with customers.
                   </span>
                 </p>
               </div>
@@ -367,7 +367,7 @@ export default class Home extends Component {
               </div>
               <div className='Column'>
                 <h5>
-                  <span>We connect businesses with customers.</span>
+                  <span>We connect businesses with consumers.</span>
                 </h5>
                 <h5>
                   <AnimatedLink href='/contact'>
