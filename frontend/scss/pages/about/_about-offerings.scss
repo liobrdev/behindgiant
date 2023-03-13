@@ -4,20 +4,21 @@
       font-family: $fontPrimary;
       width: 100%;
       background: white;
-      padding: 96px 7.5% 0;
-      padding: 6rem 7.5% 0;
+      padding: 112px 7.5% 0;
+      padding: 7rem 7.5% 0;
 
       h3 {
-        font-weight: 700;
+        font-weight: 400;
         font-size: 24px;
         font-size: 1.5rem;
         line-height: 28px;
         line-height: 1.75rem;
-        letter-spacing: 1px;
-        letter-spacing: .0625rem;
+        letter-spacing: 3px;
+        letter-spacing: .1875rem;
         margin: 0 auto 48px;
         margin: 0 auto 3rem;
         text-align: center;
+        text-transform: uppercase;
       }
 
       .Offerings {
@@ -88,8 +89,8 @@
         h3 {
           font-size: 32px;
           font-size: 2rem;
-          letter-spacing: 2px;
-          letter-spacing: .125rem;
+          letter-spacing: 4px;
+          letter-spacing: .25rem;
           margin: 0 auto 80px;
           margin: 0 auto 5rem;
         }
