@@ -6,18 +6,10 @@ const imagesUrl = process.env.NEXT_PUBLIC_IMAGES_URL || '';
 export default function NavigationMenu() {
   return (
     <div className='NavigationMenu'>
-      <div className='NavigationMenu-logo'>
-        <AnimatedLink href='/'>
-          <img className='NavigationMenu-logo-img' src={`${imagesUrl}/Logo-pr.png`} alt='Logo'/>
-        </AnimatedLink>
-      </div>
-      <h3 className='NavigationMenu-text'>
-        A consultancy and creative agency, purposefully built for the modern age.
-      </h3>
       <div className='NavigationMenu-links'>
         <ul>
           <li>
-            <small>behind Giant</small>
+            <small>About us</small>
             <AnimatedLink href='/'>Home</AnimatedLink>
           </li>
           <li>

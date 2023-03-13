@@ -37,7 +37,7 @@
       width: 100%;
       height: 85px;
       background-color: white;
-      display: inline-flex;
+      display: flex;
       align-items: center;
 
       .MenuIcon {
@@ -54,13 +54,16 @@
       }
 
       .MenuIcon-close {
-        font-family: $fontPrimary;
         font-weight: 400;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        padding-left: .25rem;
+        font-size: 12px;
         font-size: .75rem;
         line-height: 28px;
+        line-height: 1.75rem;
+        letter-spacing: 1px;
+        letter-spacing: .0625rem;
+        text-transform: uppercase;
+        padding-left: 4px;
+        padding-left: .25rem;
 
         &:hover {
           cursor: pointer;
@@ -72,58 +75,39 @@
       z-index: 5;
       position: relative;
       width: 100%;
-      font-family: $fontPrimary;
-      font-size: 1rem;
-      font-weight: 400;
+      min-height: calc(100% - 85px);
       background-color: white;
       overflow-x: hidden;
       overflow-y: hidden;
   
-      .NavigationMenu-logo {
-        width: fit-content;
-        margin: 0 auto;
-  
-        img {
-          width: 100%;
-          min-width: 125px;
-          max-width: 200px;
-        }
-      }
+      .NavigationMenu-links {
+        width: 100%;
+        margin: 48px auto;
+        margin: 3rem auto;
 
-      .NavigationMenu-text {
-        display: none;
-        max-width: 400px;
-        margin: 0 auto;
-        padding-top: 10px;
-        font-family: $fontPrimary;
-        font-weight: 600;
-        font-size: 0.75rem;
-        line-height: 1.25rem;
-        letter-spacing: 2px;
-        text-align: center;
-        text-transform: uppercase;
-      }
-  
-      .NavigationMenu-links {  
         ul {
           padding: 0;
   
           li {
             position: relative;
-            margin: 25px 0;
+            margin: 24px 0;
+            margin: 1.5rem 0;
             text-transform: uppercase;
             text-align: center;
             white-space: nowrap;
   
             small {
-              font-weight: 400;
               display: block;
               position: absolute;
               top: 0;
               width: 100%;
-              font-size: .7rem;
-              line-height: 1.3125rem;
-              letter-spacing: 1.5px;
+              font-weight: 400;
+              font-size: 12px;
+              font-size: .75rem;
+              line-height: 20px;
+              line-height: 1.25rem;
+              letter-spacing: 1px;
+              letter-spacing: .0625rem;
             }
   
             a {
@@ -131,14 +115,22 @@
               position: relative;
               display: inline-block;
               overflow: hidden;
-              padding-top: 1.3125rem;
+              padding-top: 24px;
+              padding-top: 1.5rem;
+              padding-bottom: 8px;
               padding-bottom: .5rem;
-              margin-bottom: -3px;
-              letter-spacing: 3px;
-              font-family: $fontPrimary;
+              font-weight: 400;
+              font-size: 18px;
               font-size: 1.125rem;
-              font-weight: 800;
+              line-height: 24px;
+              line-height: 1.5rem;
+              letter-spacing: 1px;
+              letter-spacing: .0625rem;
+              text-transform: uppercase;
+              margin-bottom: -3px;
+              margin-bottom: -.1875rem;
               margin-top: -3px;
+              margin-top: -.1875rem;
               vertical-align: top;
   
               &::before,
@@ -180,111 +172,27 @@
   }
 
   @include for-tablet-portrait-up {
-    &.is-on {
-      overflow-y: hidden;
-
-      .MenuIcon-container {
-        z-index: 6;
-        width: 150px;
-        height: 75px;
-      }
-
+    &.is-on {      
       .NavigationMenu {
-        top: -75px;
-        height: 100%;
-
-        .NavigationMenu-logo {
-          padding-top: 60px;
-        }
+        height: calc(100% - 85px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         .NavigationMenu-links {
-          position: absolute;
-          width: 100%;
-          bottom: 2.5vh;
+          max-width: 1080px;
 
           ul {
             display: flex;
-            flex-wrap: wrap;
-            padding-bottom: 15px;
+            padding-bottom: 16px;
+            padding-bottom: 1rem;
 
             li {
               margin: 10px 0;
-              width: 50%;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @include for-tablet-landscape-up {
-    &.is-on {
-      .NavigationMenu {
-        .NavigationMenu-links {
-          bottom: 85px;
-
-          ul {
-            max-width: 1080px;
-            margin: 0 auto;
-
-            li {
+              margin: .625rem 0;
               width: 20%;
             }
           }
-        }
-      }
-    }
-  }
-
-  @include for-medium-window-up {
-    @include for-tablet-portrait-up {
-      &.is-on {
-        .NavigationMenu {
-          .NavigationMenu-logo {
-            padding-top: 60px;
-          }
-
-          .NavigationMenu-text {
-            display: block;
-          }
-        }
-
-        & + .Navigation-edge {
-          z-index: 9;
-          position: absolute;
-          left: -50%;
-          width: 100%;
-          -webkit-transform: rotate(-3deg);
-             -moz-transform: rotate(-3deg);
-              -ms-transform: rotate(-3deg);
-               -o-transform: rotate(-3deg);
-                  transform: rotate(-3deg);
-          background-color: white;
-          bottom: 33px;
-          min-width: 1440px;
-          height: 90px;
-        }
-      }
-    }
-
-    @include for-tablet-landscape-up {
-      &.is-on {
-        height: calc(100% - 85px);
-
-        & + .Navigation-edge {
-          bottom: 30px;
-          min-width: 1920px;
-          height: 120px;
-        }
-      }
-    }
-
-    @include for-desktop-up {
-      &.is-on {
-        & + .Navigation-edge {
-          bottom: 20px;
-          min-width: 3000px;
-          height: 200px;
         }
       }
     }
@@ -299,18 +207,25 @@
 
     @include for-tablet-portrait-up {
       &.is-on {
+        width: 61.8%;
+        max-width: 480px;
+
         .NavigationMenu {
-          height: 100%;
-        }
-      }
-    }
-
-    @include for-tablet-landscape-up {
-      &.is-on {
-        height: calc(100% - 150px);
-
-        & + .Navigation-edge {
-          bottom: 90px;
+          display: block;
+  
+          .NavigationMenu-links {
+            max-width: 1080px;
+  
+            ul {
+              display: block;
+  
+              li {
+                margin: 24px 0;
+                margin: 1.5rem 0;
+                width: 100%;
+              }
+            }
+          }
         }
       }
     }

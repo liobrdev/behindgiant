@@ -125,7 +125,8 @@
       .ScrollTop {
         all: unset;
         position: absolute;
-        top: 50px;
+        top: 24px;
+        top: 1.5rem;
         text-align: center;
         width: inherit;
         color: white;
@@ -174,6 +175,102 @@
         }
       }
 
+      .NavigationMenu {
+        display: none;
+        position: relative;
+        width: 100%;
+
+        .NavigationMenu-links {
+          width: 100%;
+          margin: 48px auto;
+          margin: 3rem auto;
+  
+          ul {
+            display: flex;
+            padding: 0;
+    
+            li {
+              position: relative;
+              margin: 10px 0;
+              margin: .625rem 0;
+              width: 20%;
+              text-transform: uppercase;
+              text-align: center;
+              white-space: nowrap;
+              color: white;
+    
+              small {
+                display: block;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                font-weight: 400;
+                font-size: 12px;
+                font-size: .75rem;
+                line-height: 20px;
+                line-height: 1.25rem;
+                letter-spacing: 1px;
+                letter-spacing: .0625rem;
+              }
+    
+              a {
+                color: white;
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                padding-top: 24px;
+                padding-top: 1.5rem;
+                padding-bottom: 8px;
+                padding-bottom: .5rem;
+                font-weight: 400;
+                font-size: 18px;
+                font-size: 1.125rem;
+                line-height: 24px;
+                line-height: 1.5rem;
+                letter-spacing: 1px;
+                letter-spacing: .0625rem;
+                text-transform: uppercase;
+                margin: -3px 0;
+                margin: -.1875rem 0;
+                vertical-align: top;
+    
+                &::before,
+                &::after {
+                  content: "";
+                  z-index: 6;
+                  display: block;
+                  position: absolute;
+                  bottom: 1px;
+                  width: 0;
+                  height: 3px;
+                  background-color: white;
+                  -webkit-transition: width 0.125s linear;
+                     -moz-transition: width 0.125s linear;
+                       -o-transition: width 0.125s linear;
+                          transition: width 0.125s linear;
+                }
+    
+                &::before {
+                  right: 50%;
+                }
+    
+                &::after {
+                  left: 50%;
+                }
+    
+                &:focus,
+                &:hover {
+                  &::before,
+                  &::after {
+                    width: 49%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
       .Footer {
         position: absolute;
         bottom: 0;
@@ -208,6 +305,40 @@
 
         .ScrollDown {
           display: block;
+        }
+      }
+
+      &#home-banner2 {
+        .NavigationMenu {
+          display: block;
+        }
+      }
+    }
+
+    @include for-desktop-up {
+      &.Section--banner {  
+        .Banner-underlay {
+          right: unset;
+        }
+      }
+    }
+
+    @include for-tall-window-up {
+      &#home-banner2 {
+        .NavigationMenu {  
+          display: block;
+
+          .NavigationMenu-links {
+            ul {
+              display: block;
+
+              li {
+                margin: 24px 0;
+                margin: 1.5rem 0;
+                width: unset;
+              }
+            }
+          }
         }
       }
     }

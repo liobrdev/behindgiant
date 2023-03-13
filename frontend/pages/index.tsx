@@ -1,10 +1,11 @@
+import debounce from 'lodash/debounce';
+import Head from 'next/head';
 import { Component, MouseEvent } from 'react';
 
-import debounce from 'lodash/debounce';
+import {
+  AnimatedLink, Footer, InViewWrapper, MediaToBeLoaded, NavigationMenu,
+} from '@/components';
 
-import Head from 'next/head';
-
-import { AnimatedLink, Footer, InViewWrapper, MediaToBeLoaded } from '@/components';
 import { IBreadcrumbListItem } from '@/types';
 
 
@@ -425,8 +426,8 @@ export default class Home extends Component {
           <div className='Banner-overlay' />
           <button className='ScrollTop' onClick={this.handleScrollTop} type='button'>
             <div />
-            <span>Scroll top</span>
           </button>
+          <NavigationMenu />
           <Footer classNames='Footer--home' />
         </section>
       </>
