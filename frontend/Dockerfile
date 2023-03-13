@@ -7,6 +7,7 @@ RUN npm install
 COPY . ./
 ENV NEXT_PUBLIC_ASSETS_URL https://assets.behindgiant.liobr.dev
 ENV NEXT_PUBLIC_IMAGES_URL ${NEXT_PUBLIC_ASSETS_URL}/media/images
+ENV NEXT_PUBLIC_VIDEOS_URL ${NEXT_PUBLIC_ASSETS_URL}/media/videos
 ENV NEXT_TELEMETRY_DISABLED 1
 ENV NODE_ENV production
 RUN npm run build
