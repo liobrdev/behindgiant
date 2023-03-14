@@ -114,7 +114,7 @@ class RootComponent extends Component<Props> {
     await new Promise(resolve => {
       this.animationTimeout = setTimeout(resolve, 250);
     });
-
+  
     this.props.turnMainOpacityOn();
 
     await new Promise(resolve => {
@@ -122,6 +122,14 @@ class RootComponent extends Component<Props> {
     });
 
     this.props.makeMainScrollable();
+
+    await new Promise(resolve => {
+      this.animationTimeout = setTimeout(resolve, 100);
+    });
+
+    window.scrollTo(0, 0);
+    document.getElementById('main')?.scrollTo(0, 0);
+
     this.props.hideLoadingView();
   }
 
