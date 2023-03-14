@@ -43,7 +43,7 @@ class AnimatedLink extends Component<Props> {
     });
 
     this.props.closeNavigation();
-    this.props.router.push(pathname);
+    this.props.router.push(pathname, undefined, { scroll: false });
   }
 
   componentWillUnmount() {
