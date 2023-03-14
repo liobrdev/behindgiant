@@ -71,6 +71,16 @@
       }
     }
 
+    .Logo {
+      background-color: white;
+      padding-top: 2rem;
+      text-align: center;
+
+      h1 {
+        margin: 0;
+      }
+    }
+
     .NavigationMenu {
       z-index: 5;
       position: relative;
@@ -200,6 +210,8 @@
 
   @include for-tall-window-up {
     &.is-on {
+      overflow-y: hidden;
+
       .NavigationMenu {
         height: calc(100% - 85px);
       }

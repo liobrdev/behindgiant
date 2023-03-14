@@ -14,6 +14,14 @@ class Navigation extends Component<Props> {
         {navigationOn && <div className='Navigation-overlay' onClick={closeNavigation} />}
         <div className={`Navigation${navigationOn ? ' is-on' : ''}`}>
           <NavigationIcon isOn={navigationOn} />
+          {navigationOn && (
+            <div className='Logo'>
+              <h1>
+                <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
+                <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
+              </h1>
+            </div>
+          )}
           {navigationOn && <NavigationMenu />}
         </div>
       </>
