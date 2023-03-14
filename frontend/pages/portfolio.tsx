@@ -142,7 +142,7 @@ export default class Portfolio extends Component {
         </section>
         <section id='portfolio-projects-list'>
           <h3>
-            <span>Recent works from</span>&nbsp;<wbr/>
+            <span>Recent work from</span>&nbsp;<wbr/>
             <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
             <strong className='u-teal'>Giant</strong>
             <span>:</span>
@@ -151,8 +151,8 @@ export default class Portfolio extends Component {
             <div className='Project'>
               <AnimatedLink href='/portfolio/latest6' className='TextLink'>
                 <div className='Text'>
-                  <h4>Madonnina</h4>
-                  <p>In the Cathedral</p>
+                  <time dateTime='2023-01-06'>January 6, 2023</time>
+                  <h5>Madonnina</h5>
                 </div>
               </AnimatedLink>
               <AnimatedLink href='/portfolio/latest6' className='ThumbLink'>
@@ -168,8 +168,8 @@ export default class Portfolio extends Component {
             <div className='Project'>
               <AnimatedLink href='/portfolio/latest5' className='TextLink'>
                 <div className='Text'>
-                  <h4>Food Truck</h4>
-                  <p>#LoremIpsum</p>
+                  <time dateTime='2023-01-05'>January 5, 2023</time>
+                  <h5>Food Truck</h5>
                 </div>
               </AnimatedLink>
               <AnimatedLink href='/portfolio/latest5' className='ThumbLink'>
@@ -185,8 +185,8 @@ export default class Portfolio extends Component {
             <div className='Project'>
               <AnimatedLink href='/portfolio/latest4' className='TextLink'>
                 <div className='Text'>
-                  <h4>Fourth Wheel</h4>
-                  <p>Now you see it.</p>
+                  <time dateTime='2023-01-04'>January 4, 2023</time>
+                  <h5>Fourth Wheel</h5>
                 </div>
               </AnimatedLink>
               <AnimatedLink href='/portfolio/latest4' className='ThumbLink'>
@@ -202,8 +202,8 @@ export default class Portfolio extends Component {
             <div className='Project'>
               <AnimatedLink href='/portfolio/latest3' className='TextLink'>
                 <div className='Text'>
-                  <h4>To the Sky</h4>
-                  <p>Examine the American Dream</p>
+                  <time dateTime='2023-01-03'>January 3, 2023</time>
+                  <h5>To the Sky</h5>
                 </div>
               </AnimatedLink>
               <AnimatedLink href='/portfolio/latest3' className='ThumbLink'>
@@ -219,8 +219,8 @@ export default class Portfolio extends Component {
             <div className='Project'>
               <AnimatedLink href='/portfolio/latest2' className='TextLink'>
                 <div className='Text'>
-                  <h4>Collage</h4>
-                  <p>A Fresh Coat of Ink</p>
+                  <time dateTime='2023-01-02'>January 2, 2023</time>
+                  <h5>Collage</h5>
                 </div>
               </AnimatedLink>
               <AnimatedLink href='/portfolio/latest2' className='ThumbLink'>
@@ -236,8 +236,8 @@ export default class Portfolio extends Component {
             <div className='Project'>
               <AnimatedLink href='/portfolio/latest1' className='TextLink'>
                 <div className='Text'>
-                  <h4>Hello World</h4>
-                  <p>What do you think so far?</p>
+                  <time dateTime='2023-01-01'>January 1, 2023</time>
+                  <h5>Hello World</h5>
                 </div>
               </AnimatedLink>
               <AnimatedLink href='/portfolio/latest1' className='ThumbLink'>

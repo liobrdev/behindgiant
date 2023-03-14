@@ -1,6 +1,11 @@
 .Main--portfolio {
   section {
     &#portfolio-projects-list {
+      width: 100%;
+      background: white;
+      padding: 112px 0 0;
+      padding: 7rem 0 0;
+
       h3 {
         font-weight: 400;
         font-size: 16px;
@@ -9,8 +14,8 @@
         line-height: 1.75rem;
         letter-spacing: 1px;
         letter-spacing: .0625rem;
-        margin: 0;
-        padding: 40px 7.5%;
+        margin: 0 auto 48px;
+        margin: 0 auto 3rem;
         text-align: center;
       }
 
@@ -28,35 +33,46 @@
 
           .TextLink {
             position: relative;
-            top: calc(100% - 66px);
+            top: calc(100% - 128px);
+            top: calc(100% - 8rem);
             display: inline-block;
-            height: 66px;
+            max-width: 90%;
+            height: 128px;
+            height: 8rem;
 
             .Text {
               position: relative;
-              width: fit-content;
-              margin: 0 auto;
               text-align: center;
 
-              h4 {
-                color: $black;
-                font-weight: 800;
-                font-size: 1.0625rem;
-                line-height: 1.8125rem;
-                letter-spacing: 2px;
-                position: relative;
-                text-transform: uppercase;
-                margin: 10px 0 0;
-              }
-  
-              p {
+              time {
                 color: $black;
                 font-weight: 400;
-                font-size: .9375rem;
-                line-height: 1.6875rem;
+                font-size: 12px;
+                font-size: .75rem;
+                line-height: 20px;
+                line-height: 1.25rem;
                 letter-spacing: 1px;
+                letter-spacing: .0625rem;
                 position: relative;
+                display: inline-block;
+                margin: 16px 0 4px;
+                margin: 1rem 0 .25rem;
+                text-transform: uppercase;
+              }
+              
+              h5 {
+                color: $black;
+                font-weight: 400;
+                font-size: 18px;
+                font-size: 1.125rem;
+                line-height: 24px;
+                line-height: 1.5rem;
+                letter-spacing: 1px;
+                letter-spacing: .0625rem;
+                text-transform: uppercase;
                 margin: 0;
+                max-height: 5.4375rem;
+                overflow: auto;
               }
             }
 
@@ -85,7 +101,8 @@
 
           .ThumbLink {
             position: relative;
-            top: -66px;
+            top: -128px;
+            top: -8rem;
 
             .Thumb {
               position: relative;
@@ -97,7 +114,7 @@
                 }
 
                 height: 0;
-                padding-bottom: 56.66667%;
+                padding-bottom: 60%;
                 overflow: hidden;
                 margin: auto;
                 opacity: 0.95;
@@ -146,7 +163,8 @@
           font-size: 1.125rem;
           line-height: 32px;
           line-height: 2rem;
-          padding: 90px 7.5% 40px;
+          margin: 0 auto 80px;
+          margin: 0 auto 5rem;
         }
 
         .Projects {
@@ -157,11 +175,20 @@
       }
     }
 
-    @include for-desktop-up {
+    @include for-tablet-landscape-up {
       &#portfolio-projects-list {
+        padding: 112px 7.5% 0;
+        padding: 7rem 7.5% 0;
+
         .Projects {
           .Project {
-            width: 33.3%;
+            &:nth-of-type(2n-1) {
+              padding-right: 2.75%;
+            }
+
+            &:nth-of-type(2n) {
+              padding-left: 2.75%;
+            }
           }
         }
       }
