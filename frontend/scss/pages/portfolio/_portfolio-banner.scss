@@ -42,30 +42,38 @@
             position: relative;
 
             h2 {
-              font-size: 1rem;
-              font-weight: 800;
-              line-height: 1.125rem;
+              font-weight: 700;
+              font-size: 20px;
+              font-size: 1.25rem;
+              line-height: 28px;
+              line-height: 1.75rem;
               letter-spacing: 1px;
+              letter-spacing: .0625rem;
               text-transform: uppercase;
             }
 
             h3 {
+              font-weight: 400;
+              font-size: 24px;
               font-size: 1.5rem;
-              font-weight: 800;
-              line-height: 1.9375rem;
+              line-height: 28px;
+              line-height: 1.75rem;
               letter-spacing: 3px;
+              letter-spacing: .1875rem;
+              text-align: center;
               text-transform: uppercase;
-              position: relative;
-              margin-top: 28px;
-              margin-bottom: 0;
+              margin-bottom: 16px;
+              margin-bottom: 1rem;
             }
 
             h4 {
+              font-weight: 400;
+              font-size: 16px;
               font-size: 1rem;
-              font-weight: 500;
-              line-height: 1.4375rem;
-              letter-spacing: 2px;
-              margin-top: 0;
+              line-height: 28px;
+              line-height: 1.75rem;
+              letter-spacing: 1px;
+              letter-spacing: .0625rem;
             }
           }
         }
@@ -73,9 +81,9 @@
 
       .ScrollDown {
         all: unset;
-        display: none;
+        display: block;
         position: absolute;
-        bottom: 0;
+        bottom: 0px;
         left: calc(50% - 25px);
         color: white;
         
@@ -85,8 +93,12 @@
           width: 50px;
           text-align: center;
           font-weight: 400;
+          font-size: 12px;
           font-size: .75rem;
-          line-height: 1.0625rem;
+          line-height: 20px;
+          line-height: 1.25rem;
+          letter-spacing: 1px;
+          letter-spacing: .0625rem;
           text-transform: uppercase;
           padding-bottom: 5px;
         }
@@ -94,7 +106,7 @@
         div {
           position: relative;
           left: calc(50% - 1px);
-          height: 50px;
+          height: 55px;
           width: 2px;
           background: white;
           transition: height 0.5s ease-out;
@@ -105,7 +117,7 @@
           cursor: pointer;
 
           div {
-            height: 60px;
+            height: 50px;
           }
         }
 
@@ -122,29 +134,21 @@
         .Intro {
           a {
             #portfolio-banner-text {
-              h2 {
-                font-size: 1.25rem;
-                line-height: 1.4375rem;
-              }
-
               h3 {
-                font-size: 2.375rem;
-                line-height: 2.4375rem;
-                letter-spacing: 5px;
-                margin-top: 28px;
+                font-size: 32px;
+                font-size: 2rem;
+                letter-spacing: 4px;
+                letter-spacing: .25rem;
               }
 
               h4 {
-                font-size: 1.25rem;
-                line-height: 1.8125rem;
-                margin-top: 8px;
+                font-size: 18px;
+                font-size: 1.125rem;
+                line-height: 32px;
+                line-height: 2rem;
               }
             }
           }
-        }
-
-        .ScrollDown {
-          display: block;
         }
       }
     }
