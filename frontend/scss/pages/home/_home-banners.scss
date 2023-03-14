@@ -149,18 +149,6 @@
           transition: top 0.5s ease-out;
         }
 
-        span {
-          font-weight: 400;
-          font-size: 12px;
-          font-size: .75rem;
-          line-height: 20px;
-          line-height: 1.25rem;
-          letter-spacing: 1px;
-          letter-spacing: .0625rem;
-          text-transform: uppercase;
-          display: block;
-        }
-
         &:focus,
         &:hover {
           cursor: pointer;

@@ -8,7 +8,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background-color: $orange;
+      background-color: $neonorange;
 
       &::before {
         content: "";
@@ -30,7 +30,8 @@
       .ScrollTop {
         all: unset;
         position: absolute;
-        top: 75px;
+        top: 80px;
+        top: 5rem;
         text-align: center;
         width: inherit;
         color: white;
@@ -53,14 +54,6 @@
           transition: top 0.5s ease-out;
         }
 
-        span {
-          font-weight: 400;
-          font-size: .75rem;
-          line-height: 1.0625rem;
-          display: block;
-          text-transform: uppercase;
-        }
-
         &:focus,
         &:hover {
           cursor: pointer;
@@ -76,16 +69,20 @@
       }
 
       .Logo {
-        width: 90%;
-        margin: 0 auto;
         text-align: center;
-        position: relative;
-        top: 20px;
         
-        img {
-          width: 100%;
-          max-width: 250px;
-          margin-left: auto;
+        a {
+          color: white;
+
+          h1 {
+            margin: 0;
+            color: white;
+            font-weight: 300;
+            font-size: 48px;
+            font-size: 3rem;
+            letter-spacing: -1px;
+            letter-spacing: -.0625rem;
+          }
         }
       }
 

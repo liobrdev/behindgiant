@@ -249,14 +249,9 @@ export default class Portfolio extends Component {
         </section>
         <section id='portfolio-footer'>
           <button className='ScrollTop' onClick={this.handleScrollTop} type='button'>
-            <div/>
-            <span>Scroll top</span>
+            <div />
           </button>
-          <div className='Logo'>
-            <AnimatedLink href='/'>
-              <img className='Logo-image' src={`${imagesUrl}/Logo-wh.png`} alt='behind GIANT'/>
-            </AnimatedLink>
-          </div>
+          <div className='Logo'><AnimatedLink href='/'><h1>behind Giant</h1></AnimatedLink></div>
           <Footer classNames='Footer--portfolio' />
         </section>
       </>
