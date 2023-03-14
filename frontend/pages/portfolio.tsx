@@ -141,7 +141,12 @@ export default class Portfolio extends Component {
           </button>
         </section>
         <section id='portfolio-projects-list'>
-          <h3>Recent <strong>work</strong> from <strong>behind GIANT:</strong></h3>
+          <h3>
+            <span>Recent works from</span>&nbsp;<wbr/>
+            <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
+            <strong className='u-teal'>Giant</strong>
+            <span>:</span>
+          </h3>
           <div className='Projects'>
             <div className='Project'>
               <AnimatedLink href='/portfolio/latest6' className='TextLink'>

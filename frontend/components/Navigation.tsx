@@ -18,7 +18,7 @@ class Navigation extends Component<Props> {
             <div className='Logo'>
               <h1>
                 <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
-                <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
+                <strong className='u-teal'>Giant</strong>
               </h1>
             </div>
           )}

@@ -2,12 +2,16 @@
   section {
     &#portfolio-projects-list {
       h3 {
-        font-size: 1rem;
-        line-height: 1.75rem;
         font-weight: 400;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 28px;
+        line-height: 1.75rem;
+        letter-spacing: 1px;
+        letter-spacing: .0625rem;
+        margin: 0;
         padding: 40px 7.5%;
         text-align: center;
-        margin: 0;
       }
 
       .Projects {
@@ -138,6 +142,10 @@
     @include for-tablet-portrait-up {
       &#portfolio-projects-list {
         h3 {
+          font-size: 18px;
+          font-size: 1.125rem;
+          line-height: 32px;
+          line-height: 2rem;
           padding: 90px 7.5% 40px;
         }
 
