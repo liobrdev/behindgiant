@@ -75,7 +75,7 @@
 
       .ScrollDown {
         all: unset;
-        display: none;
+        display: block;
         position: absolute;
         bottom: 0px;
         left: calc(50% - 25px);
@@ -301,10 +301,6 @@
               letter-spacing: 2px;
             }
           }
-        }
-
-        .ScrollDown {
-          display: block;
         }
       }
 
