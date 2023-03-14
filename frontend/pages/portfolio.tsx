@@ -116,7 +116,10 @@ export default class Portfolio extends Component {
         <header id='portfolio-header'>
           <div className='Logo'>
             <AnimatedLink href='/'>
-              <img className='Logo-image' src={`${imagesUrl}/Logo-bl2.png`} alt='behind GIANT'/>
+              <h1>
+                <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
+                <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
+              </h1>
             </AnimatedLink>
           </div>
         </header>

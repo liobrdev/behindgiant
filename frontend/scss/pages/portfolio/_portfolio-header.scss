@@ -9,15 +9,15 @@
     background-color: white;
 
     .Logo {
+      padding-top: 32px;
+      padding-top: 2rem;
       text-align: center;
       position: relative;
       top: 85px;
       
       a {
-        img {
-          width: 100%;
-          min-width: 125px;
-          max-width: 200px;
+        h1 {
+          margin: 0;
         }
       }
     }
