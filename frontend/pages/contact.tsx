@@ -88,19 +88,7 @@ export default class Contact extends Component<{}, State> {
           <div className='ContactDetails'>
             <div className='ContactDetail'>
               {this.state.clocksAreMounted && <Clocks />}
-              <h2 className='Weather'>
-                <strong>OAK</strong> 57<sup>°F</sup> / 14<sup>°C</sup>
-              </h2>
-              <hr/>
-              <div className='Address'>
-                <Link href='https://goo.gl/maps/P5cff8fBMaiuuwVx9'>
-                  <a target='_blank'>
-                    Building 10A, 0000 Oak St
-                    <br/>
-                    Oakland, CA 94607
-                  </a>
-                </Link>
-              </div>
+              <h2 className='Location'>東京 Tokyo, Japan</h2>
               <hr/>
               <div className='Connect'>
                 <div><Link href="tel://510.555.8400"><a>510.555.8400</a></Link></div>

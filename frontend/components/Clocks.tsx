@@ -5,7 +5,7 @@ import { request } from '@/utils';
 
 
 const defaultClientUtcOffset = - new Date().getTimezoneOffset() * 60;
-const defaultPstUtcOffset = -28800;
+const defaultPstUtcOffset = 32400;
 
 const getSecondsElapsedToday = () => {
   const now = new Date();

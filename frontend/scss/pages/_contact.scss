@@ -53,7 +53,6 @@
         margin-top: 1.5rem;
 
         .Clocks {
-          display: none;
           position: relative;
           text-align: center;
 
@@ -66,48 +65,23 @@
           }
         }
 
-        .Weather {
-          display: none;
-          text-align: center;
+        .Location {
           color: white;
-          font-weight: 700;
-          font-size: 1.5rem;
-          line-height: 1.4375rem;
-          letter-spacing: 3px;
-          margin: 13px 0;
-
-          strong {
-            font-weight: 800;
-          }
-
-          sup {
-            font-weight: 500;
-            font-size: .75rem;
-            line-height: 1.5rem;
-            letter-spacing: 1px;
-            vertical-align: super;
-          }
+          font-weight: 400;
+          font-size: 20px;
+          font-size: 1.25rem;
+          line-height: 32px;
+          line-height: 2rem;
+          letter-spacing: 1px;
+          letter-spacing: .0625rem;
+          text-align: center;
         }
-
+        
         hr {
           display: block;
           border-bottom: 2px solid currentcolor;
           background: none;
           margin: 0;
-        }
-
-        .Address {
-          font-size: .9375rem;
-          line-height: 1.0625rem;
-          padding: 15px 0 13px;
-          font-weight: 500;
-          letter-spacing: 0;
-          text-align: center;
-
-          a {
-            display: block;
-            color: white;
-          }
         }
 
         .Connect {
@@ -118,13 +92,16 @@
 
           div {
             a {
-              font-weight: 500;
+              color: white;
+              font-weight: 400;
+              font-size: 18px;
               font-size: 1.125rem;
+              line-height: 16px;
               line-height: 1rem;
               letter-spacing: 1px;
+              letter-spacing: .0625rem;
               text-transform: uppercase;
               display: block;
-              color: white;
               width: fit-content;
               margin: 1.375rem auto;
             }
@@ -143,26 +120,8 @@
         max-width: 400px;
 
         .ContactDetail {
-          .Weather {
-            font-size: 2.5rem;
-            line-height: 2.9375rem;
-            letter-spacing: 5px;
-
-            sup {
-              font-size: 1.25rem;
-              line-height: 2.5rem;
-            }
-          }
-
           hr {
             border-bottom: 3px solid currentcolor;
-          }
-
-          .Address {
-            padding: 15px 25px 13px;
-            font-size: 1.375rem;
-            line-height: 1.8125rem;
-            letter-spacing: 2px;
           }
 
           .Connect {
@@ -172,10 +131,10 @@
               display: table-cell;
 
               a {
-                font-size: 1rem;
-                line-height: 1.3125rem;
-                margin: unset;
+                line-height: 24px;
+                line-height: 1.5rem;
                 display: inline;
+                margin: unset;
               }
 
               &:first-child {
@@ -202,17 +161,6 @@
       text-align: center;
       color: white;
       padding-bottom: 1rem;
-    }
-
-    @include for-tall-window-up {
-      .ContactDetails {
-        .ContactDetail {
-          .Clocks,
-          .Weather {
-            display: block;
-          }
-        }
-      }
     }
   }
 }
