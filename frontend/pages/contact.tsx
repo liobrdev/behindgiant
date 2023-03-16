@@ -83,7 +83,7 @@ export default class Contact extends Component<{}, State> {
           <div className='Banner-underlay' />
           <div className='Banner-overlay' />
           <div className='Logo'>
-            <img className='Logo-image' src={`${imagesUrl}/Logo-wh.png`} alt='behind GIANT' />
+            <h1>behind Giant</h1>
           </div>
           <div className='ContactDetails'>
             <div className='ContactDetail'>

@@ -28,16 +28,19 @@
     }
 
     .Logo {
-      width: fit-content;
-      margin: 0 auto;
-      padding-top: 85px;
-      position: relative;
+      text-align: center;
+      margin-top: 105px;
+      margin-top: 6.5625rem;
+      margin-bottom: 40px;
+      margin-bottom: 2.5rem;
       
-      img {
-        width: 100%;
-        min-width: 100px;
-        max-width: 200px;
-        margin-left: auto;
+      h1 {
+        color: white;
+        font-weight: 300;
+        font-size: 48px;
+        font-size: 3rem;
+        letter-spacing: -1px;
+        letter-spacing: -.0625rem;
       }
     }
 
@@ -132,7 +135,8 @@
 
     @include for-tablet-portrait-up {
       .Logo {
-        padding-top: 60px;
+        margin-top: 80px;
+        margin-top: 5rem;
       }
 
       .ContactDetails {
