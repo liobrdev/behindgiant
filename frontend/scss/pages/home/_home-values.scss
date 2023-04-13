@@ -1,0 +1,168 @@
+.Main--home {
+  section {
+    &#home-values {
+      font-family: $fontPrimary;
+      width: 100%;
+      background: white;
+      padding: 112px 7.5% 0;
+      padding: 7rem 7.5% 0;
+
+      h3 {
+        font-weight: 400;
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 28px;
+        line-height: 1.75rem;
+        letter-spacing: 3px;
+        letter-spacing: .1875rem;
+        margin: 0 auto 48px;
+        margin: 0 auto 3rem;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .Columns {
+        .Column {
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+
+          .CoreValue {
+            width: 100%;
+            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
+
+            &-number {
+              &::before {
+                content: "";
+                display: inline-block;
+                background: $neonorange;
+                width: 24px;
+                height: 4px;
+                position: relative;
+                top: -8px;
+                letter-spacing: 5px;
+                margin-right: 14px;
+              }
+
+              color: $neonorange;
+              font-weight: 700;
+              font-size: 30px;
+              font-size: 1.875rem;
+              line-height: 36px;
+              line-height: 2.25rem;
+              letter-spacing: 1px;
+              letter-spacing: .0625rem;
+              margin-bottom: 4px;
+              margin-bottom: .25rem;
+              text-align: left;
+            }
+
+            h5,
+            p {
+              display: inline;
+              font-weight: 400;
+              font-size: 16px;
+              font-size: 1rem;
+              line-height: 28px;
+              line-height: 1.75rem;
+              letter-spacing: 1px;
+              letter-spacing: 0.0625rem;
+              margin: 0;
+            }
+
+            h5 strong {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      &#home-values {
+        h3 {
+          font-size: 32px;
+          font-size: 2rem;
+          letter-spacing: 4px;
+          letter-spacing: .25rem;
+          margin: 0 auto 80px;
+          margin: 0 auto 5rem;
+        }
+
+        .Columns {
+          .Column {
+            .CoreValue {
+              &-number {
+                &::before {
+                  display: none;
+                }
+                
+                text-align: center;
+              }
+
+              text-align: center;
+
+              h5,
+              p {
+                font-size: 18px;
+                font-size: 1.125rem;
+                line-height: 32px;
+                line-height: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include for-tablet-landscape-up {
+      &#home-values {
+        .Columns {
+          .Column {
+            width: 50%;
+            max-height: 656px;
+
+            .CoreValue {
+              &-number {
+                &::before {
+                  display: inline-block;
+                }
+              }
+
+              padding: 0 24px;
+              padding: 0 1.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    @include for-desktop-up {
+      &#home-values {
+        .Columns {
+          .Column {
+            max-height: 625px;
+
+            .CoreValue {
+              &-number {
+                &::before {
+                  width: 32px;
+                  top: -11px;
+                  margin-right: 16px;
+                }
+
+                font-size: 40px;
+                font-size: 2.5rem;
+                line-height: 48px;
+                line-height: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

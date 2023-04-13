@@ -192,6 +192,55 @@ export default class Home extends Component {
             </div>
           </InViewWrapper>
         </section>
+        <section id='home-values'>
+          <InViewWrapper threshold={0.125} unobserveOnEnter>
+            <h3>Our Core Values</h3>
+            <div className='Columns'>
+              <div className='Column'>
+                <div className='CoreValue'>
+                  <div className='CoreValue-number'>01</div>
+                  <h5><strong>Comprehension before action.</strong></h5>&nbsp;&nbsp;
+                  <p><span>Identify an avenue for improvement &mdash; and act.</span></p>
+                </div>
+                <div className='CoreValue'>
+                  <div className='CoreValue-number'>02</div>
+                  <h5><strong>Break through biases.</strong></h5>&nbsp;&nbsp;
+                  <p><span>Every story deserves to be told.</span></p>
+                </div>
+                <div className='CoreValue'>
+                  <div className='CoreValue-number'>03</div>
+                  <h5><strong>Belief-driven.</strong></h5>&nbsp;&nbsp;
+                  <p><span>We represent your values and societal change.</span></p>
+                </div>
+                <div className='CoreValue'>
+                  <div className='CoreValue-number'>04</div>
+                  <h5><strong>Collaborative approach.</strong></h5>&nbsp;&nbsp;
+                  <p><span>We value and employ the input of the community.</span></p>
+                </div>
+                <div className='CoreValue'>
+                  <div className='CoreValue-number'>05</div>
+                  <h5><strong>Transparent with intention.</strong></h5>&nbsp;&nbsp;
+                  <p><span>Creating with integrity.</span></p>
+                </div>
+                <div className='CoreValue'>
+                  <div className='CoreValue-number'>06</div>
+                  <h5><strong>Pursuit with purpose.</strong></h5>&nbsp;&nbsp;
+                  <p><span>Steps guided by reason for existence.</span></p>
+                </div>
+                <div className='CoreValue'>
+                  <div className='CoreValue-number'>07</div>
+                  <h5><strong>Move without the ball.</strong></h5>&nbsp;&nbsp;
+                  <p>
+                    <span>
+                      The opportunity to score may not be present yet, but it is important to be
+                      prepared to score.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </InViewWrapper>
+        </section>
         <section id='home-offerings'>
           <InViewWrapper threshold={0.125} unobserveOnEnter>
             <h3>Our Offerings</h3>
