@@ -162,24 +162,24 @@ export default class Home extends Component {
                 <p>
                   <span>
                     Creative consultancies identify the needs of their client and find creative
-                    strategies for solving the client&apos;s problems. Unfortunately, the solutions
-                    are often void of the insights and voices of the communities they intend
-                    to serve.
+                    strategies for solving the client&apos;s problems. Unfortunately, the
+                    solutions are often void of the insights and voices of the communities they
+                    intend to serve.
                   </span>
                 </p>
                 <p>
                   <span>
-                    Collaborations often leave out culturally competent agency partners, pointing to
-                    a lack of diversity in representation and resulting in biased marketing and
-                    missed opportunities. Only 11.4% of creative industry jobs are filled by Black,
-                    Asian, or minority ethnic people, and just 11.5% of creative directors in the
-                    USA are women.
+                    Collaborations often leave out culturally competent agency partners, pointing
+                    to a lack of diversity in representation and resulting in biased marketing and
+                    missed opportunities. Only 11.4% of creative industry jobs are filled by
+                    Black, Asian, or minority ethnic people, and just 11.5% of creative directors
+                    in the USA are women.
                   </span>
                 </p>
                 <p>
                   <span>
-                    Huge disparities in opportunities for participation result in smaller reach and
-                    lower profits. This should be addressed. We constructed
+                    Huge disparities in opportunities for participation result in smaller reach
+                    and lower profits &mdash; the issue must be addressed. We constructed
                   </span>&nbsp;<wbr/>
                   <strong className='u-neonorange'>behind</strong>&nbsp;<wbr/>
                   <strong className='u-teal'>Giant</strong>&nbsp;<wbr/>
@@ -315,7 +315,7 @@ export default class Home extends Component {
                 <p>
                   <span>
                     Our beliefs are rooted in answering four important questions and in guiding our
-                    clients to do the same for their purposes:
+                    clients to do the same:
                   </span>
                 </p>
                 <ul>
