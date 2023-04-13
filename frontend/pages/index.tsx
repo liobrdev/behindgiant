@@ -119,7 +119,6 @@ export default class Home extends Component {
           imagesUrl + '/puzzle-icon.png',
           imagesUrl + '/gears-icon.png',
           imagesUrl + '/ikigai.png',
-          imagesUrl + '/stock-portrait-man2.jpg',
           imagesUrl + '/photographer.jpg',
           imagesUrl + '/sold.jpg',
           imagesUrl + '/ideas.jpg',
@@ -338,50 +337,6 @@ export default class Home extends Component {
                 <img className='Ikigai-image' src={imagesUrl + '/ikigai.png'} alt='Ikigai image'
                   width='500px'
                 />
-              </div>
-            </div>
-          </InViewWrapper>
-        </section>
-        <section id='home-who-we-are'>
-          <InViewWrapper threshold={0.125} unobserveOnEnter>
-            <h3>Who We Are</h3>
-            <div className='Columns'>
-              <div className='Column'>
-                <h5>
-                  <span>Founder and CEO</span>&nbsp;<wbr/>
-                  <strong>Anwar Malloy</strong>&nbsp;<wbr/>
-                  <span>
-                    congue nisi vitae suscipit tellus mauris a diam. Sit amet facilisis magna etiam,
-                    et magnis dis parturient montes.
-                  </span>
-                </h5>
-                <img src={imagesUrl + '/stock-portrait-man2.jpg'} alt='Photo of CEO' />
-              </div>
-              <div className='Column'>
-                <p>
-                  <q>
-                    Morbi volutpat ipsum quis est vestibulum, et porta diam eleifend. Ut volutpat
-                    condimentum lacinia.
-                  </q>
-                </p>
-                <p>
-                  <span>
-                    Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras, enim nulla
-                    aliquet porttitor lacus luctus accumsan.
-                  </span>
-                </p>
-                <p>
-                  <span>
-                    Lectus magna fringilla urna porttitor rhoncus dolor purus non enim, vehicula
-                    ipsum a arcu cursus vitae.
-                  </span>
-                </p>
-                <p>
-                  <span>
-                    Volutpat odio facilisis mauris sit amet massa. Convallis tellus id interdum
-                    velit laoreet id donec ultrices tincidunt. 
-                  </span>
-                </p>
               </div>
             </div>
           </InViewWrapper>
