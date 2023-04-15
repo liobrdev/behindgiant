@@ -109,10 +109,6 @@ class RootComponent extends Component<Props> {
       console.error('Media did not load within a reasonable time frame!');
     }
 
-    await new Promise(resolve => {
-      this.animationTimeout = setTimeout(resolve, 1000);
-    });
-
     this.props.turnMainDisplayOn();
 
     await new Promise(resolve => {
@@ -194,10 +190,10 @@ class RootComponent extends Component<Props> {
           <link rel="manifest" href="/site.webmanifest" />
           <meta name="msapplication-TileColor" content="#9A544B" />
           <meta name="theme-color" content="#9A544B" />
-          <meta itemProp="name" content="behind GIANT" />
+          <meta itemProp="name" content="behind Giant" />
           <meta itemProp="description" content={description} />
           <meta name="description" content={description} />
-          <meta property="og:title" content="behind GIANT" />
+          <meta property="og:title" content="behind Giant" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://behindgiant.com" />
           <meta property="og:description" content={description} />
