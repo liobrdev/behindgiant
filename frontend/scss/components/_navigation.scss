@@ -86,10 +86,9 @@
       z-index: 5;
       position: relative;
       width: 100%;
-      min-height: calc(100% - 85px);
+      min-height: calc(100% - 154px);
       background-color: white;
       overflow-x: hidden;
-      overflow-y: hidden;
   
       .NavigationMenu-links {
         width: 100%;
@@ -185,7 +184,6 @@
   @include for-tablet-portrait-up {
     &.is-on {      
       .NavigationMenu {
-        height: calc(100% - 85px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -210,14 +208,6 @@
   }
 
   @include for-tall-window-up {
-    &.is-on {
-      overflow-y: hidden;
-
-      .NavigationMenu {
-        height: calc(100% - 85px);
-      }
-    }
-
     @include for-tablet-portrait-up {
       &.is-on {
         width: 61.8%;
