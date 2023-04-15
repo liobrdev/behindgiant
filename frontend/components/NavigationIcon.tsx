@@ -14,7 +14,15 @@ export default function NavigationIcon({ isOn }: Props) {
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    dispatch({ type: `NAVIGATION_${ isOn ? 'CLOSE' : 'SHOW' }` });
+
+    if (!isOn) {
+      window.scrollTo(0, 0);
+      document.getElementById('main')?.scrollTo(0, 0);
+      dispatch({ type: 'NAVIGATION_SHOW' });
+      return;
+    }
+
+    dispatch({ type: 'NAVIGATION_CLOSE' });
   };
 
   const className = isOn ? 'is-active' : '';
