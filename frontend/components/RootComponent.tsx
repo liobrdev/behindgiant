@@ -109,6 +109,10 @@ class RootComponent extends Component<Props> {
       console.error('Media did not load within a reasonable time frame!');
     }
 
+    await new Promise(resolve => {
+      this.animationTimeout = setTimeout(resolve, 1000);
+    });
+
     this.props.turnMainDisplayOn();
 
     await new Promise(resolve => {
