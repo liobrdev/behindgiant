@@ -98,8 +98,8 @@ export default class Contact extends Component<{}, State> {
               </div>
             </div>
           </div>
+          <Footer classNames='Footer--contact'/>
         </section>
-        <Footer classNames='Footer--contact'/>
       </>
     );
   }

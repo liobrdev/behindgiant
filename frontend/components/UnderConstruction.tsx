@@ -23,8 +23,8 @@ export default function UnderConstruction() {
           </div>
           <h2>This page is currently under construction - check back soon!</h2>
         </div>
+        <Footer classNames='Footer--underConstruction' />
       </section>
-      <Footer classNames='Footer--underConstruction' />
     </>
   );
 }
