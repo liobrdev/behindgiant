@@ -17,7 +17,7 @@ export default function NavigationMenu() {
             <AnimatedLink href='/portfolio'>Portfolio</AnimatedLink>
           </li>
           <li>
-            <small>Ideas &amp; opinions</small>
+            <small>Ideas &amp; advice</small>
             <AnimatedLink href='/blog'>Blog</AnimatedLink>
           </li>
           <li>
