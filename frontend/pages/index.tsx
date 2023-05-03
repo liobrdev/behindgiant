@@ -117,9 +117,8 @@ export default class Home extends Component {
           imagesUrl + '/puzzle-icon.png',
           imagesUrl + '/gears-icon.png',
           imagesUrl + '/ikigai.png',
-          imagesUrl + '/photographer.jpg',
           imagesUrl + '/sold.jpg',
-          imagesUrl + '/ideas.jpg',
+          imagesUrl + '/converse.jpg',
           '/twitter_white.png',
           '/instagram_white.png',
           '/facebook_white.png',
@@ -382,35 +381,12 @@ export default class Home extends Component {
             </div>
           </InViewWrapper>
         </section>
-        <section id='home-latest'>
+        <section id='home-recent-posts'>
           <InViewWrapper threshold={0.125} unobserveOnEnter>
             <h3>Recent Posts</h3>
-            <div className='LatestNews'>
-              <div className='Article'>
-                <AnimatedLink href='/news/latest3' className='TextLink'>
-                  <div className='Text'>
-                    <time dateTime='2023-01-03'>January 3, 2023</time>
-                    <h5>behind GIANT welcomes newest design team members</h5>
-                  </div>
-                </AnimatedLink>
-                <AnimatedLink href='/news/latest3' className='ThumbLink'>
-                  <div className='Thumb'>
-                    <div className='ThumbImage-wrapper'>
-                      <div className='ThumbImage' style={{
-                        backgroundImage: 'url(' + imagesUrl + '/photographer.jpg' + ')'
-                      }}/>
-                    </div>
-                  </div>
-                </AnimatedLink>
-              </div>
-              <div className='Article'>
-                <AnimatedLink href='/news/latest2' className='TextLink'>
-                  <div className='Text'>
-                    <time dateTime='2023-01-02'>January 2, 2023</time>
-                    <h5>Announcing upcoming Brand Company LLC partnership in Q2 2023</h5>
-                  </div>
-                </AnimatedLink>
-                <AnimatedLink href='/news/latest2' className='ThumbLink'>
+            <div className='RecentPostThumbnails'>
+              <AnimatedLink href='/news/latest8' className='ThumbnailLink'>
+                <div className='RecentPostThumbnail'>
                   <div className='Thumb'>
                     <div className='ThumbImage-wrapper'>
                       <div className='ThumbImage' style={{
@@ -418,8 +394,27 @@ export default class Home extends Component {
                       }}/>
                     </div>
                   </div>
-                </AnimatedLink>
-              </div>
+                  <div className='Text'>
+                    <time dateTime='2023-01-08'>January 8, 2023</time>
+                    <h5>Announcing upcoming Brand Company LLC partnership in Q2 2023</h5>
+                  </div>
+                </div>
+              </AnimatedLink>
+              <AnimatedLink href='/blog/latest6' className='ThumbnailLink'>
+                <div className='RecentPostThumbnail'>
+                  <div className='Thumb'>
+                    <div className='ThumbImage-wrapper'>
+                      <div className='ThumbImage' style={{
+                        backgroundImage: 'url(' + imagesUrl + '/converse.jpg' + ')'
+                      }}/>
+                    </div>
+                  </div>
+                  <div className='Text'>
+                    <time dateTime='2023-01-06'>January 6, 2023</time>
+                    <h5>A Mile in Their Shoes</h5>
+                  </div>
+                </div>
+              </AnimatedLink>
             </div>
           </InViewWrapper>
         </section>
