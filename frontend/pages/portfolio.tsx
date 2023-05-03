@@ -101,7 +101,6 @@ export default class Portfolio extends Component {
           <script type="application/ld+json">{breadcrumb}</script>
         </Head>
         <MediaToBeLoaded imageUrls={[
-          imagesUrl + '/Logo-bl2.png',
           imagesUrl + '/madonnina.jpg',
           imagesUrl + '/food-truck.jpg',
           imagesUrl + '/skateboard.jpg',
@@ -147,15 +146,9 @@ export default class Portfolio extends Component {
             <strong className='u-teal'>Giant</strong>
             <span>:</span>
           </h3>
-          <div className='Projects'>
-            <div className='Project'>
-              <AnimatedLink href='/portfolio/latest6' className='TextLink'>
-                <div className='Text'>
-                  <time dateTime='2023-01-06'>January 6, 2023</time>
-                  <h5>Madonnina</h5>
-                </div>
-              </AnimatedLink>
-              <AnimatedLink href='/portfolio/latest6' className='ThumbLink'>
+          <div className='ProjectThumbnails'>
+            <AnimatedLink href='/portfolio/latest6' className='ThumbnailLink'>
+              <div className='ProjectThumbnail'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -163,16 +156,14 @@ export default class Portfolio extends Component {
                     }}/>
                   </div>
                 </div>
-              </AnimatedLink>
-            </div>
-            <div className='Project'>
-              <AnimatedLink href='/portfolio/latest5' className='TextLink'>
                 <div className='Text'>
-                  <time dateTime='2023-01-05'>January 5, 2023</time>
-                  <h5>Food Truck</h5>
+                  <time dateTime='2023-01-06'>January 6, 2023</time>
+                  <h5>Madonnina</h5>
                 </div>
-              </AnimatedLink>
-              <AnimatedLink href='/portfolio/latest5' className='ThumbLink'>
+              </div>
+            </AnimatedLink>
+            <AnimatedLink href='/portfolio/latest5' className='ThumbnailLink'>
+              <div className='ProjectThumbnail'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -180,16 +171,14 @@ export default class Portfolio extends Component {
                     }}/>
                   </div>
                 </div>
-              </AnimatedLink>
-            </div>
-            <div className='Project'>
-              <AnimatedLink href='/portfolio/latest4' className='TextLink'>
                 <div className='Text'>
-                  <time dateTime='2023-01-04'>January 4, 2023</time>
-                  <h5>Fourth Wheel</h5>
+                  <time dateTime='2023-01-05'>January 5, 2023</time>
+                  <h5>Food Truck</h5>
                 </div>
-              </AnimatedLink>
-              <AnimatedLink href='/portfolio/latest4' className='ThumbLink'>
+              </div>
+            </AnimatedLink>
+            <AnimatedLink href='/portfolio/latest4' className='ThumbnailLink'>
+              <div className='ProjectThumbnail'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -197,16 +186,14 @@ export default class Portfolio extends Component {
                     }}/>
                   </div>
                 </div>
-              </AnimatedLink>
-            </div>
-            <div className='Project'>
-              <AnimatedLink href='/portfolio/latest3' className='TextLink'>
                 <div className='Text'>
-                  <time dateTime='2023-01-03'>January 3, 2023</time>
-                  <h5>To the Sky</h5>
+                  <time dateTime='2023-01-04'>January 4, 2023</time>
+                  <h5>Fourth Wheel</h5>
                 </div>
-              </AnimatedLink>
-              <AnimatedLink href='/portfolio/latest3' className='ThumbLink'>
+              </div>
+            </AnimatedLink>
+            <AnimatedLink href='/portfolio/latest3' className='ThumbnailLink'>
+              <div className='ProjectThumbnail'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -214,16 +201,14 @@ export default class Portfolio extends Component {
                     }}/>
                   </div>
                 </div>
-              </AnimatedLink>
-            </div>
-            <div className='Project'>
-              <AnimatedLink href='/portfolio/latest2' className='TextLink'>
                 <div className='Text'>
-                  <time dateTime='2023-01-02'>January 2, 2023</time>
-                  <h5>Collage</h5>
+                  <time dateTime='2023-01-03'>January 3, 2023</time>
+                  <h5>To the Sky</h5>
                 </div>
-              </AnimatedLink>
-              <AnimatedLink href='/portfolio/latest2' className='ThumbLink'>
+              </div>
+            </AnimatedLink>
+            <AnimatedLink href='/portfolio/latest2' className='ThumbnailLink'>
+              <div className='ProjectThumbnail'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -231,16 +216,14 @@ export default class Portfolio extends Component {
                     }}/>
                   </div>
                 </div>
-              </AnimatedLink>
-            </div>
-            <div className='Project'>
-              <AnimatedLink href='/portfolio/latest1' className='TextLink'>
                 <div className='Text'>
-                  <time dateTime='2023-01-01'>January 1, 2023</time>
-                  <h5>Hello World</h5>
+                  <time dateTime='2023-01-02'>January 2, 2023</time>
+                  <h5>Collage</h5>
                 </div>
-              </AnimatedLink>
-              <AnimatedLink href='/portfolio/latest1' className='ThumbLink'>
+              </div>
+            </AnimatedLink>
+            <AnimatedLink href='/portfolio/latest1' className='ThumbnailLink'>
+              <div className='ProjectThumbnail'>
                 <div className='Thumb'>
                   <div className='ThumbImage-wrapper'>
                     <div className='ThumbImage' style={{
@@ -248,15 +231,21 @@ export default class Portfolio extends Component {
                     }}/>
                   </div>
                 </div>
-              </AnimatedLink>
-            </div>
+                <div className='Text'>
+                  <time dateTime='2023-01-01'>January 1, 2023</time>
+                  <h5>Hello World</h5>
+                </div>
+              </div>
+            </AnimatedLink>
           </div>
         </section>
         <section id='portfolio-footer'>
           <button className='ScrollTop' onClick={this.handleScrollTop} type='button'>
             <div />
           </button>
-          <div className='Logo'><AnimatedLink href='/'><h1>behind Giant</h1></AnimatedLink></div>
+          <div className='Logo'>
+            <AnimatedLink href='/'><h1>behind Giant</h1></AnimatedLink>
+          </div>
           <Footer classNames='Footer--portfolio' />
         </section>
       </>

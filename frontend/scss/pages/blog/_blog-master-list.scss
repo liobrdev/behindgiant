@@ -6,19 +6,6 @@
       padding: 112px 0 0;
       padding: 7rem 0 0;
 
-      h3 {
-        font-weight: 400;
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 28px;
-        line-height: 1.75rem;
-        letter-spacing: 1px;
-        letter-spacing: .0625rem;
-        margin: 0 auto 48px;
-        margin: 0 auto 3rem;
-        text-align: center;
-      }
-
       .BlogThumbnails {
         display: inline-flex;
         flex-wrap: wrap;
@@ -129,15 +116,6 @@
 
     @include for-tablet-portrait-up {
       &#blog-master-list {
-        h3 {
-          font-size: 18px;
-          font-size: 1.125rem;
-          line-height: 32px;
-          line-height: 2rem;
-          margin: 0 auto 80px;
-          margin: 0 auto 5rem;
-        }
-
         .BlogThumbnails {
           .ThumbnailLink {
             width: 50%;
