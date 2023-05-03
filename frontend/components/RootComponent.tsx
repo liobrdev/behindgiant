@@ -13,7 +13,9 @@ import { AppDispatch, AppState } from '@/types';
 import { LoadingView, MediaToBeLoaded, Navigation } from './';
 
 
-const description = 'behind Giant - Creative Agency';
+const description = 'A Tokyo-based creative consultancy placing emphasis on the elevation of the'
+  + ' minority voice.';
+
 const imagesUrl = process.env.NEXT_PUBLIC_IMAGES_URL || '';
 
 class RootComponent extends Component<Props> {
