@@ -113,8 +113,6 @@ export default class Home extends Component {
           <script type='application/ld+json'>{breadcrumb}</script>
         </Head>
         <MediaToBeLoaded imageUrls={[
-          imagesUrl + '/Logo-wh.png',
-          imagesUrl + '/tokyo.jpg',
           imagesUrl + '/meeting-icon.png',
           imagesUrl + '/puzzle-icon.png',
           imagesUrl + '/gears-icon.png',

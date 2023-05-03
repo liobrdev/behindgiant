@@ -13,7 +13,7 @@ import { AppDispatch, AppState } from '@/types';
 import { LoadingView, MediaToBeLoaded, Navigation } from './';
 
 
-const description = 'behind GIANT - Creative Agency';
+const description = 'behind Giant - Creative Agency';
 const imagesUrl = process.env.NEXT_PUBLIC_IMAGES_URL || '';
 
 class RootComponent extends Component<Props> {
@@ -36,6 +36,20 @@ class RootComponent extends Component<Props> {
 
   handleResize() {
     document.body.style.height = window.innerHeight + 'px';
+  }
+
+  getPageNameFromPathname(pathname: string): string {
+    let name = '';
+
+    if (!pathname[1]) name = 'home';
+    else {
+      for (let i = 1; i < pathname.length; ++i) {
+        if (pathname[i] === '/' || pathname[i] === '[' || pathname[i] === ']') name += '_';
+        else name += pathname[i];
+      }
+    }
+
+    return name;
   }
 
   isMediaLoaded(): boolean {
@@ -82,13 +96,9 @@ class RootComponent extends Component<Props> {
         this.loadingTimeout = setTimeout(() => {
           --counter;
 
-          if (this.isMediaLoaded()) {
-            resolve(true);
-          } else if (counter === 0) {
-            resolve(false);
-          } else {
-            recursiveCheck();
-          }
+          if (this.isMediaLoaded()) resolve(true);
+          else if (counter === 0) resolve(false);
+          else recursiveCheck();
         }, 1000);
       };
 
@@ -141,9 +151,7 @@ class RootComponent extends Component<Props> {
   }
 
   async componentDidUpdate(prevProps: Props) {
-    if (this.props.router.pathname !== prevProps.router.pathname) {
-      await this.animateShowMain();
-    }
+    if (this.props.router.pathname !== prevProps.router.pathname) await this.animateShowMain();
   }
 
   componentWillUnmount() {
@@ -154,12 +162,11 @@ class RootComponent extends Component<Props> {
   }
 
   render() {
-    const { loadingViewIsShowing, mainIsDisplayed, mainIsOpaque, mainIsScrollable } = this.props;
+    const {
+      loadingViewIsShowing, mainIsDisplayed, mainIsOpaque, mainIsScrollable, router: { pathname },
+    } = this.props;
 
-    let name = this.props.router.pathname;
-
-    if (name === '/') name = 'home';
-    else name = name.slice(1);
+    const name = this.getPageNameFromPathname(pathname);
 
     return (
       <>

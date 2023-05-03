@@ -1,0 +1,128 @@
+.Main--blog {
+  section {
+    &#blog-master-footer {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $neonblue;
+
+      &::before {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        top: -50px;
+        left: -50%;
+        width: 100%;
+        min-width: 1280px;
+        height: 80px;
+        -webkit-transform: rotate(-3deg);
+           -moz-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+             -o-transform: rotate(-3deg);
+                transform: rotate(-3deg);
+        background-color: white;
+      }
+
+      .ScrollTop {
+        all: unset;
+        position: absolute;
+        top: 80px;
+        top: 5rem;
+        text-align: center;
+        width: inherit;
+        color: white;
+
+        div::before {
+          content: "";
+          display: block;
+          position: relative;
+          top: 0;
+          margin: 0 auto;
+          width: 18px;
+          height: 18px;
+          border-top: 1px solid white;
+          border-left: 1px solid white;
+          -webkit-transform: rotate(45deg);
+             -moz-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+               -o-transform: rotate(45deg);
+                  transform: rotate(45deg);
+          transition: top 0.5s ease-out;
+        }
+
+        &:focus,
+        &:hover {
+          cursor: pointer;
+
+          div::before {
+            top: -5px;
+          }
+        }
+
+        &:focus {
+          outline: 1px dotted white;
+        }
+      }
+
+      .Logo {
+        text-align: center;
+        
+        a {
+          color: white;
+
+          h1 {
+            margin: 0;
+            color: white;
+            font-weight: 300;
+            font-size: 48px;
+            font-size: 3rem;
+            letter-spacing: -1px;
+            letter-spacing: -.0625rem;
+          }
+        }
+      }
+
+      .Footer {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    @include for-tablet-portrait-up {
+      &#blog-master-footer {
+        &::before {
+          top: -40px;
+          min-width: 1440px;
+          height: 90px;
+        }
+      }
+    }
+
+    @include for-tablet-landscape-up {
+      &#blog-master-footer {
+        &::before {
+          min-width: 1920px;
+          height: 110px;
+        }
+
+        .ScrollTop {
+          top: 111px;
+        }
+      }
+    }
+
+    @include for-desktop-up {
+      &#blog-master-footer {
+        &::before {
+          top: -60px;
+          min-width: 2700px;
+          height: 120px;
+        }
+      }
+    }
+  }
+}
